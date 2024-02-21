@@ -143,7 +143,7 @@ selected_remarks.click()
 
 def get_due, get_interest, get_outs, get_lrf, get_net;
 //def options = [301, 302, 311, 316, 318, 321, 323, 332, 344, 418, 419, 420, 449, 451, 461, 462, 463, 464, 465, 475];
-def options = [316];
+def options = [301];
 int[] term = [];
 double[] rate = [];
 

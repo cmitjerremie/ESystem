@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_mdi mdi-trash-can-outline font-23_1</name>
+   <tag></tag>
+   <elementGuidId>2eb63fc4-bcbb-4850-a177-481cd5db70ed</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[@id='deleteExpenseDisabled2']/i</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#deleteExpenseDisabled2 > i.mdi.mdi-trash-can-outline.font-23</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>a3f11955-1929-4e41-b54d-e8f1ae729510</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>mdi mdi-trash-can-outline font-23</value>
+      <webElementGuid>11cc2161-9d3c-450e-b1c0-1ac7aac09d1d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;deleteExpenseDisabled2&quot;)/i[@class=&quot;mdi mdi-trash-can-outline font-23&quot;]</value>
+      <webElementGuid>27362bf6-7765-486b-91c9-2193003045f4</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//button[@id='deleteExpenseDisabled2']/i</value>
+      <webElementGuid>9584f3cf-c9a9-4e96-a63c-d9c3df46ba91</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[5]/div[2]/div/div[2]/div/div/button/i</value>
+      <webElementGuid>719030d7-bfcf-4655-a1b4-9d9c0fc9d565</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

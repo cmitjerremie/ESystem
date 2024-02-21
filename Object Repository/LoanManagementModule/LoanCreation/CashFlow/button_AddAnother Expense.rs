@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_AddAnother Expense</name>
+   <tag></tag>
+   <elementGuidId>72d9fcb8-5a96-4110-996c-eafac516c3a3</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[@id='add-Expense-button']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#add-Expense-button</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>ad2826d3-1bc6-4714-937d-9da986c5b1ec</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>add-Expense-button</value>
+      <webElementGuid>2bc358c1-0fd9-46a8-bea5-21a697ade50b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>704ccda5-0ebb-4003-9f4d-7db10e5faf9a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>btn btn-info</value>
+      <webElementGuid>7a5eee5e-cefc-41ed-9b9a-6e27aac09d2f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Add
+														Another Expense</value>
+      <webElementGuid>1dc7cb85-69a0-4b85-99ec-7ea961a442b2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;add-Expense-button&quot;)</value>
+      <webElementGuid>e8bf92fb-6458-48c9-ae1e-641bde2ca0a9</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//button[@id='add-Expense-button']</value>
+      <webElementGuid>a70b6b97-1c87-4fd1-9186-9822841dd0f0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='cashflow1']/div/div/div[3]/div/div[2]/div/div/div/div/div[6]/div/button</value>
+      <webElementGuid>aff42ee8-dc70-4b6c-96a7-c49313209197</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[6]/div/button</value>
+      <webElementGuid>6ce5995d-b850-4797-a4de-bbfcfb7adc1c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[@id = 'add-Expense-button' and @type = 'button' and (text() = 'Add
+														Another Expense' or . = 'Add
+														Another Expense')]</value>
+      <webElementGuid>a343fb73-a6e3-44c6-963c-4e7014a2c9e3</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

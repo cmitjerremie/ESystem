@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_mdi mdi-trash-can-outline font-23</name>
+   <tag></tag>
+   <elementGuidId>6598a61b-74fa-402a-9157-a2ffb23b47f9</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[@id='deleteIncomeDisabled2']/i</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#deleteIncomeDisabled2 > i.mdi.mdi-trash-can-outline.font-23</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>b58ccc97-933d-4d21-95cb-af6297792dc9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>mdi mdi-trash-can-outline font-23</value>
+      <webElementGuid>1764af11-7052-4f8e-bac3-fdfe487c71a2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;deleteIncomeDisabled2&quot;)/i[@class=&quot;mdi mdi-trash-can-outline font-23&quot;]</value>
+      <webElementGuid>2ea9e666-55c8-4903-b407-2588b429745a</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//button[@id='deleteIncomeDisabled2']/i</value>
+      <webElementGuid>6a20c14f-edf1-4d03-af7f-a3b101108988</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div[2]/div/div[2]/div/div/button/i</value>
+      <webElementGuid>00d61c88-5115-41ec-9bc0-67a86165974b</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
