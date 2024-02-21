@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Create Loan</name>
+   <tag></tag>
+   <elementGuidId>d3d86ed9-e87b-4003-982e-fe12aa8fc012</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[@id='btnCreationModal']/span</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#btnCreationModal > span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>2080028e-0399-4fd9-a48e-08356c0dc814</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Create Loan</value>
+      <webElementGuid>12f0cebf-330e-4faf-aae1-58f5a5021c8b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;btnCreationModal&quot;)/span[1]</value>
+      <webElementGuid>3a247333-0da4-4c73-86bf-11c61ca2ca15</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//button[@id='btnCreationModal']/span</value>
+      <webElementGuid>86857200-5b76-4c65-80df-28a9ed3b1d4f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//button/span</value>
+      <webElementGuid>b1611ecd-7cdd-4c71-9a78-de24ba05c42a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Create Loan' or . = 'Create Loan')]</value>
+      <webElementGuid>5c951c54-1f74-4da2-85d5-4d5570a2256c</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

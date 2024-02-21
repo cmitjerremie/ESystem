@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>default</name>
+   <tag></tag>
+   <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description>Teller</description>
+      <initValue>'rvdelatorre'</initValue>
+      <name>user</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'#Password1234567'</initValue>
+      <name>pass</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Teller2</description>
+      <initValue>'zcresurrecion'</initValue>
+      <name>user2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'#Password12345678'</initValue>
+      <name>pass2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>LoanManagement</description>
+      <initValue>'10000181'</initValue>
+      <name>cid</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>
