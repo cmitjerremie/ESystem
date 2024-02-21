@@ -142,12 +142,13 @@ WebElement selected_remarks = driver.findElement(By.cssSelector("option[value='1
 selected_remarks.click()
 
 def get_due, get_interest, get_outs, get_lrf, get_net;
-def options = [301, 302, 311, 316, 318, 321, 323, 332, 344, 418, 419, 420, 449, 451, 461, 462, 463, 464, 465, 475];
+//def options = [301, 302, 311, 316, 318, 321, 323, 332, 344, 418, 419, 420, 449, 451, 461, 462, 463, 464, 465, 475];
+def options = [316];
 int[] term = [];
 double[] rate = [];
 
 //Loop all Loan type Option //Select all
-for(int j=0; j<1; j++)
+for(int j=0; j<options.size(); j++)
 {
 	WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanType'))
 	WebElement selected = driver.findElement(By.cssSelector("option[value='"+ options[j] +"']"));
@@ -178,6 +179,7 @@ for(int j=0; j<1; j++)
 		rate = [2.56, 5.12, 7.68, 10.24, 12.80, 14.72, 17.44, 19.36, 21.28, 23.20, 25.12, 28.00];
 	}
 	
+	
 	WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanCategory'))
 	WebElement selected_loan_cat = driver.findElement(By.cssSelector("option[value='1926']"));
 	selected_loan_cat.click()
@@ -190,10 +192,28 @@ for(int j=0; j<1; j++)
 	WebElement selected_bns_type = driver.findElement(By.cssSelector("option[value='2299']"));
 	selected_bns_type.click()
 	
-	WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'))
-	WebUI.delay(1)
-	WebElement selected_loan_fqncy = driver.findElement(By.id("3647"));
-	selected_loan_fqncy.click()
+	//	50 - weekly
+	//	12 - Monthly
+	//	24 - Semi-monthly
+	//	1 - Lumpsump
+	
+	if(selected_loan_type == '316')
+	{
+		//Change this manually according to the target test script
+		
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Monthly', true)	
+		term = [1,2,3,4,5,6,7,8,9,10,11,12];
+		rate = [2.67, 5.33, 8.00, 10.67, 13.33, 16.00, 18.00, 20.00, 22.00, 24.00, 26.00, 28.00];
+		
+		//Uncomment this if you want to test Semi-monthly
+//		WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Semi-monthly', true)
+//		term = [2,4,6,8,10,12,14,16,18,20,22,24];
+//		rate = [2.67, 5.33, 8.00, 10.67, 13.33, 16.00, 18.00, 20.00, 22.00, 24.00, 26.00, 28.00];
+	}
+	else
+	{
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Weekly', true)
+	}
 	
 	for(int x=0; x<rate.size(); x++) //increase loan amount
 	{	
@@ -201,7 +221,7 @@ for(int j=0; j<1; j++)
 		double int_rate = rate[x]/100;
 		int selected_term = term[x]
 		
-		for(int i=0; i<2; i++)
+		for(int i=0; i<1; i++)
 		{
 			int inter = (int) Math.ceil(principal*int_rate);
 			double due = (principal + inter) / selected_term;
@@ -253,6 +273,8 @@ if (!bugList.isEmpty()) {
 		KeywordUtil.markFailed(error);
 	}
 }
+
+WebUI.closeBrowser()
 
 
 
