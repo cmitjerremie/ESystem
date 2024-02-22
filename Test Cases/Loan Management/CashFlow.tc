@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Created to test the Computaions in cashflow form</description>
    <name>CashFlow</name>
    <tag></tag>
    <comment></comment>
