@@ -29,4 +29,9 @@
       <initValue>'10000181'</initValue>
       <name>cid</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>for cashflow</description>
+      <initValue>5000</initValue>
+      <name>loanAmount</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

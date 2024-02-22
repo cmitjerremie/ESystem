@@ -111,7 +111,7 @@ WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule
 WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Weekly', true)
 WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_Term_cboTerm'), '4', true)
 
-WebUI.sendKeys(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/input_Amount_txtAmount'), "5000" + Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/input_Amount_txtAmount'), GlobalVariable.loanAmount + Keys.chord(Keys.ENTER))
 
 WebUI.setText(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/input_Name_txtCoName2'), "TestData")
 WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_Relationship'), 'Friend', true)
@@ -208,7 +208,7 @@ else
 }
 
 
-WebElement amor = driver.findElement(By.id('txtAppliedLoanAmortization'))
+WebElement amor = driver.findElement(By.id('txtAppliedLoanAmortization'))//Amortization display
 ttl_amortization = amor.getAttribute("value");
 
 if(ttl_amortization == get_due) 
@@ -221,6 +221,75 @@ else
 	bugList.add("Incorrect amortization display")
 }
 
+WebElement ttl_borrowed = driver.findElement(By.id('txtTotalBrorrowAmount'))
+ttl_borrowed.sendKeys('10000')
+WebElement amr_ipt = driver.findElement(By.id('txtBrorrowAmortization'))
+amr_ipt.sendKeys('833.33')
+amr_ipt.sendKeys(Keys.ENTER);
+
+WebElement applied_amount = driver.findElement(By.id('txtAppliedLoan'))
+WebElement amr_dis = driver.findElement(By.id('txtAppliedLoanAmortization'))
+
+double applied_amount_double = Double.parseDouble(applied_amount.getAttribute('value').replace(",", ""));
+double amr_dis_double = Double.parseDouble(amr_dis.getAttribute('value').replace(",", ""));
+
+WebElement ttl1_fld = driver.findElement(By.id('txtTotalLoanAmount'))
+WebElement ttl2_fld = driver.findElement(By.id('txtTotalAmortization'))
+
+double ttl1 = 10000 + applied_amount_double;
+double ttl2 = 833.33 + amr_dis_double;
+
+DecimalFormat pesoFormat = new DecimalFormat("#,##0.00");
+String formatted_ttl1 = pesoFormat.format(ttl1);
+String formatted_ttl2 = pesoFormat.format(ttl2);//total Amortization
+
+if(formatted_ttl1.equals(ttl1_fld.getAttribute('value')) && formatted_ttl2.equals(ttl2_fld.getAttribute('value')))
+{
+	println("Correct Total Amount")	
+}
+else
+{
+	println("Incorrect Total Amount")
+	bugList.add("Incorrect Total Amount")
+}
+
+WebElement net_income = driver.findElement(By.id('txtNetIncome'))
+WebElement dsc = driver.findElement(By.id('txtDSC'))
+WebElement capacity = driver.findElement(By.id('txtCapacityToPay'))
+WebElement loanable = driver.findElement(By.id('txtLoanableAmount'))
+WebElement current = driver.findElement(By.id('txtCurrentLoan'))
+WebElement remaining = driver.findElement(By.id('txtRemainingLoanable'))
+WebElement amt_applied = driver.findElement(By.id('txtAmountApplied'))
+WebElement amt_approved = driver.findElement(By.id('txtAmountApproved'))
+
+get_net = net_income.getAttribute('value')
+get_dsc = dsc.getAttribute('value')
+get_capacity = capacity.getAttribute('value')
+get_loanable = loanable.getAttribute('value')
+get_current = current.getAttribute('value').replace(",", "")
+get_remaining = remaining.getAttribute('value')
+get_amt_applied = amt_applied.getAttribute('value')
+get_amt_approved = amt_approved.getAttribute('value')
+
+double dis_net = new_income - new_expense;
+double dis_dsc = Math.round(dis_net/ttl2);
+double dis_cap = dis_net*0.50;
+double dis_loanable = dis_net*1; //the selected term is 4 weeks -> months = 1
+double dis_current = Double.parseDouble(get_current);
+double dis_remaining = dis_loanable - dis_current;
+double dis_amt_applied = GlobalVariable.loanAmount;
+double dis_amt_approved = dis_amt_applied;
+
+DecimalFormat decimalFormat = new DecimalFormat("#.##");
+
+println(dis_net)
+println(dis_dsc)
+println(dis_cap)
+println(dis_loanable)
+println(dis_current)
+println(dis_remaining)
+println(dis_amt_applied)
+println(dis_amt_approved)
 
 
 
@@ -228,81 +297,4 @@ else
 
 
 
-
-
-
-//
-//WebUI.setText(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/inputtxtincomeAmount1'), '1,2000')
-//
-//WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/button_AddAnother Income'))
-//
-//WebUI.selectOptionByValue(findTestObject('Object Repository/Page_Core/select_-- Select --EmploymentSalariesIncome_ce4e89_1'), 
-//    '1760', true)
-//
-//WebUI.selectOptionByValue(findTestObject('Object Repository/Page_Core/select_-- Select --EmploymentSalariesIncome_ce4e89_1'), 
-//    '1760', true)
-//
-//WebUI.setText(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/inputtxtincomeAmount2'), '1,0000')
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/i_mdi mdi-trash-can-outline font-23'), 0)
-//
-//WebUI.selectOptionByValue(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/select_-- Select --FoodWaterElectricityEduc_adf9e8'), 
-//    '1852', true)
-//
-//WebUI.selectOptionByValue(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/select_-- Select --FoodWaterElectricityEduc_adf9e8'), 
-//    '1852', true)
-//
-//WebUI.setText(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/inputtxtrowExpenseAmount1'), '1000')
-//
-//WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/button_AddAnother Expense'))
-//
-//WebUI.selectOptionByValue(findTestObject('Object Repository/Page_Core/select_-- Select --FoodWaterElectricityEduc_adf9e8_1'), 
-//    '1850', true)
-//
-//WebUI.selectOptionByValue(findTestObject('Object Repository/Page_Core/select_-- Select --FoodWaterElectricityEduc_adf9e8_1'), 
-//    '1850', true)
-//
-//WebUI.setText(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/inputtxtrowExpenseAmount2'), '5,000')
-//
-//WebUI.sendKeys(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/inputtxtrowExpenseAmount2'), Keys.chord(Keys.ENTER))
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/i_mdi mdi-trash-can-outline font-23_1'), 0)
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/inputtxtTotalIncome'), 0)
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/inputtxtTotalExpense'), 0)
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/inputtxtActiveLoanTotal'), 0)
-//
-//WebUI.setText(findTestObject('Object Repository/Page_Core/inputtxtTotalBrorrowAmount'), '1,000')
-//
-//WebUI.sendKeys(findTestObject('Object Repository/Page_Core/inputtxtTotalBrorrowAmount'), Keys.chord(Keys.ENTER))
-//
-//WebUI.setText(findTestObject('Object Repository/Page_Core/inputtxtBrorrowAmortization'), '50')
-//
-//WebUI.sendKeys(findTestObject('Object Repository/Page_Core/inputtxtBrorrowAmortization'), Keys.chord(Keys.ENTER))
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/inputtxtTotalLoanAmount'), 0)
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/inputtxtTotalAmortization'), 0)
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/inputtxtNetIncome'), 0)
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/inputtxtDSC'), 0)
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/inputtxtCapacityToPay'), 0)
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/inputtxtLoanableAmount'), 0)
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/inputtxtCurrentLoan'), 0)
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/inputtxtRemainingLoanable'), 0)
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/inputtxtAmountApplied'), 0)
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/inputtxtAmountApproved'), 0)
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/button_Previous'), 0)
-//
-//WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/button_Next'), 0)
 
