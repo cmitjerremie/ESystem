@@ -143,7 +143,7 @@ selected_remarks.click()
 
 def get_due, get_interest, get_outs, get_lrf, get_net;
 //def options = [301, 302, 311, 316, 318, 321, 323, 332, 344, 418, 419, 420, 449, 451, 461, 462, 463, 464, 465, 475];
-def options = [301];
+def options = [316]; //316 if want to test monthly/semi/lumpsum note:uncomment the monthly inside the if-else condition
 int[] term = [];
 double[] rate = [];
 
@@ -200,15 +200,15 @@ for(int j=0; j<options.size(); j++)
 	if(selected_loan_type == '316')
 	{
 		//Change this manually according to the target test script
-		
+		//Semi-monthly
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Monthly', true)	
 		term = [1,2,3,4,5,6,7,8,9,10,11,12];
 		rate = [2.67, 5.33, 8.00, 10.67, 13.33, 16.00, 18.00, 20.00, 22.00, 24.00, 26.00, 28.00];
 		
 		//Uncomment this if you want to test Semi-monthly
-//		WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Semi-monthly', true)
-//		term = [2,4,6,8,10,12,14,16,18,20,22,24];
-//		rate = [2.67, 5.33, 8.00, 10.67, 13.33, 16.00, 18.00, 20.00, 22.00, 24.00, 26.00, 28.00];
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Semi-monthly', true)
+		term = [2,4,6,8,10,12,14,16,18,20,22,24];
+		rate = [2.67, 5.33, 8.00, 10.67, 13.33, 16.00, 18.00, 20.00, 22.00, 24.00, 26.00, 28.00];
 	}
 	else
 	{
@@ -251,15 +251,22 @@ for(int j=0; j<options.size(); j++)
 			get_due =  WebUI.getAttribute(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/input_Due_txtDue'), 'value')
 			get_interest = WebUI.getAttribute(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/input_Interest_txtInterest'), 'value')
 			get_outs = WebUI.getAttribute(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/input_LoanOutstanding_txtLoanOutstanding'), 'value')
-			get_lrf = WebUI.getAttribute(findTestObject('Object Repository/LoanManagementModule/LoanCreation/input_Birthday_mdtxtbirthday'), 'value')
+			get_lrf = WebUI.getAttribute(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/input_LRF_txtLRF'), 'value')
 			get_net = WebUI.getAttribute(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/input_Net Proceed_txtNetProcess'), 'value')
 			
-			if(get_due.equals(formatted_due))
+			if(get_due.equals(formatted_due) && get_interest.equals(formatted_inter) && get_outs.equals(formatted_outs) && get_lrf.equals(formatted_lrf) && get_net.equals(formatted_net))
 			{
 				println("works!!!!!!!!!!!!!!!!!!!!!!!")
 			}
 			else
 			{
+				println(get_due + "!=" +  formatted_due)
+				println(get_interest + "!=" +  formatted_inter)
+				println(get_outs + "!=" +  formatted_outs)
+				println(get_lrf + "!=" +  formatted_lrf)
+				println(get_net + "!=" +  formatted_net)
+				WebUI.delay(500)
+				
 				bugList.add("Computation Error in " + "Loan Type id: " + selected_loan_type + "Term " + term[x] + "Inputed principal: " + principal)
 				println("error!!!!!!!!!!!!!!!!!!!!!!!")
 			}
