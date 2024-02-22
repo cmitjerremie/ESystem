@@ -272,24 +272,35 @@ get_amt_applied = amt_applied.getAttribute('value')
 get_amt_approved = amt_approved.getAttribute('value')
 
 double dis_net = new_income - new_expense;
-double dis_dsc = Math.round(dis_net/ttl2);
+double dis_dsc = dis_net/ttl2;
 double dis_cap = dis_net*0.50;
-double dis_loanable = dis_net*1; //the selected term is 4 weeks -> months = 1
+double dis_loanable = dis_cap*1; //the selected term is 4 weeks -> months = 1
 double dis_current = Double.parseDouble(get_current);
 double dis_remaining = dis_loanable - dis_current;
 double dis_amt_applied = GlobalVariable.loanAmount;
 double dis_amt_approved = dis_amt_applied;
 
-DecimalFormat decimalFormat = new DecimalFormat("#.##");
+DecimalFormat pesoFormat2 = new DecimalFormat("#,##0.00");
+String formatted_net = pesoFormat2.format(dis_net);
+String formatted_dsc = pesoFormat2.format(dis_dsc);
+String formatted_cap = pesoFormat2.format(dis_cap);
+String formatted_loanable = pesoFormat2.format(dis_loanable);
+String formatted_current = pesoFormat2.format(dis_current);
+String formatted_remaining = pesoFormat2.format(dis_remaining);
+String formatted_amt_applied = pesoFormat2.format(dis_amt_applied);
+String formatted_amt_approved = pesoFormat2.format(dis_amt_approved);
 
-println(dis_net)
-println(dis_dsc)
-println(dis_cap)
-println(dis_loanable)
-println(dis_current)
-println(dis_remaining)
-println(dis_amt_applied)
-println(dis_amt_approved)
+if(get_net.equals(formatted_net) && get_dsc.equals(formatted_dsc) && get_capacity.equals(formatted_cap) && get_loanable.equals(formatted_loanable)
+	&& get_current.equals(formatted_current) && get_remaining.equals(formatted_remaining) && get_amt_applied(formatted_amt_applied) && get_amt_approved.equals(formatted_amt_approved))
+{
+	println("CashFlow computations are correct!!!")	
+}
+else
+{
+	bugList.add("Final Computations Error!!!!!!")
+}
+
+WebUI.closeBrowser()
 
 
 

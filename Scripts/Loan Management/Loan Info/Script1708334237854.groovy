@@ -143,7 +143,7 @@ selected_remarks.click()
 
 def get_due, get_interest, get_outs, get_lrf, get_net;
 //def options = [301, 302, 311, 316, 318, 321, 323, 332, 344, 418, 419, 420, 449, 451, 461, 462, 463, 464, 465, 475];
-def options = [316]; //316 if want to test monthly/semi/lumpsum note:uncomment the monthly inside the if-else condition
+def options = [301]; //316 if want to test monthly/semi/lumpsum note:uncomment the monthly inside the if-else condition
 int[] term = [];
 double[] rate = [];
 
@@ -196,9 +196,12 @@ for(int j=0; j<options.size(); j++)
 	//	12 - Monthly
 	//	24 - Semi-monthly
 	//	1 - Lumpsump
+	double freq = 0.3 //this is for weekly
 	
-	if(selected_loan_type == '316')
+	if(selected_loan_type == '316')//only used for checking monthly/semi/lump
 	{
+		freq = 1.25;
+		
 		//Change this manually according to the target test script
 		//Semi-monthly
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Monthly', true)	
@@ -227,7 +230,7 @@ for(int j=0; j<options.size(); j++)
 			double due = (principal + inter) / selected_term;
 			int fnl_due = (int) Math.ceil(due / 5) * 5;
 			int loan_outs = principal + inter;
-			double lrf = (0.3 * principal * selected_term)/1000;
+			double lrf = (freq * principal * selected_term)/1000;
 			int fnl_lrf = (int) Math.ceil(lrf);
 			int net = principal - fnl_lrf;
 			
