@@ -34,6 +34,14 @@ WebUI.openBrowser('')
 
 WebUI.maximizeWindow()
 
+
+if (!GlobalVariable.frequency.equals('W') && !GlobalVariable.frequency.equals('M') && !GlobalVariable.frequency.equals('S'))
+{
+	WebUI.closeBrowser()
+	KeywordUtil.markFailed("PLEASE CHECK THE GLOBAL VARIABLE - frequency!");
+	println(GlobalVariable.frequency)
+}
+
 ArrayList<String> bugList = new ArrayList<String>()//bug storage
 
 WebUI.navigateToUrl('http://10.9.2.27:8880/eSystemNextGenWebApp/pages/Login')
@@ -142,8 +150,16 @@ WebElement selected_remarks = driver.findElement(By.cssSelector("option[value='1
 selected_remarks.click()
 
 def get_due, get_interest, get_outs, get_lrf, get_net;
-//def options = [301, 302, 311, 316, 318, 321, 323, 332, 344, 418, 419, 420, 449, 451, 461, 462, 463, 464, 465, 475];
-def options = [316]; //316 if want to test monthly/semi/lumpsum note:uncomment the monthly inside the if-else condition
+def options = [301, 302, 311, 316, 318, 321, 323, 332, 344, 418, 419, 420, 449, 451, 461, 462, 463, 464, 465, 475];
+
+if(GlobalVariable.frequency == "W")
+{
+	options = [301];
+}
+else
+{
+	options = [316];
+}
 int[] term = [];
 double[] rate = [];
 
@@ -203,17 +219,21 @@ for(int j=0; j<options.size(); j++)
 	{
 		freq = 1.25;
 		
-		//Change this manually according to the target test script
-		//monthly
-//		WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Monthly', true)	
-//		term = [1,2,3,4,5,6,7,8,9,10,11,12];
-//		rate = [2.67, 5.33, 8.00, 10.67, 13.33, 16.00, 18.00, 20.00, 22.00, 24.00, 26.00, 28.00];
-		
-		//Uncomment this if you want to test Semi-monthly
-		WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Semi-monthly', true)
-		term = [2,4,6,8,10,12,14,16,18,20,22,24];
-		rate = [2.67, 5.33, 8.00, 10.67, 13.33, 16.00, 18.00, 20.00, 22.00, 24.00, 26.00, 28.00];
-		anual = 0.5;
+		if(GlobalVariable.frequency == "M")
+		{
+			//monthly
+			WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Monthly', true)
+			term = [1,2,3,4,5,6,7,8,9,10,11,12];
+			rate = [2.67, 5.33, 8.00, 10.67, 13.33, 16.00, 18.00, 20.00, 22.00, 24.00, 26.00, 28.00];
+		}
+		if(GlobalVariable.frequency == 'S')
+		{
+			//Semi-monthly
+			WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Semi-monthly', true)
+			term = [2,4,6,8,10,12,14,16,18,20,22,24];
+			rate = [2.67, 5.33, 8.00, 10.67, 13.33, 16.00, 18.00, 20.00, 22.00, 24.00, 26.00, 28.00];
+			anual = 0.5;
+		}
 	}
 	else
 	{
