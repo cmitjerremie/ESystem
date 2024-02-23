@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_-- Select --4Ps BeneficiaryArtistChi_05c006</name>
+   <tag></tag>
+   <elementGuidId>72d6cc41-800d-4d7f-8a5e-5bb34cc01075</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#cboMemberSegmentation</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='cboMemberSegmentation']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>c2ba8dd7-c9a8-445b-9a17-525274cf076e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>cboMemberSegmentation</value>
+      <webElementGuid>eca9bece-fec4-4d54-b081-95819186d98f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>form-control gb-border-fcs select2 font-11</value>
+      <webElementGuid>1eae1121-eb2f-4775-999b-4027f108c3d3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-toggle</name>
+      <type>Main</type>
+      <value>select2</value>
+      <webElementGuid>2b5864e2-a229-4517-9781-6511bb2557d1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+																			-- Select --4Ps BeneficiaryArtistChild of MemberClients Business in Market AreaDSHPK2C AgentMBA CoordinatorMIC AgentOFWPoliticianPWDShareholderSingle Parent</value>
+      <webElementGuid>096ad477-4ea5-4654-ab39-69f0bb1e3a20</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;cboMemberSegmentation&quot;)</value>
+      <webElementGuid>15d71ab5-9aac-4fc6-96c2-9d98dffecee0</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@id='cboMemberSegmentation']</value>
+      <webElementGuid>53307f9a-356d-458c-afd2-92b6557e42d8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='0']/div/div/div[2]/div/div/div[4]/div/div/select</value>
+      <webElementGuid>012057d7-aecb-41f5-a28d-2d8fed4ab301</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[4]/div/div/select</value>
+      <webElementGuid>ca08a955-b452-4c4d-94c8-6ccc56585efb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@id = 'cboMemberSegmentation' and (text() = '
+																			-- Select --4Ps BeneficiaryArtistChild of MemberClients Business in Market AreaDSHPK2C AgentMBA CoordinatorMIC AgentOFWPoliticianPWDShareholderSingle Parent' or . = '
+																			-- Select --4Ps BeneficiaryArtistChild of MemberClients Business in Market AreaDSHPK2C AgentMBA CoordinatorMIC AgentOFWPoliticianPWDShareholderSingle Parent')]</value>
+      <webElementGuid>4ba20d0e-5b78-4042-bf07-28e77ab652e1</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

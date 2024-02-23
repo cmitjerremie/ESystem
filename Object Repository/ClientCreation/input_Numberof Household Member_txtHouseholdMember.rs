@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Next</name>
+   <name>input_Numberof Household Member_txtHouseholdMember</name>
    <tag></tag>
-   <elementGuidId>83e0a709-413b-4126-ab23-10b32dfd3f92</elementGuidId>
+   <elementGuidId>f38b03c3-e8c4-49b2-a0c7-3149d072c714</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//button[@id='next']</value>
+         <key>CSS</key>
+         <value>#txtHouseholdMember</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>#next</value>
+         <key>XPATH</key>
+         <value>//input[@id='txtHouseholdMember']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,79 +21,87 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>button</value>
-      <webElementGuid>46015fa4-6aa4-452c-9443-8f35e5d7160b</webElementGuid>
+      <value>input</value>
+      <webElementGuid>a12950cc-13e3-42ca-ac67-0f7a3b28409f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>autocomplete</name>
+      <type>Main</type>
+      <value>off</value>
+      <webElementGuid>2a8f715b-8eff-4834-83dd-6e6d05e9ba13</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
-      <value>button</value>
-      <webElementGuid>ddc8ce0b-b478-4a2d-b9f7-3a121886d4c5</webElementGuid>
+      <value>text</value>
+      <webElementGuid>a5821540-5490-4ab1-822f-494737789245</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>btn btn-success</value>
-      <webElementGuid>bf9dc658-0bfa-4675-bd9c-222ba0c0b2b0</webElementGuid>
+      <value>form-control gb-border-fcs font-11</value>
+      <webElementGuid>b5f61c07-d94f-4479-855e-07c59da93106</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>onkeypress</name>
+      <type>Main</type>
+      <value>return onlyNumberKey(event)</value>
+      <webElementGuid>9882dbfe-b1b2-4ba1-bd95-c22e749ea9a7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>next</value>
-      <webElementGuid>8ed7c9aa-12c0-4e57-b32f-c49b9d41a19d</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>text</name>
-      <type>Main</type>
-      <value>Next</value>
-      <webElementGuid>b3164c79-ae9b-45b3-8a5f-29149f3e983e</webElementGuid>
+      <value>txtHouseholdMember</value>
+      <webElementGuid>c98c0686-5a4e-4ecc-9525-fe9f753114f4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;next&quot;)</value>
-      <webElementGuid>5408da5f-82db-42dd-9709-322c272a2cb7</webElementGuid>
+      <value>id(&quot;txtHouseholdMember&quot;)</value>
+      <webElementGuid>32ac2e7c-dd4f-45a4-b38e-0c7c5d3fc3b1</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//button[@id='next']</value>
-      <webElementGuid>2c4fb4a5-2473-4ead-b4e9-7dc104f19956</webElementGuid>
+      <value>//input[@id='txtHouseholdMember']</value>
+      <webElementGuid>d3d6d914-f646-405a-a938-d5f613d37c24</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='btnNextPrev']/div[2]/button</value>
-      <webElementGuid>fb72e294-3f41-4f2b-b9c2-1d37570226d7</webElementGuid>
+      <value>//div[@id='7']/div/div/div/div[2]/div/input</value>
+      <webElementGuid>c4f81ef9-1795-4a62-b252-a5926edf2846</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[7]/div[2]/button</value>
-      <webElementGuid>890cf3f5-8093-4c8b-98ae-5234d6c5503c</webElementGuid>
+      <value>//div[7]/div/div/div/div[2]/div/input</value>
+      <webElementGuid>9835b738-9b4e-4690-8edb-e08c38ec7b63</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//button[@type = 'button' and @id = 'next' and (text() = 'Next' or . = 'Next')]</value>
-      <webElementGuid>a5896217-b1a3-4abc-938b-556a1cd6a36c</webElementGuid>
+      <value>//input[@type = 'text' and @id = 'txtHouseholdMember']</value>
+      <webElementGuid>170e8ff5-9634-4280-a136-f4f0c95bd2f2</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

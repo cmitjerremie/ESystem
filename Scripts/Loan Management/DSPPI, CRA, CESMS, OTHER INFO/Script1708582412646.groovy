@@ -303,6 +303,8 @@ app.click()
 WebElement next5 = driver.findElement(By.id('next'))
 next5.click()
 
+WebUI.closeBrowser()
+
 
 
 

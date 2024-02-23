@@ -171,7 +171,7 @@ else
 WebUI.selectOptionByValue(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/select_-- Select --FoodWaterElectricityEduc_adf9e8'),'1852', true)
 WebUI.setText(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/inputtxtrowExpenseAmount1'), '1000')
 
-expense = WebUI.getAttribute(findTestObject('Object Repository/Page_Core/inputtxtTotalExpense'), 'value')
+expense = WebUI.getAttribute(findTestObject('Object Repository/ClientCreation/inputtxtTotalExpense'), 'value')
 
 if(expense == "1,000.00")
 {
@@ -194,7 +194,7 @@ dropdown2.selectByVisibleText("Food");
 WebElement add_expense2 = driver.findElement(By.id('txtrowExpenseAmount2'))
 add_expense2.sendKeys("5010.90");
 
-expense = WebUI.getAttribute(findTestObject('Object Repository/Page_Core/inputtxtTotalExpense'), 'value')
+expense = WebUI.getAttribute(findTestObject('Object Repository/ClientCreation/inputtxtTotalExpense'), 'value')
 
 if(expense == "6,010.90")
 {
