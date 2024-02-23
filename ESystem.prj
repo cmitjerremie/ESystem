@@ -4,9 +4,9 @@
    <name>ESystem</name>
    <tag></tag>
    <UUID>1570d952-fe0b-44a4-9789-461d718444ef</UUID>
-   <freeLicense>false</freeLicense>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
+   <projectFileLocation>C:\Users\j.gellang\Documents\GitHub\ESystem\ESystem.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>

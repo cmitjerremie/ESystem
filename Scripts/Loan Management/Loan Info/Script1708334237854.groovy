@@ -143,7 +143,7 @@ selected_remarks.click()
 
 def get_due, get_interest, get_outs, get_lrf, get_net;
 //def options = [301, 302, 311, 316, 318, 321, 323, 332, 344, 418, 419, 420, 449, 451, 461, 462, 463, 464, 465, 475];
-def options = [301]; //316 if want to test monthly/semi/lumpsum note:uncomment the monthly inside the if-else condition
+def options = [316]; //316 if want to test monthly/semi/lumpsum note:uncomment the monthly inside the if-else condition
 int[] term = [];
 double[] rate = [];
 
@@ -197,21 +197,23 @@ for(int j=0; j<options.size(); j++)
 	//	24 - Semi-monthly
 	//	1 - Lumpsump
 	double freq = 0.3 //this is for weekly
+	double anual = 1; //default for weeks and months
 	
 	if(selected_loan_type == '316')//only used for checking monthly/semi/lump
 	{
 		freq = 1.25;
 		
 		//Change this manually according to the target test script
-		//Semi-monthly
-		WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Monthly', true)	
-		term = [1,2,3,4,5,6,7,8,9,10,11,12];
-		rate = [2.67, 5.33, 8.00, 10.67, 13.33, 16.00, 18.00, 20.00, 22.00, 24.00, 26.00, 28.00];
+		//monthly
+//		WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Monthly', true)	
+//		term = [1,2,3,4,5,6,7,8,9,10,11,12];
+//		rate = [2.67, 5.33, 8.00, 10.67, 13.33, 16.00, 18.00, 20.00, 22.00, 24.00, 26.00, 28.00];
 		
 		//Uncomment this if you want to test Semi-monthly
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Semi-monthly', true)
 		term = [2,4,6,8,10,12,14,16,18,20,22,24];
 		rate = [2.67, 5.33, 8.00, 10.67, 13.33, 16.00, 18.00, 20.00, 22.00, 24.00, 26.00, 28.00];
+		anual = 0.5;
 	}
 	else
 	{
@@ -230,7 +232,7 @@ for(int j=0; j<options.size(); j++)
 			double due = (principal + inter) / selected_term;
 			int fnl_due = (int) Math.ceil(due / 5) * 5;
 			int loan_outs = principal + inter;
-			double lrf = (freq * principal * selected_term)/1000;
+			double lrf = (freq * principal * selected_term * anual)/1000; //old: (freq * principal * selected_term)/1000;
 			int fnl_lrf = (int) Math.ceil(lrf);
 			int net = principal - fnl_lrf;
 			
@@ -243,12 +245,10 @@ for(int j=0; j<options.size(); j++)
 				
 			WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_Term_cboTerm'))
 			WebElement selected_loan_term = driver.findElement(By.id(String.valueOf(term[x])));
-			WebUI.delay(1)
 			selected_loan_term.click()
 			
 			WebUI.setText(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/input_Amount_txtAmount'), "")
 			WebUI.sendKeys(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/input_Amount_txtAmount'), principal + Keys.chord(Keys.ENTER))
-			WebUI.delay(1)
 			
 			//verify if the computations are correct	
 			get_due =  WebUI.getAttribute(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/input_Due_txtDue'), 'value')

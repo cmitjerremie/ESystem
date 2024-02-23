@@ -271,33 +271,37 @@ WebUI.delay(5)
 WebElement next3 = driver.findElement(By.id('next'))
 next3.click()
 
-
-
 WebElement inc1 = driver.findElement(By.id('1916'))
 inc1.click()
 
-WebElement next4 = driver.findElement(By.id('1916'))
+WebElement next4 = driver.findElement(By.id('next'))
 next4.click()
 
 WebUI.delay(2)
 
-//WebUI.delay(1)
-//if (inc1.isSelected()) {
-//    // If the checkbox is selected, click it to deselect
-//    inc1.click();
-//}
-//
-//WebElement ap_with_con = driver.findElement(By.id('1920'))
-//ap_with_con.click()
-//
-//WebElement rej = driver.findElement(By.id('1922'))
-//rej.click()
-//
-//WebElement pen = driver.findElement(By.id('1921'))
-//pen.click()
-//
-//WebElement app = driver.findElement(By.id('1919'))
-//app.click()
+WebUI.delay(1)
+if (inc1.isSelected()) {
+    // If the checkbox is selected, click it to deselect
+    inc1.click();
+}
+
+WebElement ap_with_con = driver.findElement(By.id('1920'))
+ap_with_con.click()
+
+next4.click()
+WebUI.delay(3)
+
+WebElement rej = driver.findElement(By.id('1922'))
+rej.click()
+
+WebElement pen = driver.findElement(By.id('1921'))
+pen.click()
+
+WebElement app = driver.findElement(By.id('1919'))
+app.click()
+
+WebElement next5 = driver.findElement(By.id('next'))
+next5.click()
 
 
 
