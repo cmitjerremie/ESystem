@@ -30,11 +30,17 @@ import java.text.DecimalFormat;
 
 import com.kms.katalon.core.util.KeywordUtil
 
+import org.openqa.selenium.JavascriptExecutor;
+
+import org.openqa.selenium.interactions.Actions;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
 WebUI.openBrowser('')
 
 WebUI.maximizeWindow()
 
-WebUI.navigateToUrl('http://10.9.2.27:8880/eSystemNextGenWebApp/pages/Login')
+WebUI.navigateToUrl(GlobalVariable.url)
 
 WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user2)
 
@@ -45,7 +51,6 @@ WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword
 WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/span_Client_menu-arrow'))
-
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/a_ClientCreation'))
 
@@ -243,18 +248,49 @@ WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/selec
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--      Select      --0 - Hindi8 - Oo'), '0', 
     true)
 
-//WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
-//
-//WebUI.click(findTestObject('Object Repository/ClientCreation/button_OK'))
-
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--Select--DSHPGLIP 1GLIP 2IPPaglambo_b40e80'), 
     '677', true)
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
 
-WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
+// Scroll to the top of the page
+((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);")
 
-WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
+// Define a list of all scrollable areas, you might need to adjust this based on your page structure
+List<WebElement> scrollableAreas = driver.findElements(By.xpath("//div[contains(@class,'scrollable')]"))
 
-WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
+// Scroll each scrollable area to the top
+scrollableAreas.each { scrollableArea ->
+    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollTop = 0;", scrollableArea)
+}
+
+// Find the "healthDeclarationYes" element using Selenium WebDriver
+WebElement health_dec = driver.findElement(By.id("healthDeclarationYes"))
+
+// Click on the "healthDeclarationYes" element using Selenium WebDriver
+health_dec.click()
+
+
+WebElement agree1 = driver.findElement(By.id("txtiAgree"));
+WebElement agree2 = driver.findElement(By.id("txtiAgreeCBU"));
+
+Actions action1 = new Actions(driver);
+action1.moveToElement(agree2);//for the agree1 to become visible
+action1.build().perform();
+agree1.click();
+
+((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+JavascriptExecutor executor = (JavascriptExecutor) driver;
+executor.executeScript("arguments[0].click();", agree2);
+
+WebElement save = driver.findElement(By.id("next"));
+save.click()
+
+Actions actions3 = new Actions(driver)
+
+// Simulate pressing the Enter key using the Actions class
+actions3.sendKeys(Keys.ENTER).perform()
+
+
+
 

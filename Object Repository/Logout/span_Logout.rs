@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Logout</name>
+   <tag></tag>
+   <elementGuidId>ff2b87fe-25e6-46e6-a812-6691af4bd65f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//body[@id='body']/div/div/div/ul/li[6]/div/a[2]/span</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>bdd29785-1ef0-4cc8-b3aa-2b3a080d5ed7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Logout</value>
+      <webElementGuid>79ae3dd2-5b01-4842-a3d4-4089d5222708</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;body&quot;)/div[@class=&quot;wrapper show&quot;]/div[@class=&quot;navbar-custom&quot;]/div[@class=&quot;topbar container-fluid&quot;]/ul[@class=&quot;topbar-menu d-flex align-items-center gap-2&quot;]/li[@class=&quot;dropdown&quot;]/div[@class=&quot;dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown show&quot;]/a[@class=&quot;dropdown-item&quot;]/span[1]</value>
+      <webElementGuid>f6064222-3547-44ce-bea4-e51c2371ddc1</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//body[@id='body']/div/div/div/ul/li[6]/div/a[2]/span</value>
+      <webElementGuid>0313db83-d541-4be3-9b04-cc5303156b3b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[6]/div/a[2]/span</value>
+      <webElementGuid>f9e7c9d5-4f05-4b3a-8436-0e28d51a2b4e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Logout' or . = 'Logout')]</value>
+      <webElementGuid>048ad005-1599-4f55-86e7-a3b491d4f591</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

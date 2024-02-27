@@ -5,6 +5,11 @@
    <tag></tag>
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://10.9.2.15:8880/eSystemNextGenWebApp/pages/Login'</initValue>
+      <name>url</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
       <description>Teller</description>
       <initValue>'rvdelatorre'</initValue>
       <name>user</name>
@@ -26,7 +31,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>LoanManagement</description>
-      <initValue>'10000181'</initValue>
+      <initValue>'10000127'</initValue>
       <name>cid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

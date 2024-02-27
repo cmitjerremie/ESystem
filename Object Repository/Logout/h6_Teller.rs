@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>h2_Login Successful</name>
+   <name>h6_Teller</name>
    <tag></tag>
-   <elementGuidId>c2861479-1926-4867-a90f-3aa92b69dfcf</elementGuidId>
+   <elementGuidId>1ae0bc37-8478-45f1-8bda-6e719a4b320f</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//body[@id='body']/div[6]/div/div/h2</value>
+         <value>//body[@id='body']/div/div/div/ul/li[6]/a/span[2]/h6</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#swal2-title</value>
+         <value>h6.my-0.fw-normal.role</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,71 +21,55 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>h2</value>
-      <webElementGuid>e2751e42-bbaf-496b-9d4a-1fa6b350d5f9</webElementGuid>
+      <value>h6</value>
+      <webElementGuid>16d4997b-63a1-4e07-8501-971c36b7b8e4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>swal2-title</value>
-      <webElementGuid>d59c2b0b-6a29-4480-9ac6-ef418ec74b30</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>id</name>
-      <type>Main</type>
-      <value>swal2-title</value>
-      <webElementGuid>1a6e29e5-c00e-4ce7-a254-6a9d9509abf5</webElementGuid>
+      <value>my-0 fw-normal role</value>
+      <webElementGuid>19cc27d0-70a4-4207-af25-416029b47e69</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Login Successful!</value>
-      <webElementGuid>f5ff6cfe-858d-4d10-9f4a-19ac5a9918fc</webElementGuid>
+      <value>Teller</value>
+      <webElementGuid>6c7e9bf4-d03b-4ebc-9be1-d7904d7394a4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;swal2-title&quot;)</value>
-      <webElementGuid>6a76b406-037d-4cd0-ade5-c4da86778510</webElementGuid>
+      <value>id(&quot;body&quot;)/div[@class=&quot;wrapper show&quot;]/div[@class=&quot;navbar-custom&quot;]/div[@class=&quot;topbar container-fluid&quot;]/ul[@class=&quot;topbar-menu d-flex align-items-center gap-2&quot;]/li[@class=&quot;dropdown&quot;]/a[@class=&quot;nav-link dropdown-toggle arrow-none nav-user px-2&quot;]/span[@class=&quot;d-lg-flex flex-column gap-1 d-none&quot;]/h6[@class=&quot;my-0 fw-normal role&quot;]</value>
+      <webElementGuid>4ac397a8-7b85-4f30-8d44-2dfee96bbce9</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:attributes</name>
-      <type>Main</type>
-      <value>//h2[@id='swal2-title']</value>
-      <webElementGuid>f0c2bd0f-8e50-4457-9150-c3c43dfde83d</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//body[@id='body']/div[6]/div/div/h2</value>
-      <webElementGuid>de3e82dd-133f-41dd-8aa5-c66b7021ef7a</webElementGuid>
+      <value>//body[@id='body']/div/div/div/ul/li[6]/a/span[2]/h6</value>
+      <webElementGuid>3d41be7c-6ac9-4b76-bcab-e0cdb06231cd</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//h2</value>
-      <webElementGuid>330d3cb3-5f3c-4ac4-ae9d-e5331c7710d6</webElementGuid>
+      <value>//span[2]/h6</value>
+      <webElementGuid>127225f5-b386-4fe0-99bb-cf0ae17c9319</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//h2[@id = 'swal2-title' and (text() = 'Login Successful!' or . = 'Login Successful!')]</value>
-      <webElementGuid>cef0162a-0384-41f9-aa91-9e8a14762cba</webElementGuid>
+      <value>//h6[(text() = 'Teller' or . = 'Teller')]</value>
+      <webElementGuid>10c07119-1148-46df-b13e-95f0b464f9ba</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

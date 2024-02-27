@@ -38,7 +38,7 @@ WebUI.maximizeWindow()
 
 ArrayList<String> bugList = new ArrayList<String>()//bug storage
 
-WebUI.navigateToUrl('http://10.9.2.27:8880/eSystemNextGenWebApp/pages/Login')
+WebUI.navigateToUrl(GlobalVariable.url)
 
 WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user2)
 

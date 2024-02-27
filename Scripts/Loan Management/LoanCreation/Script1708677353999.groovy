@@ -39,11 +39,11 @@ WebUI.maximizeWindow()
 
 ArrayList<String> bugList = new ArrayList<String>()//bug storage
 
-WebUI.navigateToUrl('http://10.9.2.27:8880/eSystemNextGenWebApp/pages/Login')
+WebUI.navigateToUrl(GlobalVariable.url)
 
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user2)
+WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user)
 
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), GlobalVariable.pass2)
+WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), GlobalVariable.pass)
 
 WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword'))
 
@@ -236,7 +236,7 @@ app.click()
 WebElement next5 = driver.findElement(By.id('next'))
 next5.click()
 
-WebUI.closeBrowser()
+//WebUI.closeBrowser()
 
 
 

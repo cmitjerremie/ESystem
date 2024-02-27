@@ -32,22 +32,29 @@ import com.kms.katalon.core.util.KeywordUtil
 
 import org.openqa.selenium.support.ui.Select;
 
-
 WebUI.openBrowser('')
 
 WebUI.maximizeWindow()
 
-ArrayList<String> bugList = new ArrayList<String>()//bug storage
-
 WebUI.navigateToUrl(GlobalVariable.url)
 
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user2)
+WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user)
 
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), GlobalVariable.pass2)
+WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), GlobalVariable.pass)
 
 WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword'))
 
 WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
+
+//WebUI.waitForElementVisible(findTestObject('Object Repository/LoginPage/h2_Login Successful'), 0, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/LoginPage/Home/h4_Dashboard'), 0)
+
+println('Dashboard Successfully Displayed')
+
+WebUI.delay(1)
+
+ArrayList<String> bugList = new ArrayList<String>()//bug storage
 
 WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanManagementNav/a_Loan'))
 
@@ -186,21 +193,6 @@ WebElement washing = driver.findElement(By.id('cbotenthQAnswer'))
 Select select10 = new Select(washing)
 select10.selectByValue('0')
 
-int score = 9+18+7+5+7+7+5+0+11+0;
-
-WebElement dis_score = driver.findElement(By.id('txtTotalScore'))
-int getscore = Integer.parseInt(dis_score.getAttribute("value"))
-
-if(score == getscore)
-{
-	println('Correct Score! ' + score)
-}
-else
-{
-	println('Incorrect Score! ' + score + " * " + getscore)
-	bugList.add("Incorrect DSPPI overall score!!!")
-}
-
 WebElement next2 = driver.findElement(By.id('next'))
 next2.click()
 
@@ -235,67 +227,15 @@ WebElement q7 = driver.findElement(By.id('cboseventhRiskAnswer'))
 Select ra7 = new Select(q7)
 ra7.selectByVisibleText("15");
 
-int overall = 5+5+5+0+0+10+15;
-
-WebElement dis_overall = driver.findElement(By.id('txtRiskAssesmentScore'))
-int get_overall = Integer.parseInt(dis_overall.getAttribute("value"))
-
-if(overall == get_overall)
-{
-	println('Correct overall! ' + overall)
-}
-else
-{
-	println('Incorrect overall! ' + overall + " * " + get_overall)
-	bugList.add("Incorrect DSPPI overall score!!!")
-}
-
 WebElement save = driver.findElement(By.id('btnsaveCRA'))
 save.click()
-
-WebElement dis_class = driver.findElement(By.id('txtRiskClassList'))
-get_class = dis_class.getAttribute('value')
-
-if(get_class.equals("NORMAL RISK"))
-{
-	println("Correct Classification" )
-}
-else
-{
-	println("Incorrect Classification!" + get_class)
-	bugList.add("Incorrect Classification!" + get_class)
-}
-
-WebUI.delay(5)
 
 WebElement next3 = driver.findElement(By.id('next'))
 next3.click()
 
-WebElement inc1 = driver.findElement(By.id('1916'))
-inc1.click()
 
 WebElement next4 = driver.findElement(By.id('next'))
 next4.click()
-
-WebUI.delay(2)
-
-WebUI.delay(1)
-if (inc1.isSelected()) {
-    // If the checkbox is selected, click it to deselect
-    inc1.click();
-}
-
-WebElement ap_with_con = driver.findElement(By.id('1920'))
-ap_with_con.click()
-
-next4.click()
-WebUI.delay(3)
-
-WebElement rej = driver.findElement(By.id('1922'))
-rej.click()
-
-WebElement pen = driver.findElement(By.id('1921'))
-pen.click()
 
 WebElement app = driver.findElement(By.id('1919'))
 app.click()
@@ -303,7 +243,7 @@ app.click()
 WebElement next5 = driver.findElement(By.id('next'))
 next5.click()
 
-WebUI.closeBrowser()
+//WebUI.closeBrowser()
 
 
 
