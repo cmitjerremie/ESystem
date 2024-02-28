@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Withdrawal</name>
+   <tag></tag>
+   <elementGuidId>b8111c56-20ee-4165-a8ff-96a85fe80922</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>a.nav-link.rounded-0.active > span.d-none.d-md-block</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//body[@id='body']/div/div[4]/div/div/div/div[3]/ul/li[2]/a/span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>cd5abc65-4965-4c9d-a2ce-35e1a64c3683</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>d-none d-md-block</value>
+      <webElementGuid>5561f138-e57d-4042-864f-bcadc71009a9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Withdrawal</value>
+      <webElementGuid>78c27f63-8b30-4843-9df0-8ec6bafcf32d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;body&quot;)/div[@class=&quot;wrapper show&quot;]/div[@class=&quot;content-page&quot;]/div[@class=&quot;content&quot;]/div[@class=&quot;container-fluid&quot;]/div[@class=&quot;card shadow mb-3&quot;]/div[@class=&quot;card-body&quot;]/ul[@class=&quot;nav nav-pills bg-nav-pills nav-justified mb-2&quot;]/li[@class=&quot;nav-item&quot;]/a[@class=&quot;nav-link rounded-0 active&quot;]/span[@class=&quot;d-none d-md-block&quot;]</value>
+      <webElementGuid>b446c46d-2a80-4d43-bc9e-6c30a6a87e9f</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//body[@id='body']/div/div[4]/div/div/div/div[3]/ul/li[2]/a/span</value>
+      <webElementGuid>20904de0-ae58-4311-a4a7-f55cd23756cf</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/ul/li[2]/a/span</value>
+      <webElementGuid>26651d96-1a43-4ec9-806e-68c59dde5e95</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Withdrawal' or . = 'Withdrawal')]</value>
+      <webElementGuid>71f94abe-e374-4578-bc60-0ec2753c7398</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

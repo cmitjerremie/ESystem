@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Deposit</name>
+   <tag></tag>
+   <elementGuidId>2af21638-f9fa-4235-baf6-f5e9b154e364</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>span.d-none.d-md-block</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//body[@id='body']/div/div[4]/div/div/div/div[3]/ul/li/a/span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>9d9d33e4-6a77-443d-ae72-317e9214cbe3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>d-none d-md-block</value>
+      <webElementGuid>3995d25e-d993-484e-a8f9-194557c459c2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Deposit</value>
+      <webElementGuid>551b0428-5c1b-4a74-8f23-ded4eac7d6ff</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;body&quot;)/div[@class=&quot;wrapper show&quot;]/div[@class=&quot;content-page&quot;]/div[@class=&quot;content&quot;]/div[@class=&quot;container-fluid&quot;]/div[@class=&quot;card shadow mb-3&quot;]/div[@class=&quot;card-body&quot;]/ul[@class=&quot;nav nav-pills bg-nav-pills nav-justified mb-2&quot;]/li[@class=&quot;nav-item&quot;]/a[@class=&quot;nav-link rounded-0 active&quot;]/span[@class=&quot;d-none d-md-block&quot;]</value>
+      <webElementGuid>ff09a8a9-d1bd-4fb4-a80f-f6572a8e1ebe</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//body[@id='body']/div/div[4]/div/div/div/div[3]/ul/li/a/span</value>
+      <webElementGuid>4635c323-e8a6-4326-a3b6-5b98573c468a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/ul/li/a/span</value>
+      <webElementGuid>2d94cac7-d383-4e6f-bf56-ec2c13d18161</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Deposit' or . = 'Deposit')]</value>
+      <webElementGuid>7c5dc2ec-961a-4232-aa42-6b82cba12a21</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

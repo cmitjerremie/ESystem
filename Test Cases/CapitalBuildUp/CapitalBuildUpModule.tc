@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>This is to test only if the CBU works properly</description>
+   <name>CapitalBuildUpModule</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3cf9ac9c-5f72-44ec-922b-4819aa7d22cb</testCaseGuid>
+</TestCaseEntity>

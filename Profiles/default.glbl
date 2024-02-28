@@ -49,4 +49,14 @@
       <initValue>'abc'</initValue>
       <name>app_name</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>This is for the creation of client</description>
+      <initValue>'Mark'</initValue>
+      <name>fname</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>For client creation</description>
+      <initValue>'Kus'</initValue>
+      <name>lname</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

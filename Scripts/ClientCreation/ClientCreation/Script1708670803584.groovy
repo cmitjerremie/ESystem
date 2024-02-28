@@ -36,8 +36,6 @@ import org.openqa.selenium.interactions.Actions;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import org.openqa.selenium.chrome.ChromeOptions
 
 //// Set up Chrome options for headless mode and specify window size
@@ -88,9 +86,9 @@ alert.accept()
 
 WebUI.delay(1)
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_FirstName_txtFname'), 'Mang')
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_FirstName_txtFname'), GlobalVariable.fname)
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_LastName_txtLname'), 'Tomas')
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_LastName_txtLname'), GlobalVariable.lname)
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/button_SEARCH'))
 
@@ -107,9 +105,9 @@ WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/selec
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--Select--AnnulledLive-inMarriedSepa_54a068'), 
     '165', true)
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_FirstName_txtmothersMaidenFName'), 'MT Mname')
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_FirstName_txtmothersMaidenFName'), GlobalVariable.fname+'Mname')
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_LastName_txtmothersMaidenLName'), 'MT Lname')
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_LastName_txtmothersMaidenLName'), GlobalVariable.fname+'Lname')
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--Select--AglipayanBorn AgainEvangel_87720a'), 
     '0', true)
@@ -177,7 +175,7 @@ WebUI.click(findTestObject('Object Repository/ClientCreation/input_DOSRI_dosri')
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_-- Select --CARD MRI MemberCARD MRI _8bd785'), 
     '1805', true)
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Referredby_txtReferredbyOtherPrimary'), 'MT refer')
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Referredby_txtReferredbyOtherPrimary'), GlobalVariable.fname+'refer')
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/input_YES_ImmediateFamilyMember'))
 
@@ -185,7 +183,7 @@ WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
 
 WebUI.delay(1)
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Remarks_txtBeneficiaryName1'), 'MT dependent')
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Remarks_txtBeneficiaryName1'), GlobalVariable.fname+'dependent')
 
 WebElement dep_bday = driver.findElement(By.id('txtBeneficiaryBday1'))
 dep_bday.sendKeys('01011999')
@@ -245,7 +243,7 @@ WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/selec
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--Select--EmploymentSalariesIncome f_b99596'), 
     '1759', true)
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Sourceof Fund_txtOtherKYCSourceOfIncome'), 'MT test Company')
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Sourceof Fund_txtOtherKYCSourceOfIncome'), GlobalVariable.fname+'test Company')
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--Select--Below 1,000 pesos1001 - 3,_8e7891'), 
     '0', true)

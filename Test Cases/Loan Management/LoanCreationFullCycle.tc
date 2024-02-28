@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>This is to test if the user can create loan.</description>
    <name>LoanCreationFullCycle</name>
    <tag></tag>
    <comment></comment>
