@@ -44,4 +44,9 @@
       <initValue>'S'</initValue>
       <name>frequency</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Enter client name to be approved - This is for client approval</description>
+      <initValue>'abc'</initValue>
+      <name>app_name</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

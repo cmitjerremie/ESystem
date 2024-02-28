@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>This is for the creation of client.  No Validations used.</description>
    <name>ClientCreation</name>
    <tag></tag>
    <comment></comment>

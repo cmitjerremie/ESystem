@@ -31,17 +31,13 @@ WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword
 
 WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
 
-//WebUI.click(findTestObject('null'))
-//
-//WebUI.click(findTestObject('null'))
-//
-//WebUI.click(findTestObject('null'))
-//
-//WebUI.click(findTestObject('Object Repository/Logout/h6_Teller'))
-
 WebUI.click(findTestObject('Object Repository/Logout/h6_Teller'))
 
 WebUI.click(findTestObject('Object Repository/Logout/span_Logout'))
 
-WebUI.verifyElementPresent(findTestObject('Page_Card eSystemNextGen/div_Please enter your user nameand password_647189'), 0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Logout/img'), 10)
+
+println("Logout Successfull")
+
+WebUI.closeBrowser()
 

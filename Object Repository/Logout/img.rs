@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>img</name>
+   <tag></tag>
+   <elementGuidId>4166b4e1-5c05-4e36-8c74-2f941fca14db</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//body[@id='body']/div/div[2]/img</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.auth-fluid-right.text-center > img[alt=&quot;CardMRI logo&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>img</value>
+      <webElementGuid>bf8c74db-1b12-4802-b745-8c56534ffb29</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>src</name>
+      <type>Main</type>
+      <value>../Resources/img/Login_logo.png</value>
+      <webElementGuid>de530820-a271-46ec-8ef6-f2d8de109b01</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>alt</name>
+      <type>Main</type>
+      <value>CardMRI logo</value>
+      <webElementGuid>6cbc0009-f32a-46c2-a1b8-b4d3262bcedb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>height</name>
+      <type>Main</type>
+      <value>500</value>
+      <webElementGuid>3730119d-b91d-4e1d-bce8-f128e0e5feda</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;body&quot;)/div[@class=&quot;auth-fluid&quot;]/div[@class=&quot;auth-fluid-right text-center&quot;]/img[1]</value>
+      <webElementGuid>b8c79a82-9c49-4b3c-8cab-12c3c722a560</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//body[@id='body']/div/div[2]/img</value>
+      <webElementGuid>14f60e97-748e-4404-b480-f4f807564200</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:img</name>
+      <type>Main</type>
+      <value>(//img[@alt='CardMRI logo'])[2]</value>
+      <webElementGuid>3a84555a-4b23-49c2-a2b1-2dabdd4164c0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/img</value>
+      <webElementGuid>bd718358-76b9-4080-a724-ff72dc47f4b0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//img[@src = '../Resources/img/Login_logo.png' and @alt = 'CardMRI logo']</value>
+      <webElementGuid>b27d2b0b-bf37-42f0-aa36-ffd19c17ff42</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

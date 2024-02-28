@@ -36,6 +36,27 @@ import org.openqa.selenium.interactions.Actions;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import org.openqa.selenium.chrome.ChromeOptions
+
+//// Set up Chrome options for headless mode and specify window size
+//ChromeOptions options = new ChromeOptions()
+//options.addArguments("--headless")
+//options.addArguments("--window-size=1920,1080") // Adjust as per your requirement
+//
+//// Set the path to the ChromeDriver executable
+//String chromeDriverPath = "Drivers/chromedriver.exe"
+//
+//// Set the system property for ChromeDriver
+//System.setProperty("webdriver.chrome.driver", chromeDriverPath)
+//
+//// Initialize the ChromeDriver with ChromeOptions
+//ChromeDriver driver111 = new ChromeDriver(options)
+//
+//// Set the driver to Katalon DriverFactory
+//DriverFactory.changeWebDriver(driver111)
+
 WebUI.openBrowser('')
 
 WebUI.maximizeWindow()
@@ -50,7 +71,9 @@ WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword
 
 WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
 
-WebUI.click(findTestObject('Object Repository/ClientCreation/span_Client_menu-arrow'))
+WebUI.click(findTestObject('Object Repository/ClientApproval/i_Dashboard_ri-user-3-line'))
+
+WebUI.delay(1)
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/a_ClientCreation'))
 
@@ -128,6 +151,8 @@ WebUI.click(findTestObject('Object Repository/ClientCreation/input_YES_FormerEmp
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
 
+WebUI.delay(1)
+
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--      Select      --Abra - CAR (Co_3be376_1'), 
     '10488', true)
 
@@ -145,6 +170,8 @@ WebUI.setText(findTestObject('Object Repository/ClientCreation/input_IDNumber_tx
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
 
+WebUI.delay(1)
+
 WebUI.click(findTestObject('Object Repository/ClientCreation/input_DOSRI_dosri'))
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_-- Select --CARD MRI MemberCARD MRI _8bd785'), 
@@ -155,6 +182,8 @@ WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Referredby_
 WebUI.click(findTestObject('Object Repository/ClientCreation/input_YES_ImmediateFamilyMember'))
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
+
+WebUI.delay(1)
 
 WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Remarks_txtBeneficiaryName1'), 'MT dependent')
 
@@ -178,6 +207,8 @@ WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/selec
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
 
+WebUI.delay(1)
+
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_Select      51015'), '1', true)
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_Select      51015_1'), '4', true)
@@ -194,7 +225,19 @@ WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/selec
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Numberof Household Member_txtHouseholdMember'), '5')
+WebUI.delay(1)
+
+// Scroll to the top of the page
+((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);")
+
+//TestObject household = findTestObject('Object Repository/ClientCreation/input_Numberof Household Member_txtHouseholdMember')
+WebElement household = driver.findElement(By.id('txtHouseholdMember'))
+((JavascriptExecutor) driver).executeScript("arguments[0].click();", household);
+((JavascriptExecutor) driver).executeScript("arguments[0].value = '5';", household);
+
+//WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Numberof Household Member_txtHouseholdMember'), '5')
+
+WebUI.delay(1)
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--Select--EmploymentSalariesIncome f_b99596'), 
     '0', true)
@@ -217,6 +260,8 @@ WebUI.setText(findTestObject('Object Repository/ClientCreation/input_PostGraduat
 WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Vocational_txtSeniorHighSchool'), '1')
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
+
+WebUI.delay(1)
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--      Select      --0 - ARMM8 - Il_f2aada'), 
     '9', true)
@@ -253,6 +298,8 @@ WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/selec
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
 
+WebUI.delay(1)
+
 // Scroll to the top of the page
 ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);")
 
@@ -266,20 +313,19 @@ scrollableAreas.each { scrollableArea ->
 
 // Find the "healthDeclarationYes" element using Selenium WebDriver
 WebElement health_dec = driver.findElement(By.id("healthDeclarationYes"))
-
-// Click on the "healthDeclarationYes" element using Selenium WebDriver
-health_dec.click()
+((JavascriptExecutor) driver).executeScript("arguments[0].click();", health_dec);
 
 
 WebElement agree1 = driver.findElement(By.id("txtiAgree"));
 WebElement agree2 = driver.findElement(By.id("txtiAgreeCBU"));
 
-Actions action1 = new Actions(driver);
-action1.moveToElement(agree2);//for the agree1 to become visible
-action1.build().perform();
-agree1.click();
+//Actions action1 = new Actions(driver);
+//action1.moveToElement(agree2);//for the agree1 to become visible
+//action1.build().perform();
+//agree1.click();
 
 ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+((JavascriptExecutor) driver).executeScript("arguments[0].click();", agree1);
 JavascriptExecutor executor = (JavascriptExecutor) driver;
 executor.executeScript("arguments[0].click();", agree2);
 

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_mdi mdi-check-bold</name>
+   <tag></tag>
+   <elementGuidId>e4ccc619-d07b-483d-ab5a-8908ea017ec2</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>i.mdi.mdi-check-bold</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//tbody[@id='tblBodyNewClientList']/tr/th/a/i</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>dd014314-7d81-412e-ad2d-90e40839b428</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>mdi mdi-check-bold</value>
+      <webElementGuid>210b17b6-53df-467f-a75f-055830ceab40</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;tblBodyNewClientList&quot;)/tr[@class=&quot;odd&quot;]/th[@class=&quot;td-actions text-center&quot;]/a[@class=&quot;action-icon&quot;]/i[@class=&quot;mdi mdi-check-bold&quot;]</value>
+      <webElementGuid>98c8e18a-e2bb-4a57-a501-bfa29455f1dd</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//tbody[@id='tblBodyNewClientList']/tr/th/a/i</value>
+      <webElementGuid>de29b957-1e27-41f2-b9b3-1776e82b5c68</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//th/a/i</value>
+      <webElementGuid>054e57c0-a113-452a-95eb-29b41a43b8c2</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

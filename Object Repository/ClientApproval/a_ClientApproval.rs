@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_ClientApproval</name>
+   <tag></tag>
+   <elementGuidId>0f1083e0-1569-40fb-920d-5ea63a091232</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#ClientApproval</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//a[@id='ClientApproval']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>8876d3ae-397d-407b-8ff7-b7684afc1a63</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>gb-hover-side confirmation-link</value>
+      <webElementGuid>7b087e2b-2897-4e89-8c2c-f7b69b0bcc0b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>ClientApproval</value>
+      <webElementGuid>783f3ec8-cf79-4feb-9cfe-a07403207cc2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>ClientApproval</value>
+      <webElementGuid>95ce1290-c90b-49e0-ba49-c5703708befd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>onclick</name>
+      <type>Main</type>
+      <value>return loadIframe('ifrm1', this.href);</value>
+      <webElementGuid>bd6099e8-ecd4-406c-a030-5ad2866d7efd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value> Client
+									Approval </value>
+      <webElementGuid>41794ff0-971f-4a96-b615-94e0daeed82a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;ClientApproval&quot;)</value>
+      <webElementGuid>47320bfc-9b18-4512-bea6-45e55aaa5dfe</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//a[@id='ClientApproval']</value>
+      <webElementGuid>b32d51f0-8b1d-4bcf-b1f0-0f35cd839685</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='sidebarCustomer']/ul/li[4]/a</value>
+      <webElementGuid>03fa8530-7aa0-49fc-806f-8ec81cb3fc9d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Client
+									Approval')]</value>
+      <webElementGuid>9fd252d8-5f32-4e53-804b-8e98897c588b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'ClientApproval')]</value>
+      <webElementGuid>d867943c-29ed-48e2-8c22-d0a2f22c96b1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[2]/div/ul/li[4]/a</value>
+      <webElementGuid>c963788e-2c2a-45d4-8ad0-c67d1a10d26c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'ClientApproval' and @id = 'ClientApproval' and (text() = ' Client
+									Approval ' or . = ' Client
+									Approval ')]</value>
+      <webElementGuid>7eba0841-e7ec-4a16-88ba-62207ce9ebda</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
