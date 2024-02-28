@@ -15,7 +15,7 @@
       <name>user</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
+      <description>&quot;</description>
       <initValue>'#Password1234567'</initValue>
       <name>pass</name>
    </GlobalVariableEntity>
@@ -25,13 +25,13 @@
       <name>user2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
+      <description>&quot;</description>
       <initValue>'#Password12345678'</initValue>
       <name>pass2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>LoanManagement</description>
-      <initValue>'10000127'</initValue>
+      <initValue>'10000202'</initValue>
       <name>cid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -55,7 +55,7 @@
       <name>fname</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>For client creation</description>
+      <description>&quot;</description>
       <initValue>'Kus'</initValue>
       <name>lname</name>
    </GlobalVariableEntity>

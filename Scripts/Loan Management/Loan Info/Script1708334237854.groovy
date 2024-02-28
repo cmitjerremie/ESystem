@@ -79,7 +79,8 @@ WebElement btnLoan = driver.findElement(By.id('btnCreationModal'))
 if (btnLoan != null) {
 	String disabledAttribute = btnLoan.getAttribute("disabled")
 	if (disabledAttribute != null && disabledAttribute.equals("true")) {
-		println("Loan is disabled.")
+		println("Loan is disabled.Please check the Customer")
+		WebUI.closeBrowser()
 	}
 	else{
 		println("Error: Loan button should be disabled!")
