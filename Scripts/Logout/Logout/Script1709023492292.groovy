@@ -17,8 +17,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-
-WebUI.click(findTestObject('Object Repository/Logout/h6_Teller'))
+WebUI.verifyElementPresent(findTestObject('Object Repository/Logout/img_(Open)_rounded-circle'), 20)
+WebUI.click(findTestObject('Object Repository/Logout/img_(Open)_rounded-circle'))
 
 WebUI.click(findTestObject('Object Repository/Logout/span_Logout'))
 
