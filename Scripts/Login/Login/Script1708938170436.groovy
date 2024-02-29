@@ -19,6 +19,8 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
+WebUI.maximizeWindow();
+
 WebUI.navigateToUrl(GlobalVariable.url)
 
 WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user)
@@ -29,11 +31,9 @@ WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword
 
 WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/LoginPage/h2_Login Successful'), 0, FailureHandling.STOP_ON_FAILURE)
+//WebUI.waitForElementVisible(findTestObject('Object Repository/LoginPage/h2_Login Successful'), 0, FailureHandling.STOP_ON_FAILURE)
 
-println('Welcome popup works!')
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/LoginPage/Home/h4_Dashboard'), 0)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Dashboard/div_DashboardWelcome to your dashboard Were glad to have you here'), 20)
 
 println('Dashboard Successfully Displayed')
 

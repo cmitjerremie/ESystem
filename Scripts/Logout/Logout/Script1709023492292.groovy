@@ -17,19 +17,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
-
-WebUI.maximizeWindow()
-
-WebUI.navigateToUrl(GlobalVariable.url)
-
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user2)
-
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), GlobalVariable.pass2)
-
-WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword'))
-
-WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
 
 WebUI.click(findTestObject('Object Repository/Logout/h6_Teller'))
 
