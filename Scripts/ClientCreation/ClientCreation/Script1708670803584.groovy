@@ -55,20 +55,6 @@ import org.openqa.selenium.chrome.ChromeOptions
 //// Set the driver to Katalon DriverFactory
 //DriverFactory.changeWebDriver(driver111)
 
-WebUI.openBrowser('')
-
-WebUI.maximizeWindow()
-
-WebUI.navigateToUrl(GlobalVariable.url)
-
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user2)
-
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), GlobalVariable.pass2)
-
-WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword'))
-
-WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
-
 WebUI.click(findTestObject('Object Repository/ClientApproval/i_Dashboard_ri-user-3-line'))
 
 WebUI.delay(1)
@@ -170,7 +156,9 @@ WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('Object Repository/ClientCreation/input_DOSRI_dosri'))
+//WebUI.click(findTestObject('Object Repository/ClientCreation/input_DOSRI_dosri'))
+WebElement dosri = driver.findElement(By.id("dosriNone"))
+((JavascriptExecutor) driver).executeScript("arguments[0].click();", dosri);
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_-- Select --CARD MRI MemberCARD MRI _8bd785'), 
     '1805', true)
@@ -330,10 +318,12 @@ executor.executeScript("arguments[0].click();", agree2);
 WebElement save = driver.findElement(By.id("next"));
 save.click()
 
+WebUI.delay(2)
 Actions actions3 = new Actions(driver)
-
 // Simulate pressing the Enter key using the Actions class
 actions3.sendKeys(Keys.ENTER).perform()
+
+WebUI.delay(3)
 
 
 

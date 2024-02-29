@@ -26,7 +26,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>&quot;</description>
-      <initValue>'#Password12345678'</initValue>
+      <initValue>'#Password123456'</initValue>
       <name>pass2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
