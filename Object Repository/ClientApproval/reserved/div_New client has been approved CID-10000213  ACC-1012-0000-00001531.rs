@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>h6_Teller</name>
+   <name>div_New client has been approved CID-10000213  ACC-1012-0000-00001531</name>
    <tag></tag>
-   <elementGuidId>1ae0bc37-8478-45f1-8bda-6e719a4b320f</elementGuidId>
+   <elementGuidId>46e4b80e-4b74-48ff-917b-ee51c92286fa</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//body[@id='body']/div/div/div/ul/li[6]/a/span[2]/h6</value>
+         <value>//div[@id='swal2-content']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>h6.my-0.fw-normal.role</value>
+         <value>#swal2-content</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,55 +21,55 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>h6</value>
-      <webElementGuid>16d4997b-63a1-4e07-8501-971c36b7b8e4</webElementGuid>
+      <value>div</value>
+      <webElementGuid>a81e7fd7-80f2-45c6-9d44-e5d0227a5d26</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
+      <name>id</name>
       <type>Main</type>
-      <value>my-0 fw-normal role</value>
-      <webElementGuid>19cc27d0-70a4-4207-af25-416029b47e69</webElementGuid>
+      <value>swal2-content</value>
+      <webElementGuid>4d6a5db8-746e-4445-a9fb-cb296fcf439e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Teller</value>
-      <webElementGuid>6c7e9bf4-d03b-4ebc-9be1-d7904d7394a4</webElementGuid>
+      <value>New client has been approved CID-10000213 / ACC-1012-0000-00001531</value>
+      <webElementGuid>3cc4f732-d10a-4acf-8e6c-aedef549ccdd</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;body&quot;)/div[@class=&quot;wrapper show&quot;]/div[@class=&quot;navbar-custom&quot;]/div[@class=&quot;topbar container-fluid&quot;]/ul[@class=&quot;topbar-menu d-flex align-items-center gap-2&quot;]/li[@class=&quot;dropdown&quot;]/a[@class=&quot;nav-link dropdown-toggle arrow-none nav-user px-2&quot;]/span[@class=&quot;d-lg-flex flex-column gap-1 d-none&quot;]/h6[@class=&quot;my-0 fw-normal role&quot;]</value>
-      <webElementGuid>4ac397a8-7b85-4f30-8d44-2dfee96bbce9</webElementGuid>
+      <value>id(&quot;swal2-content&quot;)</value>
+      <webElementGuid>8c003f14-7b9e-44d0-973b-f1d46f39ab7b</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
+      <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//body[@id='body']/div/div/div/ul/li[6]/a/span[2]/h6</value>
-      <webElementGuid>3d41be7c-6ac9-4b76-bcab-e0cdb06231cd</webElementGuid>
+      <value>//div[@id='swal2-content']</value>
+      <webElementGuid>4d3249fb-8e55-4127-b632-e3d223f3d27c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//span[2]/h6</value>
-      <webElementGuid>127225f5-b386-4fe0-99bb-cf0ae17c9319</webElementGuid>
+      <value>//div[4]/div/div[2]/div</value>
+      <webElementGuid>396d7de4-9031-4519-95ad-ae9cd5270034</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//h6[(text() = 'Teller' or . = 'Teller')]</value>
-      <webElementGuid>10c07119-1148-46df-b13e-95f0b464f9ba</webElementGuid>
+      <value>//div[@id = 'swal2-content' and (text() = 'New client has been approved CID-10000213 / ACC-1012-0000-00001531' or . = 'New client has been approved CID-10000213 / ACC-1012-0000-00001531')]</value>
+      <webElementGuid>7d10c815-c9ad-44df-9c0b-3f16c2a2a5ba</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

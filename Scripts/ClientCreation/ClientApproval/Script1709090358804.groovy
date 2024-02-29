@@ -40,19 +40,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.openqa.selenium.chrome.ChromeOptions
 
-WebUI.openBrowser('')
-
-WebUI.maximizeWindow()
-
-WebUI.navigateToUrl(GlobalVariable.url)
-
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user2)
-
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), GlobalVariable.pass2)
-
-WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword'))
-
-WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
 
 WebUI.click(findTestObject('Object Repository/ClientApproval/i_ri-user-3-line'))
 
@@ -91,6 +78,17 @@ if (tableContent.contains(expectedResult)) {
 	
 	WebUI.waitForElementVisible(findTestObject('Object Repository/ClientApproval/div_New client has been approved CID-100002_073c72'),
 	    0)
+	
+	String get_info = WebUI.getText(findTestObject('Object Repository/ClientApproval/div_New client has been approved CID-100002_073c72')) 
+	def matcher = (get_info =~ /CID-(\d+) \/ ACC-(\d+-\d+-\d+)/)
+	matcher.find()
+	String cid = matcher.group(1)
+	String acc = matcher.group(2)
+	
+	GlobalVariable.gen_cid = cid
+	GlobalVariable.gen_acc = acc
+	
+	println(GlobalVariable.app_name+ " CID: " + GlobalVariable.gen_cid + " ACC NO: " + GlobalVariable.gen_acc)
 	
 	WebUI.click(findTestObject('Object Repository/ClientApproval/button_OK'))
 } else {

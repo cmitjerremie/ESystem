@@ -31,6 +31,9 @@ import java.text.DecimalFormat;
 import com.kms.katalon.core.util.KeywordUtil
 
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.JavascriptExecutor;
+
+import org.openqa.selenium.interactions.Actions;
 
 WebUI.openBrowser('')
 
@@ -38,9 +41,9 @@ WebUI.maximizeWindow()
 
 WebUI.navigateToUrl(GlobalVariable.url)
 
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user)
+WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user2)
 
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), GlobalVariable.pass)
+WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), GlobalVariable.pass2)
 
 WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword'))
 
@@ -193,8 +196,12 @@ WebElement washing = driver.findElement(By.id('cbotenthQAnswer'))
 Select select10 = new Select(washing)
 select10.selectByValue('0')
 
+WebUI.delay(1)
+
 WebElement next2 = driver.findElement(By.id('next'))
-next2.click()
+JavascriptExecutor js = (JavascriptExecutor) driver;
+js.executeScript("arguments[0].scrollIntoView(false);", next2);
+next2.click();
 
 WebElement kyc = driver.findElement(By.id('txtRiskClassList'))
 kyc.click()
@@ -233,17 +240,14 @@ save.click()
 WebElement next3 = driver.findElement(By.id('next'))
 next3.click()
 
-
-WebElement next4 = driver.findElement(By.id('next'))
-next4.click()
-
-WebElement app = driver.findElement(By.id('1919'))
-app.click()
+WebElement approve = driver.findElement(By.id('1919'))
+approve.click()
 
 WebElement next5 = driver.findElement(By.id('next'))
 next5.click()
 
-//WebUI.closeBrowser()
+//WebElement proceed = driver.findElement(By.id('btnProceedLoan'))
+//proceed.click()
 
 
 

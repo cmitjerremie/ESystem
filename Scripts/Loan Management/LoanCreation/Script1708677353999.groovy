@@ -32,6 +32,8 @@ import com.kms.katalon.core.util.KeywordUtil
 
 import org.openqa.selenium.support.ui.Select;
 
+import org.openqa.selenium.JavascriptExecutor;
+
 
 WebUI.openBrowser('')
 
@@ -185,6 +187,8 @@ select9.selectByValue('11')
 WebElement washing = driver.findElement(By.id('cbotenthQAnswer'))
 Select select10 = new Select(washing)
 select10.selectByValue('0')
+
+((JavascriptExecutor) driver).executeScript("window.scrollBy(0, 500);");
 
 WebElement next2 = driver.findElement(By.id('next'))
 next2.click()

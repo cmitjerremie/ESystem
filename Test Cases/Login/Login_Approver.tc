@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>This is for the approval of client</description>
+   <name>Login_Approver</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>1b147963-ceb5-4d59-a283-b58847213970</testCaseGuid>
+</TestCaseEntity>

@@ -30,6 +30,16 @@
       <name>pass2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
+      <description>Bookkeeper</description>
+      <initValue>'zcresurrecion'</initValue>
+      <name>user3</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>&quot;</description>
+      <initValue>'#Password123456'</initValue>
+      <name>pass3</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
       <description>LoanManagement</description>
       <initValue>'10000202'</initValue>
       <name>cid</name>
@@ -46,17 +56,27 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Enter client name to be approved - This is for client approval</description>
-      <initValue>'abc'</initValue>
+      <initValue>'Ether Net'</initValue>
       <name>app_name</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>This is for the creation of client</description>
-      <initValue>'Mark'</initValue>
+      <initValue>'En'</initValue>
       <name>fname</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>&quot;</description>
-      <initValue>'Kus'</initValue>
+      <initValue>'Rille'</initValue>
       <name>lname</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Temp storage of approved customer cid </description>
+      <initValue>''</initValue>
+      <name>gen_cid</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Temp storage of approved customer acc num</description>
+      <initValue>''</initValue>
+      <name>gen_acc</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

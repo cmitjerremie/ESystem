@@ -17,15 +17,24 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.delay(2)
-WebUI.verifyElementPresent(findTestObject('Object Repository/Logout/span_(Open)_account-user-avatar'), 30)
-WebUI.click(findTestObject('Object Repository/Logout/span_(Open)_account-user-avatar'))
+WebUI.openBrowser('')
 
-WebUI.click(findTestObject('Object Repository/Logout/i_ChangePassword_mdi mdi-logout me-1'))
+WebUI.maximizeWindow();
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Logout/img'), 10)
+WebUI.navigateToUrl(GlobalVariable.url)
 
-println("Logout Successfull")
+WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user3)
 
-WebUI.closeBrowser()
+WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), GlobalVariable.pass3)
 
+WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword'))
+
+WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
+
+//WebUI.waitForElementVisible(findTestObject('Object Repository/LoginPage/h2_Login Successful'), 10, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Dashboard/div_DashboardWelcome to your dashboard Were glad to have you here'), 50)
+
+println('Dashboard Successfully Displayed')
+
+WebUI.delay(1)

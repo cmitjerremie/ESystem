@@ -59,15 +59,18 @@ import java.time.format.DateTimeFormatter
 //String test = WebUI.getText(findTestObject('Object Repository/Test only/div_Invalid CID Number'))
 //print(test)
 
-String TestCID = "CID-10000180 / ACC-1012-0000-00001192"
-def matcher = (TestCID =~ /^(.*?) \//)
+String TestCID = "New Client has been approved CID-10000180 / ACC-1012-0000-00001192"
+def matcher = (TestCID =~ /CID-(\d+) \/ ACC-(\d+-\d+-\d+)/)
 matcher.find()
 String cid = matcher.group(1)
-println(cid)
+String acc = matcher.group(2)
 
-println(GlobalVariable.cid)
-GlobalVariable.cid = cid
-println(GlobalVariable.cid)
+println(GlobalVariable.gen_cid)
+println(GlobalVariable.gen_acc)
+GlobalVariable.gen_cid = cid
+GlobalVariable.gen_acc = acc
+println(GlobalVariable.gen_cid)
+println(GlobalVariable.gen_acc)
 
 
 
