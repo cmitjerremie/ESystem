@@ -35,25 +35,6 @@ import org.openqa.selenium.JavascriptExecutor;
 
 import org.openqa.selenium.interactions.Actions;
 
-WebUI.openBrowser('')
-
-WebUI.maximizeWindow()
-
-WebUI.navigateToUrl(GlobalVariable.url)
-
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user2)
-
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), GlobalVariable.pass2)
-
-WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword'))
-
-WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
-
-//WebUI.waitForElementVisible(findTestObject('Object Repository/LoginPage/h2_Login Successful'), 0, FailureHandling.STOP_ON_FAILURE)
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/LoginPage/Home/h4_Dashboard'), 0)
-
-println('Dashboard Successfully Displayed')
 
 WebUI.delay(1)
 
@@ -115,12 +96,24 @@ WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanCreation/
 WebElement selected_remarks = driver.findElement(By.cssSelector("option[value='1880']"));
 selected_remarks.click()
 
-WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanType'), 'SIKAP 1', true)
-WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanCategory'), 'MANUFACTURING', true)
-WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanPurpose_cboLoanPurpose'), 'Manufacture of Food Products, Beverages, etc.', true)
-WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_BusinessType_cboBusinessType'), 'Candy Factory', true)
-WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Weekly', true)
-WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_Term_cboTerm'), '4', true)
+if(GlobalVariable.LoanType.equals('R'))
+{
+	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanType'), 'SIKAP 1', true)
+	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanCategory'), 'MANUFACTURING', true)
+	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanPurpose_cboLoanPurpose'), 'Manufacture of Food Products, Beverages, etc.', true)
+	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_BusinessType_cboBusinessType'), 'Candy Factory', true)
+	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Weekly', true)
+	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_Term_cboTerm'), '4', true)
+}
+else
+{
+	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanType'), 'AGRI LOAN', true)
+	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanCategory'), 'AGRICULTURE, FORESTRY AND FISHING', true)
+	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanPurpose_cboLoanPurpose'), 'Crop Production, Forestry and Logging', true)
+	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_BusinessType_cboBusinessType'), 'Corn Farming', true)
+	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Weekly', true)
+	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_Term_cboTerm'), '4', true)
+}
 
 WebUI.sendKeys(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/input_Amount_txtAmount'), GlobalVariable.loanAmount + Keys.chord(Keys.ENTER))
 
@@ -196,16 +189,21 @@ WebElement washing = driver.findElement(By.id('cbotenthQAnswer'))
 Select select10 = new Select(washing)
 select10.selectByValue('0')
 
+// Scroll to the bottom of the page using Actions class
+Actions actions = new Actions(driver)
+actions.keyDown(Keys.CONTROL).sendKeys(Keys.END).perform()
+
 WebUI.delay(1)
 
 WebElement next2 = driver.findElement(By.id('next'))
-JavascriptExecutor js = (JavascriptExecutor) driver;
-js.executeScript("arguments[0].scrollIntoView(false);", next2);
 next2.click();
 
 WebElement kyc = driver.findElement(By.id('txtRiskClassList'))
 kyc.click()
 
+actions.keyDown(Keys.CONTROL).sendKeys(Keys.HOME).perform()
+
+WebUI.delay(2)
 WebElement q1 = driver.findElement(By.id('cboRiskAnswerList'))
 Select ra1 = new Select(q1)
 ra1.selectByVisibleText("5");
@@ -246,8 +244,16 @@ approve.click()
 WebElement next5 = driver.findElement(By.id('next'))
 next5.click()
 
-//WebElement proceed = driver.findElement(By.id('btnProceedLoan'))
-//proceed.click()
+actions.keyDown(Keys.CONTROL).sendKeys(Keys.END).perform()
+
+WebUI.delay(1)
+
+WebElement proceed = driver.findElement(By.id('btnProceedLoan'))
+proceed.click()
+
+WebUI.delay(2)
+// Simulate pressing the Enter key using the Actions class
+actions.sendKeys(Keys.ENTER).perform()
 
 
 

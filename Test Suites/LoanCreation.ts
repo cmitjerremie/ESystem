@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
-   <description>Single Approval</description>
-   <name>ClientApproval</name>
+   <description>This is for specific client. &#xd;
+Please change the CID of global variable</description>
+   <name>LoanCreation</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,23 +11,23 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>true</rerunImmediately>
-   <testSuiteGuid>2ae65ff9-d68f-49ab-98db-f9d96b32075d</testSuiteGuid>
+   <testSuiteGuid>39dc3ded-0ec6-437f-be78-19197d884da3</testSuiteGuid>
    <testCaseLink>
-      <guid>05ba7a6c-1e37-4d84-99ab-2fc32919d783</guid>
+      <guid>a5bab9a1-65e5-4c64-b3bf-73d6f2e4efa6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Login/Login_Approver</testCaseId>
+      <testCaseId>Test Cases/Login/Login</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>9b208b21-bbf1-453a-b268-ded9b7d9bb83</guid>
+      <guid>fa171b74-c938-47f7-8eb9-cbb27f991bb7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/ClientCreation/ClientApproval</testCaseId>
+      <testCaseId>Test Cases/Loan Management/LoanCreationFullCycle</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>9373b45d-dc3b-47bb-848a-7a7dcf3c91aa</guid>
+      <guid>75acbc22-c86e-4c9a-aaa8-6dd9cf48df51</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Logout/Logout</testCaseId>

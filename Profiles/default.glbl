@@ -41,13 +41,18 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>LoanManagement</description>
-      <initValue>'10000202'</initValue>
+      <initValue>'10000220'</initValue>
       <name>cid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>for cashflow</description>
-      <initValue>5000</initValue>
+      <initValue>7700</initValue>
       <name>loanAmount</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>R - Regular, B - Business</description>
+      <initValue>'B'</initValue>
+      <name>LoanType</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>For LoanInfo ONLY, SET W - For Weekly, M - Monthly, S - Semi Monthly</description>
@@ -61,12 +66,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>This is for the creation of client</description>
-      <initValue>'En'</initValue>
+      <initValue>'Ben'</initValue>
       <name>fname</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>&quot;</description>
-      <initValue>'Rille'</initValue>
+      <initValue>'Thong'</initValue>
       <name>lname</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -78,5 +83,20 @@
       <description>Temp storage of approved customer acc num</description>
       <initValue>''</initValue>
       <name>gen_acc</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>This is for Capital Build Up</description>
+      <initValue>'10000181'</initValue>
+      <name>cbu_cid</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>&quot;</description>
+      <initValue>'200.35'</initValue>
+      <name>cbu_deposit</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>&quot;</description>
+      <initValue>'200'</initValue>
+      <name>cbu_withdraw</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

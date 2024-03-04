@@ -72,5 +72,14 @@ GlobalVariable.gen_acc = acc
 println(GlobalVariable.gen_cid)
 println(GlobalVariable.gen_acc)
 
+if(GlobalVariable.LoanType.equals('R'))
+{
+	println("R Works!!!")
+}
+else
+{
+	println("B Works!!!")
+}
+
 
 
