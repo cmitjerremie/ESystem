@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_SinglePayment</name>
+   <tag></tag>
+   <elementGuidId>b8cb5d74-8b19-4a21-b4ce-214b76769f44</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//a[@id='SinglePayment']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#SinglePayment</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>5ea968fe-45c7-4a0e-80f3-5e019f621e04</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>gb-hover-side confirmation-link</value>
+      <webElementGuid>3da848c3-48bd-4cbf-8e13-9a46c1c8acdd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>SinglePayment</value>
+      <webElementGuid>1faf5f62-1c78-4946-9638-8e9f88f6d426</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>SinglePayment</value>
+      <webElementGuid>237120ad-f66c-49a6-a590-f31e36c0d5e1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>onclick</name>
+      <type>Main</type>
+      <value>return loadIframe('ifrm1', this.href);</value>
+      <webElementGuid>a6714281-87bf-43d8-9a0d-322d39ab47c7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value> Single
+									Payment </value>
+      <webElementGuid>c22b3ead-5c92-47a4-9452-1925b1858f60</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;SinglePayment&quot;)</value>
+      <webElementGuid>52532526-2930-41aa-91a0-b14e207d5cf7</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//a[@id='SinglePayment']</value>
+      <webElementGuid>91e0dd5a-8f89-4717-bd32-f6010790ea29</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='sidebarPayment']/ul/li/a</value>
+      <webElementGuid>f1e34718-0260-4a0b-8dbb-230aa594c509</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Single
+									Payment')]</value>
+      <webElementGuid>24c700e9-7009-4a09-82c9-c099a19bdee1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'SinglePayment')]</value>
+      <webElementGuid>74383cb9-5361-4b4b-87d2-f648fbd95f0b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[3]/div/ul/li/a</value>
+      <webElementGuid>1eece8eb-3401-475f-ae39-7bb9ad026af4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'SinglePayment' and @id = 'SinglePayment' and (text() = ' Single
+									Payment ' or . = ' Single
+									Payment ')]</value>
+      <webElementGuid>efb72372-45de-4408-931d-770c09758606</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

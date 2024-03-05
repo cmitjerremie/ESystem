@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>td_1,405.00</name>
+   <tag></tag>
+   <elementGuidId>9af4d890-d0dd-4342-a4fb-983aa35da468</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//tbody[@id='SinglePaymentTbody']/tr/td[6]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>td.text-center.td-num.totalDue</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>td</value>
+      <webElementGuid>5aaebb32-0c0c-4847-8132-54e966d146a8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>text-center td-num totalDue</value>
+      <webElementGuid>d9a78ae4-7648-4019-90f4-374b2348c53a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>1,405.00</value>
+      <webElementGuid>cb6af9c6-e9fd-4cee-b590-9b420e000aa0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;SinglePaymentTbody&quot;)/tr[@class=&quot;odd&quot;]/td[@class=&quot;text-center td-num totalDue&quot;]</value>
+      <webElementGuid>7b82b5ee-cbc8-4808-b8b2-e132ee26acba</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//tbody[@id='SinglePaymentTbody']/tr/td[6]</value>
+      <webElementGuid>ff99f5a4-c6e0-482c-8353-b302dbe9bfd5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//td[6]</value>
+      <webElementGuid>9690a499-2326-43c4-b135-2dd3b187270e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//td[(text() = '1,405.00' or . = '1,405.00')]</value>
+      <webElementGuid>b1157ddc-3e48-4eed-829d-312cbc886d0a</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

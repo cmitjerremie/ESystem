@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_uil uil-file-edit-alt</name>
+   <tag></tag>
+   <elementGuidId>7a1d893b-73a1-4d88-b380-474d51899809</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//tbody[@id='SinglePaymentTbody']/tr/td[11]/a/span/i</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>i.uil.uil-file-edit-alt</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>cf292856-d3a6-48a3-92d0-feb5abb2f69d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>uil uil-file-edit-alt</value>
+      <webElementGuid>540815e3-4ee8-4001-b363-10d373177ae3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;SinglePaymentTbody&quot;)/tr[@class=&quot;odd&quot;]/td[@class=&quot;td-actions&quot;]/a[@class=&quot;action-icon btn&quot;]/span[@class=&quot;icon text-gray-700 ml-auto&quot;]/i[@class=&quot;uil uil-file-edit-alt&quot;]</value>
+      <webElementGuid>686dfeb8-ba36-4356-bfec-e078b8a522c0</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//tbody[@id='SinglePaymentTbody']/tr/td[11]/a/span/i</value>
+      <webElementGuid>8d7095a4-916c-4784-927d-199e49e54708</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a/span/i</value>
+      <webElementGuid>3058670a-bd18-429b-b8ba-60c367a8655b</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

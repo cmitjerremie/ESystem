@@ -31,20 +31,6 @@ import org.openqa.selenium.By
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-WebUI.openBrowser('')
-
-WebUI.maximizeWindow();
-
-WebUI.navigateToUrl(GlobalVariable.url)
-
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user2)
-
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), GlobalVariable.pass2)
-
-WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword'))
-
-WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
-
 WebUI.delay(1)
 
 WebUI.waitForElementClickable(findTestObject('Object Repository/CBU/i_uil-wallet'), 30)
@@ -233,6 +219,8 @@ WebUI.setText(findTestObject('Object Repository/CBU/input_Date End_dtMEnd'), for
 
 WebUI.sendKeys(findTestObject('Object Repository/CBU/input_Date End_dtMEnd'), Keys.ENTER.toString())
 
+WebUI.delay(1)
+
 TestObject tableObject = findTestObject('Object Repository/CBU/div_Transaction DateTRNTRN DescriptionUsern_71bb85')
 
 // Extract table contents
@@ -249,6 +237,8 @@ if (tableText.contains("No data available in table")) {
 WebUI.setText(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), GlobalVariable.cbu_deposit)
 WebUI.sendKeys(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), Keys.chord(Keys.ENTER))
 
+WebUI.delay(1)
+
 if (tableText.contains(GlobalVariable.cbu_deposit)) {
 	println("Transaction search success! - Deposit")
 } else {
@@ -259,6 +249,8 @@ if (tableText.contains(GlobalVariable.cbu_deposit)) {
 WebUI.setText(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), "")
 WebUI.setText(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), GlobalVariable.cbu_withdraw)
 WebUI.sendKeys(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), Keys.chord(Keys.ENTER))
+
+WebUI.delay(1)
 
 if (tableText.contains(GlobalVariable.cbu_withdraw)) {
 	println("Transaction search success! - Withdraw")
