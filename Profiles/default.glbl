@@ -96,7 +96,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>&quot;</description>
-      <initValue>'200'</initValue>
+      <initValue>'250'</initValue>
       <name>cbu_withdraw</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

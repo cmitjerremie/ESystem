@@ -14,6 +14,8 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import com.thoughtworks.selenium.webdriven.commands.GetAttribute
+
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
@@ -25,6 +27,9 @@ import java.text.DecimalFormat;
 
 import org.openqa.selenium.WebElement
 import org.openqa.selenium.By
+
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 WebUI.openBrowser('')
 
@@ -39,6 +44,10 @@ WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), Gl
 WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword'))
 
 WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
+
+WebUI.delay(1)
+
+WebUI.waitForElementClickable(findTestObject('Object Repository/CBU/i_uil-wallet'), 30)
 
 WebUI.delay(1)
 
@@ -109,6 +118,8 @@ WebUI.click(findTestObject('Object Repository/CBU/button_Post'))
 
 WebUI.click(findTestObject('Object Repository/CBU/button_Yes'))
 
+WebUI.waitForElementVisible(findTestObject('Object Repository/CBU/div_i  SuccessfulDeposit of Cash  has been _650bb7'), 10)
+
 WebUI.click(findTestObject('Object Repository/CBU/button_OK'))
 
 WebUI.click(findTestObject('Object Repository/CBU/button_OK'))
@@ -149,23 +160,111 @@ else
 WebUI.delay(1)
 
 //Test Withdraw
-//double w_beg_bal = pesoFormat.format(begBalance);
-//WebUI.click(findTestObject('Object Repository/CBU/span_Withdrawal'))
-//
-//WebUI.setText(findTestObject('Object Repository/CBU/inputtxtWithdrawAmount'), '500')
-//
-//WebUI.click(findTestObject('Object Repository/CBU/button_Cancel_1'))
-//
-//WebUI.setText(findTestObject('Object Repository/CBU/inputtxtWithdrawAmount'), '500')
-//
-//WebUI.click(findTestObject('Object Repository/CBU/button_Post_1'))
-//
-//WebUI.click(findTestObject('Object Repository/CBU/button_Cancel'))
-//
-//WebUI.click(findTestObject('Object Repository/CBU/button_Post_1'))
-//
-//WebUI.click(findTestObject('Object Repository/CBU/button_Yes'))
-//
-//WebUI.click(findTestObject('Object Repository/CBU/button_OK'))
+WebUI.click(findTestObject('Object Repository/CBU/span_Withdrawal'))
+
+String wExpected_beg_bal = formatted_new_beg;
+
+WebElement w_get_element = driver.findElement(By.id("txtDepositBengBal"))
+String wget_beg_bal = w_get_element.getAttribute("value").replace(",", "")
+
+Double parse_beg_bal = Double.parseDouble(wget_beg_bal)
+String formatted_wnew_beg = pesoFormat.format(parse_beg_bal);
+
+println(formatted_wnew_beg + " = " + wExpected_beg_bal)
+if(wExpected_beg_bal == formatted_wnew_beg)
+{
+	println("Beg Balance: " + formatted_wnew_beg + " Expected: " + wExpected_beg_bal)
+	println("Withdrawal Beginning Balance Correct!")
+}
+else
+{
+	println("Beg Balance: " + formatted_wnew_beg + " Expected: " + wExpected_beg_bal)
+	KeywordUtil.markFailed("ERROR: Incorrect Withdrawal Beginning Balance!");
+}
+
+WebUI.setText(findTestObject('Object Repository/CBU/inputtxtWithdrawAmount'), GlobalVariable.cbu_withdraw)
+
+//verify if ending amount is displayed correctly
+WebElement w_ending_dis = driver.findElement(By.id("txtWithdrawEndBal"))
+String get_ending = w_ending_dis.getAttribute('value').replace(",", "")
+Double parse_wEnding = Double.parseDouble(get_ending)
+double with_amount = Double.parseDouble(GlobalVariable.cbu_withdraw);
+
+Double w_expected_end = parse_beg_bal - with_amount;
+String formatted_expected = pesoFormat.format(w_expected_end);
+
+if(formatted_expected == w_ending_dis.getAttribute('value'))
+{
+	println("Withdrawal Ending Balance: " + w_ending_dis.getAttribute('value') + " Expected: " + formatted_expected)
+	println("Withdrawal Ending Balance display correct!")
+}
+else
+{
+	println("Withdrawal Ending Balance: " + w_ending_dis.getAttribute('value') + " Expected: " + formatted_expected)
+	KeywordUtil.markFailed("ERROR: Incorrect Withdrawal Ending Balance!");
+}
+
+WebElement wNew_begBal = driver.findElement(By.id('txtWithdrawBengBal'))
+
+WebUI.click(findTestObject('Object Repository/CBU/button_Cancel_1'))
+
+WebUI.click(findTestObject('Object Repository/CBU/button_Post_1'))
+
+WebUI.click(findTestObject('Object Repository/CBU/button_Yes'))
+
+WebUI.waitForElementVisible(findTestObject('Object Repository/CBU/div_i  SuccessfulWithdrawal of Cash has bee_9370dc'), 10)
+
+WebUI.click(findTestObject('Object Repository/CBU/button_OK'))
+
+WebUI.click(findTestObject('Object Repository/CBU/span_Transaction History'))
+
+// Get today's date
+LocalDate today = LocalDate.now()
+
+// Define the date format
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy")
+
+// Format today's date
+String formattedDate = today.format(formatter)
+
+// Enter the formatted date into the text fields
+WebUI.setText(findTestObject('Object Repository/CBU/input_Date Start_dtMStart'), formattedDate)
+WebUI.setText(findTestObject('Object Repository/CBU/input_Date End_dtMEnd'), formattedDate)
+
+WebUI.sendKeys(findTestObject('Object Repository/CBU/input_Date End_dtMEnd'), Keys.ENTER.toString())
+
+TestObject tableObject = findTestObject('Object Repository/CBU/div_Transaction DateTRNTRN DescriptionUsern_71bb85')
+
+// Extract table contents
+String tableText = WebUI.getText(tableObject)
+
+// Check if table has results
+if (tableText.contains("No data available in table")) {
+	println("Table has no results.")
+	KeywordUtil.markFailed("ERROR: Table has no results. Transactions should be displayed!");
+} else {
+	println("Table has results.")
+}
+
+WebUI.setText(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), GlobalVariable.cbu_deposit)
+WebUI.sendKeys(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), Keys.chord(Keys.ENTER))
+
+if (tableText.contains(GlobalVariable.cbu_deposit)) {
+	println("Transaction search success! - Deposit")
+} else {
+	println("Table has no results.")
+	KeywordUtil.markFailed("ERROR: Table has no results. Transactions should be displayed! - deposit search");
+}
+
+WebUI.setText(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), "")
+WebUI.setText(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), GlobalVariable.cbu_withdraw)
+WebUI.sendKeys(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), Keys.chord(Keys.ENTER))
+
+if (tableText.contains(GlobalVariable.cbu_withdraw)) {
+	println("Transaction search success! - Withdraw")
+} else {
+	println("Table has no results.")
+	KeywordUtil.markFailed("ERROR: Table has no results. Transactions should be displayed! - withdraw search");
+}
 
 
