@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SinglePayment_ForHeadlessOnly</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e6db182f-f91f-4eeb-b809-46fbe143f5ba</testCaseGuid>
+</TestCaseEntity>

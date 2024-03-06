@@ -22,7 +22,7 @@
       <guid>ab4ccf8c-cab9-48b5-97b5-51ba2def4d04</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Payment/SinglePayment</testCaseId>
+      <testCaseId>Test Cases/Payment/SinglePayment_NoHeadless</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

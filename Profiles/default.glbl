@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://10.9.2.15:8880/eSystemNextGenWebApp/pages/Login'</initValue>
+      <initValue>'http://10.9.2.15:8080/eSystemNextGenWeb/pages/Login'</initValue>
       <name>url</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -98,5 +98,10 @@
       <description>&quot;</description>
       <initValue>'250'</initValue>
       <name>cbu_withdraw</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Please input the cid for payment</description>
+      <initValue>'10000220'</initValue>
+      <name>payment_cid</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
