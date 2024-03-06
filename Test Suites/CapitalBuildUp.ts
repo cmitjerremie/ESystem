@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
-   <description>Test if user can deposit and withdraw correcty and verify if it reflects in history.</description>
+   <description>Test if user can deposit and withdraw correcty and verify if it reflects in the history.</description>
    <name>CapitalBuildUp</name>
    <tag></tag>
    <isRerun>false</isRerun>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
-   <description>Single Approval</description>
+   <description>Test if the user can approve pending client</description>
    <name>ClientApproval</name>
    <tag></tag>
    <isRerun>false</isRerun>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
-   <description>This will register the client (No Approval)&#xd;
-Single Registration</description>
+   <description>Test if the user can create client</description>
    <name>ClientCreation</name>
    <tag></tag>
    <isRerun>false</isRerun>

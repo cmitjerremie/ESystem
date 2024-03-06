@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
-   <description>This is for specific client. &#xd;
-Please change the CID of global variable</description>
+   <description>Test if the user can create loan</description>
    <name>LoanCreation</name>
    <tag></tag>
    <isRerun>false</isRerun>

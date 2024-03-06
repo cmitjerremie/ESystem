@@ -86,7 +86,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>This is for Capital Build Up</description>
-      <initValue>'10000181'</initValue>
+      <initValue>'10000180'</initValue>
       <name>cbu_cid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -101,7 +101,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Please input the cid for payment</description>
-      <initValue>'10000220'</initValue>
+      <initValue>'10000213'</initValue>
       <name>payment_cid</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
