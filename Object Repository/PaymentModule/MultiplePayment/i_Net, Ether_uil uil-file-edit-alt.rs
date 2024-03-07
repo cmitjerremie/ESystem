@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_Net, Ether_uil uil-file-edit-alt</name>
+   <tag></tag>
+   <elementGuidId>7707a37a-9eb9-4788-8337-ba6e69ede89d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//tbody[@id='tblBodyClientList']/tr[2]/td[13]/a/span/i</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>i.uil.uil-file-edit-alt</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>c241eea3-6a83-4bc8-b266-e6c4277d57d4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>uil uil-file-edit-alt</value>
+      <webElementGuid>355c9f60-3012-4089-a742-653f6057383a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;tblBodyClientList&quot;)/tr[2]/td[@class=&quot;td-actions&quot;]/a[@class=&quot;action-icon btn&quot;]/span[@class=&quot;icon text-gray-700 ml-auto&quot;]/i[@class=&quot;uil uil-file-edit-alt&quot;]</value>
+      <webElementGuid>084a2682-7a02-4a5a-86e5-494ed62ce469</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//tbody[@id='tblBodyClientList']/tr[2]/td[13]/a/span/i</value>
+      <webElementGuid>2e8f30d9-7b73-452c-969f-9dabac7ee211</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a/span/i</value>
+      <webElementGuid>4b5ab895-646b-43e4-b9c6-24ebb81261c1</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

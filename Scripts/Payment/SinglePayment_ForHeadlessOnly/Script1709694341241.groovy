@@ -34,9 +34,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.JavascriptExecutor;
 import java.text.DecimalFormat;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import org.openqa.selenium.chrome.ChromeOptions
+import org.openqa.selenium.interactions.Actions;
 
 // Set up Chrome options for headless mode and specify window size
 ChromeOptions options = new ChromeOptions()
@@ -153,3 +151,57 @@ WebUI.waitForElementVisible(findTestObject('Object Repository/PaymentModule/inpu
 
 WebUI.setText(findTestObject('Object Repository/PaymentModule/inputtxtPRno'), '123')
 
+WebUI.click(findTestObject('Object Repository/PaymentModule/button_OK'))
+
+WebUI.waitForElementVisible(findTestObject('Object Repository/PaymentModule/div_Single Payment was successfully Posted'), 10)
+
+String msg = WebUI.getText(findTestObject('Object Repository/PaymentModule/div_Single Payment was successfully Posted'))
+
+if(msg.equals("Single Payment was successfully Posted"))
+{
+	println("Single Payment was successfully Posted")
+}
+else
+{
+	println("ERROR: " + msg + " is incorrect!")
+	KeywordUtil.markFailed("ERROR: Error in posting payment please check!");
+	
+}
+WebUI.delay(2)
+
+Actions actions = new Actions(driver)
+actions.sendKeys(Keys.ENTER).perform()
+
+WebUI.delay(2)
+
+actions.sendKeys(Keys.ENTER).perform()
+
+WebUI.delay(2)
+
+String parentWindowHandle = driver.getWindowHandle()
+
+// Get all window handles
+Set<String> allWindowHandles = driver.getWindowHandles()
+
+// Iterate through all handles and close the newly opened tab
+for (String windowHandle : allWindowHandles) {
+	if (!windowHandle.equals(parentWindowHandle)) {
+		driver.switchTo().window(windowHandle)
+		driver.close()
+	}
+}
+
+// Switch back to the parent window
+driver.switchTo().window(parentWindowHandle)
+
+WebUI.delay(2)
+WebUI.verifyElementPresent(findTestObject('Object Repository/Logout/span_(Open)_account-user-avatar'), 30)
+WebUI.click(findTestObject('Object Repository/Logout/span_(Open)_account-user-avatar'))
+
+WebUI.click(findTestObject('Object Repository/Logout/i_ChangePassword_mdi mdi-logout me-1'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Logout/img'), 10)
+
+println("Logout Successfull")
+
+WebUI.closeBrowser()
