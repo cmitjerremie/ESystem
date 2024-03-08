@@ -61,12 +61,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>This is for the creation of client</description>
-      <initValue>'Bal'</initValue>
+      <initValue>'Wan'</initValue>
       <name>fname</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>&quot;</description>
-      <initValue>'Lot'</initValue>
+      <initValue>'Wan'</initValue>
       <name>lname</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

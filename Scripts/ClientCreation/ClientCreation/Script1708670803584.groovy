@@ -315,10 +315,20 @@ WebElement agree2 = driver.findElement(By.id("txtiAgreeCBU"));
 JavascriptExecutor executor = (JavascriptExecutor) driver;
 executor.executeScript("arguments[0].click();", agree2);
 
+WebUI.delay(1)
+
 WebElement save = driver.findElement(By.id("next"));
+
+Actions action1 = new Actions(driver);
+action1.moveToElement(save);
+action1.build().perform();
+
+WebUI.delay(1)
+
 save.click()
 
-WebUI.delay(2)
+WebUI.delay(1)
+
 Actions actions3 = new Actions(driver)
 // Simulate pressing the Enter key using the Actions class
 actions3.sendKeys(Keys.ENTER).perform()
