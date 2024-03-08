@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_SIKAP 1_mdi mdi-magnify</name>
+   <tag></tag>
+   <elementGuidId>a341e246-1b22-4c70-9b8b-db4f509e6ea7</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//tbody[@id='LoanApprovalTbody']/tr/td[10]/a/span/i</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>b373437d-861a-4e78-9444-90800fa23edb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value> mdi mdi-magnify</value>
+      <webElementGuid>43a3e160-b294-47dd-a017-29f06bf94c2b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;LoanApprovalTbody&quot;)/tr[@class=&quot;odd&quot;]/td[@class=&quot;td-actions&quot;]/a[@class=&quot;action-icon btn&quot;]/span[@class=&quot;icon text-gray-700 ml-auto&quot;]/i[@class=&quot;mdi mdi-magnify&quot;]</value>
+      <webElementGuid>e124768d-a97f-490a-97ac-170dd0f5804b</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//tbody[@id='LoanApprovalTbody']/tr/td[10]/a/span/i</value>
+      <webElementGuid>80c0097e-71fa-4150-9f13-5482931c2c9f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a/span/i</value>
+      <webElementGuid>787165b7-a7b6-44ae-b740-6b9fffef696f</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

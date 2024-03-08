@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>strong_Loan Information</name>
+   <tag></tag>
+   <elementGuidId>a37b8648-cb18-4688-838e-907c3b192be8</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//h4[@id='fullWidthModalLabel']/strong</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>strong</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>strong</value>
+      <webElementGuid>816ada4a-d2e5-42db-b632-a0d3c16dd994</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value> Loan Information</value>
+      <webElementGuid>0ab711ce-458f-4d4b-bdab-c4d4216cff31</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;fullWidthModalLabel&quot;)/strong[1]</value>
+      <webElementGuid>5a48f652-15b9-43e0-87f3-882339b463c7</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//h4[@id='fullWidthModalLabel']/strong</value>
+      <webElementGuid>895e6167-a9bd-47f5-a6a8-bcdfb94a8c9a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//strong</value>
+      <webElementGuid>c65fcb82-13dd-4973-8358-b0e744a30899</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//strong[(text() = ' Loan Information' or . = ' Loan Information')]</value>
+      <webElementGuid>e2f716f0-bcfb-4cbb-a0f8-3c0fb8ac456d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

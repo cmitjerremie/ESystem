@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_SIKAP 1_ri-close-circle-fill</name>
+   <tag></tag>
+   <elementGuidId>54363575-81f3-4cab-9653-d5e9a3330a33</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//tbody[@id='LoanApprovalTbody']/tr/td[10]/a[3]/span/i</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>i.ri-close-circle-fill</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>1361fe22-9614-42c8-beef-39a6a6f3da0e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>ri-close-circle-fill</value>
+      <webElementGuid>ecafe86c-6bd8-4222-b9d8-4d79f50d6f6c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;LoanApprovalTbody&quot;)/tr[@class=&quot;odd&quot;]/td[@class=&quot;td-actions&quot;]/a[@class=&quot;action-icon btn&quot;]/span[@class=&quot;icon text-gray-700 ml-auto&quot;]/i[@class=&quot;ri-close-circle-fill&quot;]</value>
+      <webElementGuid>4e8f5e7a-ddcb-45cd-b3b5-b3e12ee83578</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//tbody[@id='LoanApprovalTbody']/tr/td[10]/a[3]/span/i</value>
+      <webElementGuid>3ecfe6fd-2f79-4028-8e69-ee74b1bdbf11</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a[3]/span/i</value>
+      <webElementGuid>db8e22cd-31bd-4f3f-8cde-2ce14cc2d182</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

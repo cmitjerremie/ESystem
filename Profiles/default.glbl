@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://10.9.2.15:8080/eSystemNextGenWeb/pages/Login'</initValue>
+      <initValue>'http://10.9.2.27:8880/eSystemNextGenWebApp/pages/Login'</initValue>
       <name>url</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -41,17 +41,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>LoanManagement</description>
-      <initValue>'10000220'</initValue>
+      <initValue>'10000300'</initValue>
       <name>cid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>for cashflow</description>
-      <initValue>7700</initValue>
+      <initValue>5100</initValue>
       <name>loanAmount</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>R - Regular, B - Business</description>
-      <initValue>'B'</initValue>
+      <initValue>'R'</initValue>
       <name>LoanType</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -60,19 +60,19 @@
       <name>frequency</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Enter client name to be approved - This is for client approval</description>
-      <initValue>'Ether Net'</initValue>
-      <name>app_name</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
       <description>This is for the creation of client</description>
-      <initValue>'Ben'</initValue>
+      <initValue>'Bal'</initValue>
       <name>fname</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>&quot;</description>
-      <initValue>'Thong'</initValue>
+      <initValue>'Lot'</initValue>
       <name>lname</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Enter client name to be approved - This is for client approval</description>
+      <initValue>'Paki Tongkitong'</initValue>
+      <name>app_name</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Temp storage of approved customer cid </description>
@@ -86,7 +86,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>This is for Capital Build Up</description>
-      <initValue>'10000180'</initValue>
+      <initValue>'10000300'</initValue>
       <name>cbu_cid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
