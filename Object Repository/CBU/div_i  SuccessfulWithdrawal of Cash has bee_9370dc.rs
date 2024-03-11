@@ -6,12 +6,12 @@
    <elementGuidId>4cb5866d-d02e-42d4-8ac4-5b993c12a536</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>div.swal2-popup.swal2-modal.swal2-show</value>
+         <key>XPATH</key>
+         <value>//div[(text() = '?!i  Successful!×Withdrawal of Cash has been successfully posted.OKCancel' or . = '?!i  Successful!×Withdrawal of Cash has been successfully posted.OKCancel')]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//body[@id='body']/div[4]/div</value>
+         <key>CSS</key>
+         <value>div.swal2-popup.swal2-modal.swal2-show</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>52805acd-bd91-44b4-b780-a1b9c9a2e549</webElementGuid>
+      <webElementGuid>4c655b18-01bc-4ef7-b43a-905c3d202389</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -30,7 +30,7 @@
       <name>aria-labelledby</name>
       <type>Main</type>
       <value>swal2-title</value>
-      <webElementGuid>a37515ff-c877-4375-8172-16f229611d83</webElementGuid>
+      <webElementGuid>ab0bba41-8f0c-453e-a04d-8473a6bab92c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -38,7 +38,7 @@
       <name>aria-describedby</name>
       <type>Main</type>
       <value>swal2-content</value>
-      <webElementGuid>a758e85d-436d-41a7-8c82-9ec5949d5462</webElementGuid>
+      <webElementGuid>0ee709d9-07d2-486e-9505-5c860b07143f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -46,7 +46,7 @@
       <name>class</name>
       <type>Main</type>
       <value>swal2-popup swal2-modal swal2-show</value>
-      <webElementGuid>0ba1a8d3-621d-40cb-9efd-bf1902be30a1</webElementGuid>
+      <webElementGuid>47b62b07-3fef-41e0-8078-648df7b4ca37</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -54,7 +54,7 @@
       <name>tabindex</name>
       <type>Main</type>
       <value>-1</value>
-      <webElementGuid>4f1087a5-e05a-47ef-bc00-e02db4b6cb40</webElementGuid>
+      <webElementGuid>ba028e64-c896-4ebd-929e-5dffb2ef7ea5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -62,7 +62,7 @@
       <name>role</name>
       <type>Main</type>
       <value>dialog</value>
-      <webElementGuid>4c571a23-5821-4d28-98d4-28afc9d80bb5</webElementGuid>
+      <webElementGuid>cac1dd75-7a43-489d-a1a3-179b94f8a447</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -70,7 +70,7 @@
       <name>aria-live</name>
       <type>Main</type>
       <value>assertive</value>
-      <webElementGuid>f58bf79d-8ba3-48f7-94f5-a6e71c4106bb</webElementGuid>
+      <webElementGuid>2a7e9e4a-be06-458c-a56c-28043b5575ed</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -78,7 +78,7 @@
       <name>aria-modal</name>
       <type>Main</type>
       <value>true</value>
-      <webElementGuid>d9cddf21-f8c3-4a04-bef8-71d10e2021ce</webElementGuid>
+      <webElementGuid>317a7607-61c9-4638-9f5d-29577d08c9ef</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -86,7 +86,7 @@
       <name>text</name>
       <type>Main</type>
       <value>?!i  Successful!×Withdrawal of Cash has been successfully posted.OKCancel</value>
-      <webElementGuid>7827236b-07ab-4c8c-af52-1084492ba67e</webElementGuid>
+      <webElementGuid>b983d85a-ec1e-48fd-93c0-6efe045b0e25</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -94,7 +94,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;body&quot;)/div[@class=&quot;swal2-container swal2-center swal2-fade swal2-shown&quot;]/div[@class=&quot;swal2-popup swal2-modal swal2-show&quot;]</value>
-      <webElementGuid>32d395b0-6856-4faf-9db9-900f0f8763d5</webElementGuid>
+      <webElementGuid>6e2d8480-70d4-4029-890a-0dd644c9b6c9</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -102,7 +102,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//body[@id='body']/div[4]/div</value>
-      <webElementGuid>de18a59f-5052-4076-a0dd-c39e2c8561db</webElementGuid>
+      <webElementGuid>08a36953-d2d0-4d3f-bf24-81697c7ce00f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -110,7 +110,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[4]/div</value>
-      <webElementGuid>7c55ac8c-e319-4519-ab07-8e0557edadeb</webElementGuid>
+      <webElementGuid>c4b43023-a255-4f1d-a760-edfd6deaa5d5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -118,6 +118,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//div[(text() = '?!i  Successful!×Withdrawal of Cash has been successfully posted.OKCancel' or . = '?!i  Successful!×Withdrawal of Cash has been successfully posted.OKCancel')]</value>
-      <webElementGuid>dfd0494e-b748-41c1-9f6c-97446acf0a7d</webElementGuid>
+      <webElementGuid>0b938dee-6961-44d5-b0ed-1ddf55c9aecc</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

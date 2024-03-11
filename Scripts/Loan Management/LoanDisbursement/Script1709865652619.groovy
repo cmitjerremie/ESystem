@@ -44,7 +44,7 @@ WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanManagemen
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanApproval/a_LoanApproval'))
+WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/a_LoanDisbursement'))
 
 // Get the WebDriver instance
 def driver = DriverFactory.getWebDriver()
@@ -57,13 +57,13 @@ alert.accept()
 
 WebUI.delay(1)
 
-WebUI.setText(findTestObject('Object Repository/LoanManagementModule/LoanApproval/input_Search_form-control form-control-sm'), GlobalVariable.cid)
-WebUI.sendKeys(findTestObject('Object Repository/LoanManagementModule/LoanApproval/input_Search_form-control form-control-sm'), Keys.chord(Keys.ENTER))
+WebUI.setText(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/input_Search_form-control form-control-sm'), GlobalVariable.cid)
+WebUI.sendKeys(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/input_Search_form-control form-control-sm'), Keys.chord(Keys.ENTER))
 
-TestObject app_table = findTestObject('Object Repository/LoanManagementModule/LoanApproval/LoanApprovalTable')
+TestObject dis_table = findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/LoanDisbursementTable')
 
 // Extract the text content of the table
-String tableContent = WebUI.getText(app_table)
+String tableContent = WebUI.getText(dis_table)
 
 // Define the expected result
 String expectedResult = GlobalVariable.cid
@@ -73,30 +73,42 @@ if (tableContent.contains(expectedResult)) {
 	println(tableContent)
 	println("The table contains the expected result: ${expectedResult}")
 	
-	WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanApproval/i_SIKAP 1_mdi mdi-magnify'), 10)
-	WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanApproval/i_SIKAP 1_mdi mdi-magnify'))
+	WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/i_SIKAP 1_ri-checkbox-circle-fill'), 10)
+	WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/i_SIKAP 1_ri-checkbox-circle-fill'))
 	
-	WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanApproval/strong_Loan Information'), 10)
-	WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanApproval/button_Approve'))
+	WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/h4_Are yousure you want to disburse this loan'), 10)
+	WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/button_YES'))
 	
-	WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanApproval/h2_Are you sure you want to approve this loan'), 10)
-	
-	WebUI.waitForElementClickable(findTestObject('Object Repository/LoanManagementModule/LoanApproval/button_Cancel_approval'), 10)
-	WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanApproval/button_Cancel_approval'))
 	WebUI.delay(1)
 	
-	WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanApproval/button_Approve'), 10)
-	WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanApproval/button_Approve'))
+	WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/div_Loan has been Released'), 10)
+	WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/button_OK'))
 	
-	WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanApproval/h2_Are you sure you want to approve this loan'), 10)
-	
-	WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanApproval/button_Yes'), 10)
-	WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanApproval/button_Yes'))
 	WebUI.delay(1)
 	
-	WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanApproval/div_Loan has been approved'), 10)	
-	WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanApproval/button_OK'))
-	WebUI.delay(2)	
+	WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/h2_Amortization Generated'), 10)
+	WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/button_OK'))
+		
+	WebUI.delay(2)
+	
+	String parentWindowHandle = driver.getWindowHandle()
+	
+	// Get all window handles
+	Set<String> allWindowHandles = driver.getWindowHandles()
+	
+	// Iterate through all handles and close the newly opened tab
+	for (String windowHandle : allWindowHandles) {
+		if (!windowHandle.equals(parentWindowHandle)) {
+			driver.switchTo().window(windowHandle)
+			driver.close()
+		}
+	}
+	
+	// Switch back to the parent window
+	driver.switchTo().window(parentWindowHandle)
+	
+	WebUI.delay(1)
+	
 	
 } else {
 	println("The table does not contain the expected result: ${expectedResult}")

@@ -6,12 +6,12 @@
    <elementGuidId>500d5831-f23a-4ea0-9449-24e6ccd2818e</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//body[@id='body']/div/div[4]/div/div/div/div</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>div.card-header.card-header-success.card-header-icon</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//body[@id='body']/div/div[4]/div/div/div/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>22d00d96-90d3-4a43-9570-b8341f8ab6d0</webElementGuid>
+      <webElementGuid>a2426e05-7979-4b97-a69c-d395b6b12de3</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -30,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>card-header card-header-success card-header-icon</value>
-      <webElementGuid>9b606cc7-3b04-4f09-9f07-f8156f800db3</webElementGuid>
+      <webElementGuid>94c393bf-da14-43c4-a685-61ee218d5682</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -41,7 +41,7 @@
 							Dashboard
 							Welcome to your dashboard! We're glad to have you here.
 						</value>
-      <webElementGuid>3032ecab-d79f-4cf8-8497-4885a3114fc6</webElementGuid>
+      <webElementGuid>0805e3a3-0120-4b21-a099-34768b5480cc</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -49,7 +49,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;body&quot;)/div[@class=&quot;wrapper show&quot;]/div[@class=&quot;content-page&quot;]/div[@class=&quot;content&quot;]/div[@class=&quot;container-fluid&quot;]/div[@class=&quot;card shadow mb-4&quot;]/div[@class=&quot;card-header card-header-success card-header-icon&quot;]</value>
-      <webElementGuid>4edcc6ed-18e5-4fb9-abb8-cca087314ef1</webElementGuid>
+      <webElementGuid>291baf9a-aa07-4a15-9a08-58031c44285b</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -57,7 +57,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//body[@id='body']/div/div[4]/div/div/div/div</value>
-      <webElementGuid>8c90fcad-45f1-4c11-af24-03769c897715</webElementGuid>
+      <webElementGuid>080148d4-51a3-4a7a-b464-37831674f1b3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -65,7 +65,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[4]/div/div/div/div</value>
-      <webElementGuid>6ee6dcb3-1172-4747-9426-abc0009fca81</webElementGuid>
+      <webElementGuid>1b5d7b2a-75e1-4ab2-84c5-62fbccb54aa2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,6 +79,6 @@
 							Dashboard&#xd;
 							Welcome to your dashboard! We&quot; , &quot;'&quot; , &quot;re glad to have you here.&#xd;
 						&quot;))]</value>
-      <webElementGuid>3430bb6a-45bd-41ab-89a3-860dec150bc9</webElementGuid>
+      <webElementGuid>1bed417e-4ca3-4dfa-8667-cd56ad0d06d1</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

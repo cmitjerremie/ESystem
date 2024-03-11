@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Cancel</name>
+   <name>input_Search_form-control form-control-sm</name>
    <tag></tag>
-   <elementGuidId>6b6c3f3b-b83b-425a-bcbd-7aa60dcc06d8</elementGuidId>
+   <elementGuidId>0d9be8d1-ae7e-47af-827b-8e304fb9b279</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#Cancel</value>
+         <value>input.form-control.form-control-sm</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[@type = 'button' and @id = 'Cancel' and (text() = 'Cancel' or . = 'Cancel')]</value>
+         <value>(//input[@type='search'])[3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,87 +21,71 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>button</value>
-      <webElementGuid>47f1893f-ff1f-4a08-850c-9dcdb9e807be</webElementGuid>
+      <value>input</value>
+      <webElementGuid>3c0666ae-755f-4986-82ba-4e691ff3266e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
-      <value>button</value>
-      <webElementGuid>e580512c-19bf-45ac-baa3-873bb7a8200b</webElementGuid>
+      <value>search</value>
+      <webElementGuid>9e24033c-1ab1-4e4c-97f4-50b0da72701f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>btn keep-enabled btn-danger</value>
-      <webElementGuid>cda241cb-e650-453b-ad89-702148f8ce49</webElementGuid>
+      <value>form-control form-control-sm</value>
+      <webElementGuid>41624fb0-6217-4e15-b769-9295cf206999</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>data-bs-dismiss</name>
+      <name>aria-controls</name>
       <type>Main</type>
-      <value>modal</value>
-      <webElementGuid>0fc63dde-bfb9-4ae6-b216-6265a21ed1c9</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>id</name>
-      <type>Main</type>
-      <value>Cancel</value>
-      <webElementGuid>c39711a3-d419-4745-933f-ce4537916708</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>text</name>
-      <type>Main</type>
-      <value>Cancel</value>
-      <webElementGuid>cbfe1cf4-780b-4484-9e49-14f3440941ca</webElementGuid>
+      <value>LoanDisbursmentTable</value>
+      <webElementGuid>15bf847a-93b1-4646-80c9-b42858d2fb9b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;Cancel&quot;)</value>
-      <webElementGuid>acf8e633-eace-468f-86bb-8efb3b0e63fb</webElementGuid>
+      <value>id(&quot;LoanDisbursmentTable_filter&quot;)/label[1]/input[@class=&quot;form-control form-control-sm&quot;]</value>
+      <webElementGuid>b320b352-ab5c-4e1b-99a6-d333b79c2d26</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//button[@id='Cancel']</value>
-      <webElementGuid>297fbb9f-921f-41ac-9b6c-3ef0bc21b434</webElementGuid>
+      <value>(//input[@type='search'])[3]</value>
+      <webElementGuid>32d32f1c-9b75-4d44-925e-6ecd5c4cd436</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='btnApprove']/div/button</value>
-      <webElementGuid>ac4963e2-2a6c-45ce-a07c-bfa7ccadf80a</webElementGuid>
+      <value>//div[@id='LoanDisbursmentTable_filter']/label/input</value>
+      <webElementGuid>869df264-c1bb-4d23-9f5d-c509e690c91f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[8]/div/button</value>
-      <webElementGuid>9c3d5e99-b0fd-4048-817e-e843d0285892</webElementGuid>
+      <value>//label/input</value>
+      <webElementGuid>6fc18841-30c1-4a72-81b3-5423ba1bc651</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//button[@type = 'button' and @id = 'Cancel' and (text() = 'Cancel' or . = 'Cancel')]</value>
-      <webElementGuid>50a77ec2-dec4-45ec-a660-2364b2b6d44f</webElementGuid>
+      <value>//input[@type = 'search']</value>
+      <webElementGuid>189c1b81-2594-47e2-a277-a665cc1d83d6</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

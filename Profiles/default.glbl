@@ -41,7 +41,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>LoanManagement</description>
-      <initValue>'10000300'</initValue>
+      <initValue>'10000303'</initValue>
       <name>cid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -61,17 +61,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>This is for the creation of client</description>
-      <initValue>'Wan'</initValue>
+      <initValue>'Peter'</initValue>
       <name>fname</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>&quot;</description>
-      <initValue>'Wan'</initValue>
+      <initValue>'Parker'</initValue>
       <name>lname</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Enter client name to be approved - This is for client approval</description>
-      <initValue>'Paki Tongkitong'</initValue>
+      <initValue>'Peter Parker'</initValue>
       <name>app_name</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -86,7 +86,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>This is for Capital Build Up</description>
-      <initValue>'10000300'</initValue>
+      <initValue>'10000302'</initValue>
       <name>cbu_cid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -96,12 +96,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>&quot;</description>
-      <initValue>'250'</initValue>
+      <initValue>'100'</initValue>
       <name>cbu_withdraw</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Please input the cid for payment</description>
-      <initValue>'10000213'</initValue>
+      <initValue>'10000219'</initValue>
       <name>payment_cid</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

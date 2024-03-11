@@ -98,10 +98,6 @@ else
 
 WebUI.click(findTestObject('Object Repository/CBU/button_Post'))
 
-WebUI.click(findTestObject('Object Repository/CBU/button_Cancel'))
-
-WebUI.click(findTestObject('Object Repository/CBU/button_Post'))
-
 WebUI.click(findTestObject('Object Repository/CBU/button_Yes'))
 
 WebUI.waitForElementVisible(findTestObject('Object Repository/CBU/div_i  SuccessfulDeposit of Cash  has been _650bb7'), 10)
@@ -192,14 +188,24 @@ else
 
 WebElement wNew_begBal = driver.findElement(By.id('txtWithdrawBengBal'))
 
-WebUI.click(findTestObject('Object Repository/CBU/button_Cancel_1'))
-
 WebUI.click(findTestObject('Object Repository/CBU/button_Post_1'))
 
 WebUI.click(findTestObject('Object Repository/CBU/button_Yes'))
 
 WebUI.waitForElementVisible(findTestObject('Object Repository/CBU/div_i  SuccessfulWithdrawal of Cash has bee_9370dc'), 10)
 
+String new_beg_Wbalance = wNew_begBal.getAttribute('value')
+if(new_beg_Wbalance.equals(formatted_expected))
+{
+	println("Withdrawal new beggining balance is Successfully updated: " + new_beg_Wbalance)
+}
+else
+{
+	println("Error: Withdrawal new beggining was not changed: " + new_beg_Wbalance + "Expected: " + formatted_expected)
+	KeywordUtil.markFailed("Error: Withdrawal new beggining was not changed: " + new_beg_Wbalance + "Expected: " + formatted_expected)
+}
+
+WebUI.delay(1)
 WebUI.click(findTestObject('Object Repository/CBU/button_OK'))
 
 WebUI.click(findTestObject('Object Repository/CBU/span_Transaction History'))
@@ -242,7 +248,7 @@ WebUI.delay(1)
 if (tableText.contains(GlobalVariable.cbu_deposit)) {
 	println("Transaction search success! - Deposit")
 } else {
-	println("Table has no results.")
+	println("Table has no results. - Deposit")
 	KeywordUtil.markFailed("ERROR: Table has no results. Transactions should be displayed! - deposit search");
 }
 
@@ -250,13 +256,17 @@ WebUI.setText(findTestObject('Object Repository/CBU/input_Search_form-control fo
 WebUI.setText(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), GlobalVariable.cbu_withdraw)
 WebUI.sendKeys(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), Keys.chord(Keys.ENTER))
 
+String tableText2 = WebUI.getText(tableObject)
+
 WebUI.delay(1)
 
-if (tableText.contains(GlobalVariable.cbu_withdraw)) {
+if (tableText2.contains(GlobalVariable.cbu_withdraw)) {
 	println("Transaction search success! - Withdraw")
 } else {
-	println("Table has no results.")
+	println("Table has no results.- Withdraw")
 	KeywordUtil.markFailed("ERROR: Table has no results. Transactions should be displayed! - withdraw search");
 }
+
+WebUI.delay(2)
 
 

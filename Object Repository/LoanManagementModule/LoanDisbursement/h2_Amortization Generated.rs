@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_Loan has been approved</name>
+   <name>h2_Amortization Generated</name>
    <tag></tag>
-   <elementGuidId>c5ba0452-3406-4984-93e5-dfd0d49887fd</elementGuidId>
+   <elementGuidId>ab595bc6-847b-4d3f-ab2f-94c3b33c5d32</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#swal2-content</value>
+         <value>#swal2-title</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id = 'swal2-content' and (text() = 'Loan has been approved' or . = 'Loan has been approved')]</value>
+         <value>//h2[@id='swal2-title']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,55 +21,63 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
-      <webElementGuid>160feba2-81f2-42fd-9459-d2f03a2ccd6a</webElementGuid>
+      <value>h2</value>
+      <webElementGuid>e444b112-044d-4afd-8773-c35727a1a095</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>swal2-title</value>
+      <webElementGuid>6072409f-d606-48ac-a5e5-e266562585a4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>swal2-content</value>
-      <webElementGuid>025ceccf-94df-43d0-9a1e-ee42dc10c1a1</webElementGuid>
+      <value>swal2-title</value>
+      <webElementGuid>e94eb123-f3be-43b3-933c-2605dd8f3e14</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Loan has been approved</value>
-      <webElementGuid>6755aba4-309d-4f2c-a7d8-d331c1ac22af</webElementGuid>
+      <value>Amortization Generated</value>
+      <webElementGuid>555da4f0-4177-4d9e-968d-5d8e99a987c7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;swal2-content&quot;)</value>
-      <webElementGuid>84502cf9-b191-4fea-9618-ada41f6bc837</webElementGuid>
+      <value>id(&quot;swal2-title&quot;)</value>
+      <webElementGuid>ade3c4f8-72f4-4628-a413-9358311b4428</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//div[@id='swal2-content']</value>
-      <webElementGuid>6f30fa74-ddb9-416a-abd4-0bd1c7b30227</webElementGuid>
+      <value>//h2[@id='swal2-title']</value>
+      <webElementGuid>d8b8b112-6a9a-4aae-9a9a-06e24188462e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[8]/div/div[2]/div</value>
-      <webElementGuid>c9dd29c3-dd50-4064-b1b7-c0604f2a4d78</webElementGuid>
+      <value>//h2</value>
+      <webElementGuid>59aec2c8-7275-4b38-b255-6de6a04ae5e3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//div[@id = 'swal2-content' and (text() = 'Loan has been approved' or . = 'Loan has been approved')]</value>
-      <webElementGuid>d58ec641-b172-4b30-ab6a-8e13877aa145</webElementGuid>
+      <value>//h2[@id = 'swal2-title' and (text() = 'Amortization Generated' or . = 'Amortization Generated')]</value>
+      <webElementGuid>bb834259-d97f-4796-b2ca-cb3be978ee87</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Cancel</name>
+   <name>button_YES</name>
    <tag></tag>
-   <elementGuidId>6b6c3f3b-b83b-425a-bcbd-7aa60dcc06d8</elementGuidId>
+   <elementGuidId>b075b120-42d2-4730-8f9d-0d85583a6038</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#Cancel</value>
+         <value>div.col-6 > button.btn.btn-success</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[@type = 'button' and @id = 'Cancel' and (text() = 'Cancel' or . = 'Cancel')]</value>
+         <value>//button[@id='']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>47f1893f-ff1f-4a08-850c-9dcdb9e807be</webElementGuid>
+      <webElementGuid>6cb17ca1-d217-4c25-b7f5-41f5858b2e2c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -30,78 +30,70 @@
       <name>type</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>e580512c-19bf-45ac-baa3-873bb7a8200b</webElementGuid>
+      <webElementGuid>5c17b54b-e381-4db9-bc90-2cae51ffd8a6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>btn keep-enabled btn-danger</value>
-      <webElementGuid>cda241cb-e650-453b-ad89-702148f8ce49</webElementGuid>
+      <value>btn btn-success</value>
+      <webElementGuid>3a1031a6-7ef8-45dc-9b81-c3d8e58a32ab</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>data-bs-dismiss</name>
+      <name>onclick</name>
       <type>Main</type>
-      <value>modal</value>
-      <webElementGuid>0fc63dde-bfb9-4ae6-b216-6265a21ed1c9</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>id</name>
-      <type>Main</type>
-      <value>Cancel</value>
-      <webElementGuid>c39711a3-d419-4745-933f-ce4537916708</webElementGuid>
+      <value>getReleaseLoan()</value>
+      <webElementGuid>9a4d1cdb-2c89-4550-a32b-691f28c9aaac</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Cancel</value>
-      <webElementGuid>cbfe1cf4-780b-4484-9e49-14f3440941ca</webElementGuid>
+      <value>YES</value>
+      <webElementGuid>7132bebe-f26b-4c40-ab18-d9f39e08e0bb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;Cancel&quot;)</value>
-      <webElementGuid>acf8e633-eace-468f-86bb-8efb3b0e63fb</webElementGuid>
+      <value>id(&quot;Approvemodal&quot;)/div[@class=&quot;modal-dialog modal-dialog-centered&quot;]/div[@class=&quot;modal-content&quot;]/div[@class=&quot;modal-body&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-6&quot;]/button[@class=&quot;btn btn-success&quot;]</value>
+      <webElementGuid>074f4c67-c153-4632-9591-f7e9b573e558</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//button[@id='Cancel']</value>
-      <webElementGuid>297fbb9f-921f-41ac-9b6c-3ef0bc21b434</webElementGuid>
+      <value>//button[@id='']</value>
+      <webElementGuid>6c61c375-020f-4072-bb2a-f6da8beed3ca</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='btnApprove']/div/button</value>
-      <webElementGuid>ac4963e2-2a6c-45ce-a07c-bfa7ccadf80a</webElementGuid>
+      <value>//div[@id='Approvemodal']/div/div/div[2]/div[2]/div/button</value>
+      <webElementGuid>e4e8ff4d-4deb-454e-9824-0978746bdf2c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[8]/div/button</value>
-      <webElementGuid>9c3d5e99-b0fd-4048-817e-e843d0285892</webElementGuid>
+      <value>//div[2]/div/button</value>
+      <webElementGuid>ae2e37cf-8689-42aa-a541-73f8e235abca</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//button[@type = 'button' and @id = 'Cancel' and (text() = 'Cancel' or . = 'Cancel')]</value>
-      <webElementGuid>50a77ec2-dec4-45ec-a660-2364b2b6d44f</webElementGuid>
+      <value>//button[@type = 'button' and (text() = 'YES' or . = 'YES')]</value>
+      <webElementGuid>d57a311f-894e-4aaa-a353-bb866b7f059f</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

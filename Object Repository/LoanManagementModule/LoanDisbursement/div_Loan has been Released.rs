@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_Logout</name>
+   <name>div_Loan has been Released</name>
    <tag></tag>
-   <elementGuidId>ff2b87fe-25e6-46e6-a812-6691af4bd65f</elementGuidId>
+   <elementGuidId>e6a4662d-069d-46f1-a4a0-d33d8b8af7eb</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
+         <value>#swal2-content</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//li[6]/div/a[2]/span</value>
+         <value>//div[@id='swal2-content']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -20,47 +21,55 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>span</value>
-      <webElementGuid>1cbe9a4a-a4e8-484a-bf1d-b81cd1fc45a5</webElementGuid>
+      <value>div</value>
+      <webElementGuid>21a2753a-cb6f-40bb-9b37-c14f20edb887</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>swal2-content</value>
+      <webElementGuid>3e83a67e-e1d8-409d-abd3-a461e21d3127</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Logout</value>
-      <webElementGuid>ec42b5b4-dd5b-4a28-a790-bc554a0b51d6</webElementGuid>
+      <value>Loan has been Released</value>
+      <webElementGuid>b829c123-8fdc-4fda-9b36-2306aa8aec9e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;body&quot;)/div[@class=&quot;wrapper show&quot;]/div[@class=&quot;navbar-custom&quot;]/div[@class=&quot;topbar container-fluid&quot;]/ul[@class=&quot;topbar-menu d-flex align-items-center gap-2&quot;]/li[@class=&quot;dropdown&quot;]/div[@class=&quot;dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown show&quot;]/a[@class=&quot;dropdown-item&quot;]/span[1]</value>
-      <webElementGuid>b8a17439-6f93-4939-8a33-a3db0d7a678b</webElementGuid>
+      <value>id(&quot;swal2-content&quot;)</value>
+      <webElementGuid>c7d11df6-9f9b-411c-9e52-23e50f70896f</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
+      <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//body[@id='body']/div/div/div/ul/li[6]/div/a[2]/span</value>
-      <webElementGuid>57e34bad-6563-4c2c-b9f2-b53dfb7beaef</webElementGuid>
+      <value>//div[@id='swal2-content']</value>
+      <webElementGuid>73e7d0b6-5c1e-4a43-be52-b06e98443739</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//li[6]/div/a[2]/span</value>
-      <webElementGuid>d65ea63f-5992-4182-ba3d-298427ea2747</webElementGuid>
+      <value>//div[6]/div/div[2]/div</value>
+      <webElementGuid>d4473d30-bcdb-41b5-800b-34ba9f88b121</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//span[(text() = 'Logout' or . = 'Logout')]</value>
-      <webElementGuid>084e2b42-3962-400a-a8e4-8007a656771e</webElementGuid>
+      <value>//div[@id = 'swal2-content' and (text() = 'Loan has been Released' or . = 'Loan has been Released')]</value>
+      <webElementGuid>2d2f1802-b82c-4fd9-a24a-658fd8ccd42b</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

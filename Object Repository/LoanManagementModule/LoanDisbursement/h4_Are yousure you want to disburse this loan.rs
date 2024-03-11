@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Cancel</name>
+   <name>h4_Are yousure you want to disburse this loan</name>
    <tag></tag>
-   <elementGuidId>6b6c3f3b-b83b-425a-bcbd-7aa60dcc06d8</elementGuidId>
+   <elementGuidId>f47eee77-6e4c-4227-8936-04216dd4f78c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#Cancel</value>
+         <value>#myCenterModalLabel</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[@type = 'button' and @id = 'Cancel' and (text() = 'Cancel' or . = 'Cancel')]</value>
+         <value>//div[2]/div/div/div/h4</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,87 +21,74 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>button</value>
-      <webElementGuid>47f1893f-ff1f-4a08-850c-9dcdb9e807be</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>type</name>
-      <type>Main</type>
-      <value>button</value>
-      <webElementGuid>e580512c-19bf-45ac-baa3-873bb7a8200b</webElementGuid>
+      <value>h4</value>
+      <webElementGuid>5d44b4f6-9a61-44dd-856a-03ec9db36c63</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>btn keep-enabled btn-danger</value>
-      <webElementGuid>cda241cb-e650-453b-ad89-702148f8ce49</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>data-bs-dismiss</name>
-      <type>Main</type>
-      <value>modal</value>
-      <webElementGuid>0fc63dde-bfb9-4ae6-b216-6265a21ed1c9</webElementGuid>
+      <value>modal-title text-center</value>
+      <webElementGuid>e4cee86b-32b0-472c-b881-47e1c2ffd771</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>Cancel</value>
-      <webElementGuid>c39711a3-d419-4745-933f-ce4537916708</webElementGuid>
+      <value>myCenterModalLabel</value>
+      <webElementGuid>0f94d6fd-b2f1-45b0-ba5b-2e68d6ba129f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Cancel</value>
-      <webElementGuid>cbfe1cf4-780b-4484-9e49-14f3440941ca</webElementGuid>
+      <value>Are you
+						sure you want to disburse this loan?</value>
+      <webElementGuid>e9408b35-b570-4af5-bc86-fcc7c0c4e6b2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;Cancel&quot;)</value>
-      <webElementGuid>acf8e633-eace-468f-86bb-8efb3b0e63fb</webElementGuid>
+      <value>id(&quot;Approvemodal&quot;)/div[@class=&quot;modal-dialog modal-dialog-centered&quot;]/div[@class=&quot;modal-content&quot;]/div[@class=&quot;modal-header&quot;]/h4[@id=&quot;myCenterModalLabel&quot;]</value>
+      <webElementGuid>28ebae25-e481-469a-8d9d-5c6083cc9103</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//button[@id='Cancel']</value>
-      <webElementGuid>297fbb9f-921f-41ac-9b6c-3ef0bc21b434</webElementGuid>
+      <value>//h4[@id='myCenterModalLabel']</value>
+      <webElementGuid>70611fd9-17e2-40d4-b577-d8e86a99a220</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='btnApprove']/div/button</value>
-      <webElementGuid>ac4963e2-2a6c-45ce-a07c-bfa7ccadf80a</webElementGuid>
+      <value>//div[@id='Approvemodal']/div/div/div/h4</value>
+      <webElementGuid>dda62e40-a8a5-4f83-b260-565b06135753</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[8]/div/button</value>
-      <webElementGuid>9c3d5e99-b0fd-4048-817e-e843d0285892</webElementGuid>
+      <value>//div[2]/div/div/div/h4</value>
+      <webElementGuid>76160706-d042-461e-ac8c-40af95e0fb5f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//button[@type = 'button' and @id = 'Cancel' and (text() = 'Cancel' or . = 'Cancel')]</value>
-      <webElementGuid>50a77ec2-dec4-45ec-a660-2364b2b6d44f</webElementGuid>
+      <value>//h4[@id = 'myCenterModalLabel' and (text() = 'Are you&#xd;
+						sure you want to disburse this loan?' or . = 'Are you&#xd;
+						sure you want to disburse this loan?')]</value>
+      <webElementGuid>8b702d90-f1b6-4f63-9c97-d6525617aa4b</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

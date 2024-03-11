@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_Loan has been approved</name>
+   <name>h2_Are you sure you want to approve this loan</name>
    <tag></tag>
-   <elementGuidId>c5ba0452-3406-4984-93e5-dfd0d49887fd</elementGuidId>
+   <elementGuidId>6f2d8e14-8436-4f13-90a1-ac0aeea92fc5</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#swal2-content</value>
+         <value>#swal2-title</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id = 'swal2-content' and (text() = 'Loan has been approved' or . = 'Loan has been approved')]</value>
+         <value>//h2[@id = 'swal2-title' and (text() = 'Are you sure you want to approve this loan?' or . = 'Are you sure you want to approve this loan?')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -21,55 +21,63 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
-      <webElementGuid>160feba2-81f2-42fd-9459-d2f03a2ccd6a</webElementGuid>
+      <value>h2</value>
+      <webElementGuid>317445fd-6524-4861-8d99-6f60723d94b8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>swal2-title</value>
+      <webElementGuid>555fbb93-3129-48eb-af1e-7c5a9557c0e7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>swal2-content</value>
-      <webElementGuid>025ceccf-94df-43d0-9a1e-ee42dc10c1a1</webElementGuid>
+      <value>swal2-title</value>
+      <webElementGuid>c10d5f65-8390-4a38-966c-ddbab3cd5a1e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Loan has been approved</value>
-      <webElementGuid>6755aba4-309d-4f2c-a7d8-d331c1ac22af</webElementGuid>
+      <value>Are you sure you want to approve this loan?</value>
+      <webElementGuid>ef74194b-aaed-4042-b4f3-73590c4c80ec</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;swal2-content&quot;)</value>
-      <webElementGuid>84502cf9-b191-4fea-9618-ada41f6bc837</webElementGuid>
+      <value>id(&quot;swal2-title&quot;)</value>
+      <webElementGuid>309e046d-c048-4034-aae6-7a89db2cb403</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//div[@id='swal2-content']</value>
-      <webElementGuid>6f30fa74-ddb9-416a-abd4-0bd1c7b30227</webElementGuid>
+      <value>//h2[@id='swal2-title']</value>
+      <webElementGuid>bc7fe406-3778-4f23-a708-b57e5bd9b138</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[8]/div/div[2]/div</value>
-      <webElementGuid>c9dd29c3-dd50-4064-b1b7-c0604f2a4d78</webElementGuid>
+      <value>//h2</value>
+      <webElementGuid>efe1c2f1-fc2f-46c3-b707-74be5ce4e781</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//div[@id = 'swal2-content' and (text() = 'Loan has been approved' or . = 'Loan has been approved')]</value>
-      <webElementGuid>d58ec641-b172-4b30-ab6a-8e13877aa145</webElementGuid>
+      <value>//h2[@id = 'swal2-title' and (text() = 'Are you sure you want to approve this loan?' or . = 'Are you sure you want to approve this loan?')]</value>
+      <webElementGuid>aae3fb3f-2309-48bd-9d41-fb749d9662b6</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
