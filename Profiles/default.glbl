@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://10.9.2.27:8880/eSystemNextGenWebApp/pages/Login'</initValue>
+      <initValue>'http://10.9.2.15:8080/eSystemNextGenWeb/pages/Login'</initValue>
       <name>url</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -103,5 +103,10 @@
       <description>Please input the cid for payment</description>
       <initValue>'10000219'</initValue>
       <name>payment_cid</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>This is for ammendment of client</description>
+      <initValue>'10000300'</initValue>
+      <name>cid_ammend</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
