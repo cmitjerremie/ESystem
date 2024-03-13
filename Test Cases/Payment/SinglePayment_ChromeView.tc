@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Test if the user can pay the current loan term.</description>
-   <name>SinglePayment_NoHeadless</name>
+   <name>SinglePayment_ChromeView</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>279b00bb-a171-49d3-84ff-80618c723c8b</testCaseGuid>

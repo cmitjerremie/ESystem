@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_Active_mdi mdi-pencil-outline</name>
+   <tag></tag>
+   <elementGuidId>1e694bb8-a3ed-41a7-b447-e58d5032aa2d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>i.mdi.mdi-pencil-outline</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//a[@id='80edit']/i</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:attr=[title=&quot;User Details&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>1611894f-e4d5-4063-9838-b3e44d085f07</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>mdi mdi-pencil-outline</value>
+      <webElementGuid>576a2b30-2b6d-4673-83db-363b4507a7ce</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;tblUsersBody&quot;)/tr[@class=&quot;odd&quot;]/td[@class=&quot;td-actions&quot;]/a[@id=&quot;80edit&quot;]/i[@class=&quot;mdi mdi-pencil-outline&quot;]</value>
+      <webElementGuid>aa46d708-7aac-492d-a2fe-8c4895162e40</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//a[@id='80edit']/i</value>
+      <webElementGuid>07ea95bc-03ca-41bd-b03a-d55a47cecb67</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//td[10]/a/i</value>
+      <webElementGuid>9756cc35-02dd-406e-bdf4-410e2d87bb7f</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

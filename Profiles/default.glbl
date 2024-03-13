@@ -61,12 +61,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>This is for the creation of client</description>
-      <initValue>'Peter'</initValue>
+      <initValue>'Sent'</initValue>
       <name>fname</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>&quot;</description>
-      <initValue>'Parker'</initValue>
+      <initValue>'Petir'</initValue>
       <name>lname</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -101,7 +101,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Please input the cid for payment</description>
-      <initValue>'10000219'</initValue>
+      <initValue>'10000302'</initValue>
       <name>payment_cid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
