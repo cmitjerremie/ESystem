@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>h4_Please Enterthe PR Number</name>
+   <tag></tag>
+   <elementGuidId>1d93d43c-6b86-4fb6-9013-36637039e32c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#myCenterModalLabel</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//h4[@id='myCenterModalLabel']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=heading[name=&quot;Please Enter the PR Number.&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>h4</value>
+      <webElementGuid>285056c0-86a1-4e9b-a3b8-449dc443da88</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>modal-title</value>
+      <webElementGuid>437885ab-b0bf-4b47-bd1d-afb933c1e6bd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>myCenterModalLabel</value>
+      <webElementGuid>3ed3a39c-72e2-4f3f-9971-056f1a1d6287</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Please Enter
+						the PR Number.</value>
+      <webElementGuid>c7bdaf22-31c6-4055-bc96-6b0146205121</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;myCenterModalLabel&quot;)</value>
+      <webElementGuid>b204c9c5-0340-4778-b80e-1268061d43b9</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//h4[@id='myCenterModalLabel']</value>
+      <webElementGuid>9875065b-3c37-4eb2-8cbd-49d22a2239d7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='PRNOmodal']/div/div/div/h4</value>
+      <webElementGuid>a5111b0b-fc01-4363-81e9-a987bf35bdf8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Post'])[1]/following::h4[1]</value>
+      <webElementGuid>5b5c727b-5a56-4c9d-9625-f9f339433e02</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Validation:'])[1]/following::h4[1]</value>
+      <webElementGuid>465fae78-86bb-4030-89f0-0270f1fb0e45</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='OK'])[1]/preceding::h4[1]</value>
+      <webElementGuid>958b4849-5a82-4425-ae4d-b4449d0b550c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Payment Details'])[1]/preceding::h4[1]</value>
+      <webElementGuid>d23af0f5-1fba-48e9-83d2-4ad216c51b2f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div/h4</value>
+      <webElementGuid>a7630388-7e2c-473f-b1db-81e3811344fb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//h4[@id = 'myCenterModalLabel' and (text() = 'Please Enter
+						the PR Number.' or . = 'Please Enter
+						the PR Number.')]</value>
+      <webElementGuid>487c9e13-b3ef-490b-a229-3b914c371e29</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

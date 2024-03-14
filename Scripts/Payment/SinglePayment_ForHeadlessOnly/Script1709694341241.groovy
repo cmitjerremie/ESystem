@@ -113,34 +113,50 @@ else
 	KeywordUtil.markFailed("ERROR: Incorrect Display, please check the Due, Collection, and validation");
 }
 
+interest = WebUI.getText(findTestObject('Object Repository/PaymentModule/td_0.00'))
 WebUI.click(findTestObject('Object Repository/PaymentModule/i_uil uil-file-edit-alt'))
 
-//String mba = WebUI.getText(findTestObject('Object Repository/PaymentModule/ForValidation/input_MBA PREMIUM_inputField_1'))
-//String due = WebUI.getText(findTestObject('Object Repository/PaymentModule/ForValidation/input_AGRI LOAN_inputField_2'))
-//String cbu = WebUI.getText(findTestObject('Object Repository/PaymentModule/ForValidation/input_Capital-Build Up_inputField_3'))
-//String ttl = WebUI.getText(findTestObject('Object Repository/PaymentModule/ForValidation/input_Total_txtTotalSingleDetails'))
-
-String mba = driver.findElement(By.id('inputField_1')).getAttribute('value')
-String due = driver.findElement(By.id('inputField_2')).getAttribute('value')
-String cbu = driver.findElement(By.id('inputField_3')).getAttribute('value')
-String ttl = driver.findElement(By.id('txtTotalSingleDetails')).getAttribute('value')
-
-String get_loanDue = loan_due.replace(",","")
-Double parse_loanDue = Double.parseDouble(get_loanDue)
-Double dis_due = parse_loanDue - 70
-
-DecimalFormat pesoFormat = new DecimalFormat("#,##0.00");
-String formatted_dis_due = pesoFormat.format(dis_due);
-
-if(mba.equals("20.00") && due.equals(formatted_dis_due) && cbu.equals("50.00") && ttl.equals(loan_due))
+if(interest == '0.00')
 {
-	println("MBA: " + mba + " == 20.00 Due:" + due + " == " + formatted_dis_due + " cbu: " + cbu + " == 50.00 Total: " + ttl + " == " + loan_due)
-	println("Payment view details - Validation Works!")
+	String mba = driver.findElement(By.id('inputField_1')).getAttribute('value')
+	String cbu = driver.findElement(By.id('inputField_2')).getAttribute('value')
+	String ttl = driver.findElement(By.id('txtTotalSingleDetails')).getAttribute('value')
+	
+	if(mba.equals("20.00") && cbu.equals("50.00") && ttl.equals(loan_due))
+	{
+		println("MBA: " + mba + " == 20.00" + " cbu: " + cbu + " == 50.00 Total: " + ttl + " == " + loan_due)
+		println("Payment view details - Validation Works!")
+	}
+	else
+	{
+		println("MBA: " + mba + " != 20.00" + " cbu: " + cbu + " != 50.00 Total: " + ttl + " != " + loan_due)
+		KeywordUtil.markFailed("ERROR: Incorrect Display, Payment view details!");
+	}
 }
 else
 {
-	println("MBA: " + mba + " != 20.00 Due:" + due + " != " + formatted_dis_due + " cbu: " + cbu + " != 50.00 Total: " + ttl + " != " + loan_due)
-	KeywordUtil.markFailed("ERROR: Incorrect Display, Payment view details!");
+	String mba = driver.findElement(By.id('inputField_1')).getAttribute('value')
+	String due = driver.findElement(By.id('inputField_2')).getAttribute('value')
+	String cbu = driver.findElement(By.id('inputField_3')).getAttribute('value')
+	String ttl = driver.findElement(By.id('txtTotalSingleDetails')).getAttribute('value')
+	
+	String get_loanDue = loan_due.replace(",","")
+	Double parse_loanDue = Double.parseDouble(get_loanDue)
+	Double dis_due = parse_loanDue - 70
+	
+	DecimalFormat pesoFormat = new DecimalFormat("#,##0.00");
+	String formatted_dis_due = pesoFormat.format(dis_due);
+	
+	if(mba.equals("20.00") && due.equals(formatted_dis_due) && cbu.equals("50.00") && ttl.equals(loan_due))
+	{
+		println("MBA: " + mba + " == 20.00 Due:" + due + " == " + formatted_dis_due + " cbu: " + cbu + " == 50.00 Total: " + ttl + " == " + loan_due)
+		println("Payment view details - Validation Works!")
+	}
+	else
+	{
+		println("MBA: " + mba + " != 20.00 Due:" + due + " != " + formatted_dis_due + " cbu: " + cbu + " != 50.00 Total: " + ttl + " != " + loan_due)
+		KeywordUtil.markFailed("ERROR: Incorrect Display, Payment view details!");
+	}
 }
 
 WebUI.click(findTestObject('Object Repository/PaymentModule/button_Done'))

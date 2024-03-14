@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//tbody[@id='tblBodyClientList']/tr[3]/td[11]/input</value>
+         <value>//tbody[@id='tblBodyClientList']/tr[3]/td[12]/input</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -15,6 +15,7 @@
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -22,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>0ed652cd-dec1-44f9-adb5-dfb3ec3a16b0</webElementGuid>
+      <webElementGuid>347eaafe-ee59-4493-bbc8-9cbd934a8ae6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -30,7 +31,7 @@
       <name>type</name>
       <type>Main</type>
       <value>text</value>
-      <webElementGuid>02b1a10f-2ff0-447a-b102-3c016dde702d</webElementGuid>
+      <webElementGuid>c332b552-d71e-45d6-a08d-03df14f581a1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -38,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>form-control gb-border-fcs</value>
-      <webElementGuid>7498b543-ace2-435d-9242-31da87dca05e</webElementGuid>
+      <webElementGuid>07d53c2f-4f05-4825-b224-88b4b3d6d57a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -46,7 +47,7 @@
       <name>value</name>
       <type>Main</type>
       <value>0.00</value>
-      <webElementGuid>e2434e22-aff3-4135-a947-7bba032e0b9b</webElementGuid>
+      <webElementGuid>f00ae37c-a6a0-4742-ab4f-5195639948fc</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -54,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>txtWithdraw10000220</value>
-      <webElementGuid>800f4dfe-5f76-49cc-bac3-dc7fe69b0003</webElementGuid>
+      <webElementGuid>1d27c104-917f-4123-8242-802c861c6b81</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -62,7 +63,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;txtWithdraw10000220&quot;)</value>
-      <webElementGuid>412b8c86-8d34-46b9-b358-d327a1b4b6a5</webElementGuid>
+      <webElementGuid>94d2a0e3-7e4e-4a17-adc6-10aa100e1f9a</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -70,7 +71,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='txtWithdraw10000220']</value>
-      <webElementGuid>5a87e820-a4c4-438b-baa1-46331fe1855e</webElementGuid>
+      <webElementGuid>2991432f-011d-4740-a398-8ad1ff88da65</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -78,7 +79,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//tbody[@id='tblBodyClientList']/tr[2]/td[11]/input</value>
-      <webElementGuid>fa7ceace-d399-455f-98a2-5e42b704c83a</webElementGuid>
+      <webElementGuid>c8b795ae-eb8a-4ffe-91be-47b7cfbff1ad</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -86,7 +87,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//td[11]/input</value>
-      <webElementGuid>0bf8d1f7-72a0-4dd2-b68d-6618220cba88</webElementGuid>
+      <webElementGuid>f7813206-ba0a-45f8-b3d2-89a2f0374a2f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -94,6 +95,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@type = 'text' and @id = 'txtWithdraw10000220']</value>
-      <webElementGuid>793f83e2-7997-4201-b459-573e04e4fb7a</webElementGuid>
+      <webElementGuid>7b16de1b-75d1-4d81-8ebb-9d4fc146fedd</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

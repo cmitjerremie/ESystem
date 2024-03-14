@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//tbody[@id='tblBodyClientList']/tr[2]/td[12]/input</value>
+         <value>//tbody[@id='tblBodyClientList']/tr[2]/td[11]/input</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -15,6 +15,7 @@
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -22,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>6ce16331-4614-40e3-8568-14f52250541c</webElementGuid>
+      <webElementGuid>1ff69b95-18b4-47fb-9e25-331d9f1cd681</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -30,7 +31,7 @@
       <name>type</name>
       <type>Main</type>
       <value>text</value>
-      <webElementGuid>633f0c63-86c9-4523-a36b-c49d967ce676</webElementGuid>
+      <webElementGuid>f361906b-909e-4a52-8f81-f482840bf35a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -38,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>form-control pay gb-border-fcs</value>
-      <webElementGuid>5dc54438-b981-4c31-bb9a-ef3ea98175be</webElementGuid>
+      <webElementGuid>7fc69039-ca5f-41b6-a143-0b73702bf8d6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -46,7 +47,7 @@
       <name>value</name>
       <type>Main</type>
       <value>0.00</value>
-      <webElementGuid>ebd1b20e-0561-446b-9b5f-09bc6dfcbb71</webElementGuid>
+      <webElementGuid>bec05331-6d29-424c-96d7-09125fba9eac</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -54,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>inputPaid10000220</value>
-      <webElementGuid>3b12a8fe-f4e6-4e60-bdc2-34cdec44eec8</webElementGuid>
+      <webElementGuid>162b1208-0dc0-40ee-be84-3335a8419594</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -62,7 +63,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;inputPaid10000220&quot;)</value>
-      <webElementGuid>ac844b93-4c34-461f-99bc-ba0a946ffe34</webElementGuid>
+      <webElementGuid>0a4d7d15-7e23-430c-8bb5-d222462600c8</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -70,7 +71,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='inputPaid10000220']</value>
-      <webElementGuid>d88f5903-040d-4289-8f50-c6076a51155c</webElementGuid>
+      <webElementGuid>f51286cd-c09b-444d-8a47-43c275b14992</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -78,7 +79,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//tbody[@id='tblBodyClientList']/tr[2]/td[12]/input</value>
-      <webElementGuid>a4079fe0-8c96-4ad1-a077-7d9ea4ab0045</webElementGuid>
+      <webElementGuid>876ca6de-4f3f-4c1e-987a-6a9cb683e851</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -86,7 +87,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//td[12]/input</value>
-      <webElementGuid>fe3efa97-39ce-4169-9866-a6aff92f2a75</webElementGuid>
+      <webElementGuid>d08c18c9-f0f0-43ac-ab85-1e9b5fdbf55f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -94,6 +95,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@type = 'text' and @id = 'inputPaid10000220']</value>
-      <webElementGuid>49eb03b1-a432-4c18-8c68-978304bd39d7</webElementGuid>
+      <webElementGuid>a78e668f-b10b-4da7-b958-6f5cac5f4d54</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

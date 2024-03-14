@@ -70,14 +70,17 @@ alert.accept()
 
 WebUI.delay(1)
 
-WebUI.setText(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Multiple Payment_txtCid'), '10000213')
+WebUI.setText(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Multiple Payment_txtCid'), '10000301')
 WebUI.sendKeys(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Multiple Payment_txtCid'), Keys.chord(Keys.ENTER))
 
 WebUI.setText(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_NetCash_txtNetCash'), "200")
 WebUI.sendKeys(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_NetCash_txtNetCash'), Keys.chord(Keys.ENTER))
 
-WebUI.setText(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_inputPaid10000220'), "200")
-WebUI.sendKeys(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_inputPaid10000220'), Keys.chord(Keys.ENTER))
+//WebUI.setText(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_inputPaid10000220'), "200")
+//WebUI.sendKeys(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_inputPaid10000220'), Keys.chord(Keys.ENTER))
+def payc1 = driver.findElement(By.id("inputPaid" + GlobalVariable.multiple_payc1))
+payc1.sendKeys("200")
+payc1.sendKeys(Keys.ENTER)
 
 WebElement get_collect = driver.findElement(By.id('txtTotalCollection'))
 String txt_collect = get_collect.getAttribute('value')
@@ -121,39 +124,49 @@ else
 	KeywordUtil.markFailed("Validation Error!: " + txt_val + " Expected: 0");
 }
 
-WebUI.setText(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_inputPai_c2'), "200")
-WebUI.sendKeys(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_inputPai_c2'), Keys.chord(Keys.ENTER))
+def payc2 = driver.findElement(By.id("inputPaid" + GlobalVariable.multiple_payc2))
+def wdc3 = driver.findElement(By.id("txtWithdraw" + GlobalVariable.multiple_wdc3))
 
-WebUI.setText(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_txtWithdraw10000220'), "100")
-WebUI.sendKeys(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_txtWithdraw10000220'), Keys.chord(Keys.ENTER))
+payc2.sendKeys("100")
+payc2.sendKeys(Keys.ENTER)
 
-WebUI.setText(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_txtWithdraw_c2'), "100")
-WebUI.sendKeys(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_txtWithdraw_c2'), Keys.chord(Keys.ENTER))
+wdc3.sendKeys("100")
+wdc3.sendKeys(Keys.ENTER)
+
+
+//WebUI.setText(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_inputPai_c2'), "200")
+//WebUI.sendKeys(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_inputPai_c2'), Keys.chord(Keys.ENTER))
+//
+//WebUI.setText(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_txtWithdraw10000220'), "100")
+//WebUI.sendKeys(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_txtWithdraw10000220'), Keys.chord(Keys.ENTER))
+//
+//WebUI.setText(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_txtWithdraw_c2'), "100")
+//WebUI.sendKeys(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Net, Ether_txtWithdraw_c2'), Keys.chord(Keys.ENTER))
 
 String txt_collect2 = get_collect.getAttribute('value')
 String txt_with2 = get_with.getAttribute('value')
 String txt_val2 = get_val.getAttribute('value')
 
 //check if input amount is equal to collection display
-if(txt_collect2.equals("400.00"))
+if(txt_collect2.equals("300.00"))
 {
 	println("Collection Displayed correctly: " + txt_collect2)
 }
 else
 {
-	println("Collection Display is incorrect!: " + txt_collect2 + " Expected: 400.00")
-	KeywordUtil.markFailed("Collection Display is incorrect!: " + txt_collect2 + " Expected: 400.00");
+	println("Collection Display is incorrect!: " + txt_collect2 + " Expected: 300.00")
+	KeywordUtil.markFailed("Collection Display is incorrect!: " + txt_collect2 + " Expected: 300.00");
 }
 
 //check if withdraw display is not affected
-if(txt_with2.equals("200.00"))
+if(txt_with2.equals("100.00"))
 {
 	println("Withdraw was not affected!, great!: " + txt_with2)
 }
 else
 {
-	println("Withdraw was affected!, Error!: " + txt_with2 + " Expected: 200.00")
-	KeywordUtil.markFailed("Withdraw was affected!, Error!: " + txt_with2 + " Expected: 200.00");
+	println("Withdraw was affected!, Error!: " + txt_with2 + " Expected: 100.00")
+	KeywordUtil.markFailed("Withdraw was affected!, Error!: " + txt_with2 + " Expected: 100.00");
 }
 
 //check if validation works
@@ -167,6 +180,38 @@ else
 	KeywordUtil.markFailed("Validation Error!: " + txt_val2 + " Expected: 0");
 }
 
+WebUI.delay(2)
+WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Core/button_Post'), 10)
+WebUI.click(findTestObject('Object Repository/Page_Core/button_Post'))
+
+WebUI.waitForElementVisible(findTestObject('Object Repository/Page_Core/h4_Please Enterthe PR Number'), 30)
+WebUI.verifyTextPresent("Please Enter the PR Number.", false)
+WebUI.setText(findTestObject('Object Repository/Page_Core/input_Please Enterthe PR Number_txtPRno'), "123")
+WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Core/button_OK'), 10)
+WebUI.click(findTestObject('Object Repository/Page_Core/button_OK'))
+
+Actions actions = new Actions(driver)
+actions.sendKeys(Keys.ENTER).perform()
+WebUI.delay(3)
+actions.sendKeys(Keys.ENTER).perform()
+
+WebUI.delay(2)
+
+String parentWindowHandle = driver.getWindowHandle()
+
+// Get all window handles
+Set<String> allWindowHandles = driver.getWindowHandles()
+
+// Iterate through all handles and close the newly opened tab
+for (String windowHandle : allWindowHandles) {
+	if (!windowHandle.equals(parentWindowHandle)) {
+		driver.switchTo().window(windowHandle)
+		driver.close()
+	}
+}
+
+// Switch back to the parent window
+driver.switchTo().window(parentWindowHandle)
 
 
 

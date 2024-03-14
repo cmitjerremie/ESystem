@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Net, Ether_txtWithdraw10000220</name>
+   <name>input_Please Enterthe PR Number_txtPRno</name>
    <tag></tag>
-   <elementGuidId>5d83020d-ea43-4156-90e6-4bdd928b6a17</elementGuidId>
+   <elementGuidId>fcd5ed5b-458d-4df2-97fe-059bbb57480f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//tbody[@id='tblBodyClientList']/tr[2]/td[12]/input</value>
+         <key>CSS</key>
+         <value>#txtPRno</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>#txtWithdraw10000220</value>
+         <key>XPATH</key>
+         <value>//input[@id='txtPRno']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>#txtPRno</value>
+      </entry>
+   </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
@@ -23,7 +29,15 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>70cdc8d3-e661-41c3-9cc7-fcf1e3761d52</webElementGuid>
+      <webElementGuid>ad9d9355-b4ce-4330-b1e0-d3141db16bac</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>autocomplete</name>
+      <type>Main</type>
+      <value>off</value>
+      <webElementGuid>74a18e58-d8b9-4387-a34b-bd72716268a0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,70 +45,62 @@
       <name>type</name>
       <type>Main</type>
       <value>text</value>
-      <webElementGuid>bd29a1a5-3bcb-4a31-98e0-01ed7100ffea</webElementGuid>
+      <webElementGuid>9147e1f4-49dc-4b6d-b201-bf72f8251dfb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>form-control gb-border-fcs</value>
-      <webElementGuid>370041aa-89ec-4800-999c-7ac56a928e03</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>value</name>
-      <type>Main</type>
-      <value>0.00</value>
-      <webElementGuid>57f4c722-5c82-4b25-b9d6-71a3615e60ce</webElementGuid>
+      <value>form-control</value>
+      <webElementGuid>7385365f-166d-4bb4-8e83-d225f8ee3a53</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>txtWithdraw10000220</value>
-      <webElementGuid>9b9e3059-fe51-4ac6-83fe-d24df5b6e08d</webElementGuid>
+      <value>txtPRno</value>
+      <webElementGuid>d061fe4b-6aec-40d2-b14d-8fc956bcbf96</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;txtWithdraw10000220&quot;)</value>
-      <webElementGuid>b567e73c-1b44-42bd-926b-7c10a9a04dbe</webElementGuid>
+      <value>id(&quot;txtPRno&quot;)</value>
+      <webElementGuid>5c3152f3-bac8-4607-9448-a1b4feee52b6</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@id='txtWithdraw10000220']</value>
-      <webElementGuid>196b7835-27be-4626-9946-dfe6283b46b5</webElementGuid>
+      <value>//input[@id='txtPRno']</value>
+      <webElementGuid>477f3cd2-37a7-4c00-878f-eda07ab9e376</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//tbody[@id='tblBodyClientList']/tr[2]/td[11]/input</value>
-      <webElementGuid>25cf7d71-823d-4f13-a9e8-ccfbd60a105d</webElementGuid>
+      <value>//div[@id='PRNOmodal']/div/div/div[2]/div/div/div/input</value>
+      <webElementGuid>b03e59d1-9942-4e80-8c03-8fd0fecab29f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//td[11]/input</value>
-      <webElementGuid>2edd867b-3e0b-42e3-819b-0d0c19ef5ba9</webElementGuid>
+      <value>//div[2]/div/div/div[2]/div/div/div/input</value>
+      <webElementGuid>0c1c2133-77da-4cd7-bab6-c1ede2653a66</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@type = 'text' and @id = 'txtWithdraw10000220']</value>
-      <webElementGuid>190f2bea-4b38-483b-905a-e91a9fbb9a58</webElementGuid>
+      <value>//input[@type = 'text' and @id = 'txtPRno']</value>
+      <webElementGuid>a7275f62-347e-4463-9649-60888928b083</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
