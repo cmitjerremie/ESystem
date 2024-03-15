@@ -60,12 +60,22 @@
       <name>loanAmount</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
+      <description>Ex. SIKAP 1, SIKAP 2, AGRI etc.</description>
+      <initValue>'AGRI LOAN'</initValue>
+      <name>loan_type</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>For Loan Creation (Weekly, Monthly, Semi-monthly, LumpSum)</description>
+      <initValue>'LumpSum'</initValue>
+      <name>freq</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
       <description>R - Regular, B - Business</description>
       <initValue>'R'</initValue>
       <name>LoanType</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>For LoanInfo ONLY, SET W - For Weekly, M - Monthly, S - Semi Monthly</description>
+      <description>For LoanInfo ONLY, SET W - For Weekly, M - Monthly, S - Semi Monthly, L - Lumpsum</description>
       <initValue>'S'</initValue>
       <name>frequency</name>
    </GlobalVariableEntity>

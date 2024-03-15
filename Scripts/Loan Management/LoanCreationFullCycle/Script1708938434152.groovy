@@ -59,17 +59,17 @@ WebUI.delay(1)
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanManagementForm/h4_Loan Management'), 5)
 WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanManagementForm/h4_Loan Information'), 5)
-
+WebUI.delay(3)
 WebElement btnLoan = driver.findElement(By.id('btnCreationModal'))
 
 if (btnLoan != null) {
 	String disabledAttribute = btnLoan.getAttribute("disabled")
 	if (disabledAttribute != null && disabledAttribute.equals("true")) {
-		println("Loan is disabled.")
+		println("Loan is disabled.-Correct!")
 	}
 	else{
-		println("Error: Loan button should be disabled!")
-		bugList.add('Loan Button is not Disabled!')
+		println("Error: Loan button should be disabled!-Bug")
+		bugList.add('Loan Button is not Disabled!-Bug')
 	}
 }
 
@@ -96,24 +96,52 @@ WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanCreation/
 WebElement selected_remarks = driver.findElement(By.cssSelector("option[value='1880']"));
 selected_remarks.click()
 
-if(GlobalVariable.LoanType.equals('R'))
-{
-	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanType'), 'SIKAP 1', true)
-	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanCategory'), 'MANUFACTURING', true)
-	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanPurpose_cboLoanPurpose'), 'Manufacture of Food Products, Beverages, etc.', true)
-	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_BusinessType_cboBusinessType'), 'Candy Factory', true)
-	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Weekly', true)
-	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_Term_cboTerm'), '4', true)
-}
-else
-{
-	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanType'), 'AGRI LOAN', true)
-	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanCategory'), 'AGRICULTURE, FORESTRY AND FISHING', true)
-	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanPurpose_cboLoanPurpose'), 'Crop Production, Forestry and Logging', true)
-	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_BusinessType_cboBusinessType'), 'Corn Farming', true)
-	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), 'Weekly', true)
-	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_Term_cboTerm'), '4', true)
-}
+
+WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanType'), GlobalVariable.loan_type, true)
+//	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanCategory'), 'AGRICULTURE, FORESTRY AND FISHING', true)
+//	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanPurpose_cboLoanPurpose'), 'Crop Production, Forestry and Logging', true)
+//	WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_BusinessType_cboBusinessType'), 'Corn Farming', true)
+WebElement selectElement = WebUI.findWebElement(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanCategory'), 30)
+// Get the total number of options
+List<WebElement> options = selectElement.findElements(By.tagName('option'))
+int optionCount = options.size()
+// Generate a random index
+int randomIndex = new Random().nextInt(optionCount - 1) + 1
+// Get the random option
+WebElement randomOption = options.get(randomIndex)
+WebUI.selectOptionByValue(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_-- SelectLoanCategory'), randomOption.getAttribute('value'), true)
+
+
+WebElement selectElement2 = WebUI.findWebElement(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanPurpose_cboLoanPurpose'), 30)
+// Get the total number of options
+List<WebElement> options2 = selectElement2.findElements(By.tagName('option'))
+int optionCount2 = options2.size()
+// Generate a random index
+int randomIndex2 = new Random().nextInt(optionCount2 - 1) + 1
+// Get the random option
+WebElement randomOption2 = options2.get(randomIndex2)
+WebUI.selectOptionByValue(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanPurpose_cboLoanPurpose'), randomOption2.getAttribute('value'), true)
+
+
+WebElement selectElement3 = WebUI.findWebElement(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_BusinessType_cboBusinessType'), 30)
+// Get the total number of options
+List<WebElement> options3 = selectElement3.findElements(By.tagName('option'))
+int optionCount3 = options3.size()
+// Generate a random index
+int randomIndex3 = new Random().nextInt(optionCount3 - 1) + 1
+// Get the random option
+WebElement randomOption3 = options3.get(randomIndex3)
+WebUI.selectOptionByValue(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_BusinessType_cboBusinessType'), randomOption3.getAttribute('value'), true)
+
+WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_LoanFrequency_cboLoanFrequency'), GlobalVariable.freq, true)
+//WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_Term_cboTerm'), '4', true)
+
+// Locate the select element
+WebElement selectElement4 = WebUI.findWebElement(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_Term_cboTerm'), 30)
+// Get the second option
+WebElement secondOption = selectElement4.findElements(By.tagName('option'))[1]
+// Select the second option by its value
+WebUI.selectOptionByValue(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/select_Term_cboTerm'), secondOption.getAttribute('value'), true)
 
 WebUI.sendKeys(findTestObject('Object Repository/LoanManagementModule/LoanCreation/LoanInfo/input_Amount_txtAmount'), GlobalVariable.loanAmount + Keys.chord(Keys.ENTER))
 
@@ -134,7 +162,7 @@ capital.sendKeys("10000");
 
 WebUI.selectOptionByLabel(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/select_-- Select --EmploymentSalariesIncome_ce4e89'), 'Employment/Salaries', true)
 
-WebUI.setText(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/inputtxtincomeAmount1'), '20000')
+WebUI.setText(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/inputtxtincomeAmount1'), '40000')
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/select_-- Select --FoodWaterElectricityEduc_adf9e8'),'1852', true)
 WebUI.setText(findTestObject('Object Repository/LoanManagementModule/LoanCreation/CashFlow/inputtxtrowExpenseAmount1'), '1000')
