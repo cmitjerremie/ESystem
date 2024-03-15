@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_zcresurrecion_ri-pencil-fill</name>
+   <tag></tag>
+   <elementGuidId>0e54afef-d7d4-4be3-8647-0b1745471d90</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>i.ri-pencil-fill</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//tbody[@id='LoanDraftListtbody']/tr/td[9]/a/span/i</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>.action-icon >> nth=0</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>2ffae832-e50e-497a-8fc5-59a7bbf34995</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value> ri-pencil-fill</value>
+      <webElementGuid>a16a2765-04a2-4544-a8ff-7fb0a148c3f7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;LoanDraftListtbody&quot;)/tr[@class=&quot;odd&quot;]/td[@class=&quot;td-actions&quot;]/a[@class=&quot;action-icon btn&quot;]/span[@class=&quot;icon text-gray-700 ml-auto&quot;]/i[@class=&quot;ri-pencil-fill&quot;]</value>
+      <webElementGuid>5563c0db-a523-4ccc-b3e9-14c4d1ad1c34</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//tbody[@id='LoanDraftListtbody']/tr/td[9]/a/span/i</value>
+      <webElementGuid>64cc9892-ec68-4e86-bfc6-44aef3ace98b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a/span/i</value>
+      <webElementGuid>cb81505b-59b1-4839-8f13-411bf3933114</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

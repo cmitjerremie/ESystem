@@ -17,6 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+import org.openqa.selenium.interactions.Actions;
+import com.kms.katalon.core.webui.driver.DriverFactory
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.Alert
+
 WebUI.openBrowser('')
 
 WebUI.maximizeWindow();
@@ -30,6 +35,21 @@ WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), Gl
 WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword'))
 
 WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
+
+WebUI.delay(10)
+// Get the WebDriver instance
+WebDriver driver = DriverFactory.getWebDriver()
+
+try {    
+    // Switch to the alert
+    Alert alert = driver.switchTo().alert()
+
+    // Accept the alert
+    alert.accept()
+} catch (Exception e) {
+    // Handle the scenario where the alert does not appear
+    println("Alert did not appear.")
+}
 
 //WebUI.waitForElementVisible(findTestObject('Object Repository/LoginPage/h2_Login Successful'), 10, FailureHandling.STOP_ON_FAILURE)
 

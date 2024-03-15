@@ -107,7 +107,7 @@ if (tableContent.contains(expectedResult)) {
 	// Switch back to the parent window
 	driver.switchTo().window(parentWindowHandle)
 	
-	WebUI.delay(1)
+	WebUI.delay(3)
 	
 	
 } else {

@@ -63,6 +63,8 @@ WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword
 
 WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
 
+WebUI.delay(10)
+
 WebUI.waitForElementVisible(findTestObject('Object Repository/PaymentModule/i_ri-parking-fill'), 30)
 
 WebUI.click(findTestObject('Object Repository/PaymentModule/i_ri-parking-fill'))

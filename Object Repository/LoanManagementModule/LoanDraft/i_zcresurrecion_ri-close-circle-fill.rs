@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_zcresurrecion_ri-close-circle-fill</name>
+   <tag></tag>
+   <elementGuidId>ec44dad0-c829-4f62-8b22-a81f1eefcb1e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>i.ri-close-circle-fill</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//tbody[@id='LoanDraftListtbody']/tr/td[9]/a[2]/span/i</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>.td-actions > a:nth-child(2) >> nth=0</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>3b4e3905-b1d8-460f-aa3c-7d29709d1116</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>ri-close-circle-fill</value>
+      <webElementGuid>70dd4c3d-3b2e-4cee-b874-4b0047c2c8dd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;LoanDraftListtbody&quot;)/tr[@class=&quot;odd&quot;]/td[@class=&quot;td-actions&quot;]/a[@class=&quot;action-icon btn&quot;]/span[@class=&quot;icon text-gray-700 ml-auto&quot;]/i[@class=&quot;ri-close-circle-fill&quot;]</value>
+      <webElementGuid>624d4a2b-761b-4867-97b9-50689305150f</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//tbody[@id='LoanDraftListtbody']/tr/td[9]/a[2]/span/i</value>
+      <webElementGuid>f8944303-afae-4bd4-b873-53aec7ad14f8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a[2]/span/i</value>
+      <webElementGuid>c41f7939-13f3-4c14-87d8-71b4dcc2b2c3</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

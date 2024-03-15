@@ -181,14 +181,14 @@ else
 }
 
 WebUI.delay(2)
-WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Core/button_Post'), 10)
-WebUI.click(findTestObject('Object Repository/Page_Core/button_Post'))
+WebUI.waitForElementClickable(findTestObject('Object Repository/PaymentModule/MultiplePayment/button_Post (1)'), 10)
+WebUI.click(findTestObject('Object Repository/PaymentModule/MultiplePayment/button_Post (1)'))
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Page_Core/h4_Please Enterthe PR Number'), 30)
+WebUI.waitForElementVisible(findTestObject('Object Repository/PaymentModule/MultiplePayment/h4_Please Enterthe PR Number'), 30)
 WebUI.verifyTextPresent("Please Enter the PR Number.", false)
-WebUI.setText(findTestObject('Object Repository/Page_Core/input_Please Enterthe PR Number_txtPRno'), "123")
-WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Core/button_OK'), 10)
-WebUI.click(findTestObject('Object Repository/Page_Core/button_OK'))
+WebUI.setText(findTestObject('Object Repository/PaymentModule/MultiplePayment/input_Please Enterthe PR Number_txtPRno'), "123")
+WebUI.waitForElementClickable(findTestObject('Object Repository/PaymentModule/MultiplePayment/button_OK'), 10)
+WebUI.click(findTestObject('Object Repository/PaymentModule/MultiplePayment/button_OK'))
 
 Actions actions = new Actions(driver)
 actions.sendKeys(Keys.ENTER).perform()

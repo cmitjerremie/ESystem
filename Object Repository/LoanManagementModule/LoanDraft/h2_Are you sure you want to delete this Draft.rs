@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Post</name>
+   <name>h2_Are you sure you want to delete this Draft</name>
    <tag></tag>
-   <elementGuidId>7b89d9f1-6ba7-4ad8-a77c-f44cfbdad7b7</elementGuidId>
+   <elementGuidId>67da566c-be15-47d7-a854-7b8b92186ce5</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#btnPost</value>
+         <value>#swal2-title</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[@id='btnPost']</value>
+         <value>//h2[@id='swal2-title']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <smartLocatorCollection>
       <entry>
          <key>SMART_LOCATOR</key>
-         <value>internal:role=button[name=&quot;Post&quot;i]</value>
+         <value>internal:role=heading[name=&quot;Are you sure you want to delete this Draft?&quot;i]</value>
       </entry>
    </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
@@ -28,111 +28,103 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>button</value>
-      <webElementGuid>2c9a3045-adaf-4b2d-bcdd-a4e0123f5fa4</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>type</name>
-      <type>Main</type>
-      <value>button</value>
-      <webElementGuid>d51db813-d2c4-4574-892d-bd70588b75b2</webElementGuid>
+      <value>h2</value>
+      <webElementGuid>21f95df4-5174-4706-b18b-6e8abdd2f843</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>btn btn-success</value>
-      <webElementGuid>80e39702-0ee7-4eeb-9622-38be8b934709</webElementGuid>
+      <value>swal2-title</value>
+      <webElementGuid>ef468fbf-0942-4a14-8042-9847e4e975a6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>btnPost</value>
-      <webElementGuid>24185285-60bc-4a92-a434-035606538d83</webElementGuid>
+      <value>swal2-title</value>
+      <webElementGuid>6508f94f-78b6-4f92-b429-c0ed7b0706cc</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Post</value>
-      <webElementGuid>a01417e3-ae29-4045-9671-11b0a18bb58e</webElementGuid>
+      <value>Are you sure you want to delete this Draft?</value>
+      <webElementGuid>664ef2c2-1699-4c58-8464-71b9fd3d2afc</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;btnPost&quot;)</value>
-      <webElementGuid>f6126165-7eb7-47fc-b7b1-e8998c860661</webElementGuid>
+      <value>id(&quot;swal2-title&quot;)</value>
+      <webElementGuid>9387faa3-fec2-403d-89e6-0fe32cc2a4c8</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//button[@id='btnPost']</value>
-      <webElementGuid>4197c11a-07c2-4a84-be40-ccd5ddc3408b</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
-      <type>Main</type>
-      <value>//body[@id='body']/div/div[4]/div/div/div/div[2]/div[4]/div/div[2]/div/div/button</value>
-      <webElementGuid>6db2d42f-7378-41ea-b22c-0c1c56b578af</webElementGuid>
+      <value>//h2[@id='swal2-title']</value>
+      <webElementGuid>1418359c-4d2c-41fb-b66e-b06f666e0e5b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Validation:'])[1]/following::button[1]</value>
-      <webElementGuid>f569c4f8-b956-41db-99a2-e8b79ae37b66</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='i'])[1]/following::h2[1]</value>
+      <webElementGuid>ce741b84-5d88-4679-8ddb-756a3dedf9cf</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Total Withdraw:'])[1]/following::button[1]</value>
-      <webElementGuid>6264c68d-aef4-4ea2-9d91-db3185d0a81c</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='!'])[1]/following::h2[1]</value>
+      <webElementGuid>f8b5b571-09ee-4392-95eb-7e7f2ce4e9a7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='OK'])[1]/preceding::button[2]</value>
-      <webElementGuid>87adff16-fafc-4e0f-956a-9fcdd9f1bf6e</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='×'])[1]/preceding::h2[1]</value>
+      <webElementGuid>11e12bab-d8c7-4493-b15b-246f27ba7197</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Post']/parent::*</value>
-      <webElementGuid>6e12772d-f1c4-45ad-854a-cacf68a8f9b1</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Yes'])[1]/preceding::h2[1]</value>
+      <webElementGuid>de6b39fc-750d-47b3-a779-bd7569b9a2a6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Are you sure you want to delete this Draft?']/parent::*</value>
+      <webElementGuid>94524f0f-1c16-4b27-a1c5-24b3a43cae09</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/div/div/button</value>
-      <webElementGuid>bf4e34a5-acac-4dff-89bc-aac0c9b4c667</webElementGuid>
+      <value>//h2</value>
+      <webElementGuid>8f60d7d5-abeb-4242-9bee-c9652905915f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//button[@type = 'button' and @id = 'btnPost' and (text() = 'Post' or . = 'Post')]</value>
-      <webElementGuid>9adde9ea-bb73-4f84-a54b-e77c30b66a73</webElementGuid>
+      <value>//h2[@id = 'swal2-title' and (text() = 'Are you sure you want to delete this Draft?' or . = 'Are you sure you want to delete this Draft?')]</value>
+      <webElementGuid>44ffb0c6-4605-47c8-8dbd-28260d29f09d</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

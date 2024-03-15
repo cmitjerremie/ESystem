@@ -5,13 +5,13 @@
    <tag></tag>
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>'http://10.9.2.15:8880/eSystemNextGenWebApp/pages/Login'</initValue>
+      <description>http://10.9.2.15:8080/eSystemNextGenWeb/pages/Login</description>
+      <initValue>'http://10.9.2.15:8080/eSystemNextGenWeb/pages/Login'</initValue>
       <name>url</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Teller</description>
-      <initValue>'rvdelatorre'</initValue>
+      <initValue>''</initValue>
       <name>user</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -40,8 +40,18 @@
       <name>pass3</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
+      <description>for teller area</description>
+      <initValue>'BAY'</initValue>
+      <name>unit</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>&quot;</description>
+      <initValue>'DAYAP 1'</initValue>
+      <name>center</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
       <description>LoanManagement</description>
-      <initValue>'10000303'</initValue>
+      <initValue>'10000323'</initValue>
       <name>cid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -61,17 +71,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>This is for the creation of client</description>
-      <initValue>'Sent'</initValue>
+      <initValue>'Tom'</initValue>
       <name>fname</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>&quot;</description>
-      <initValue>'Petir'</initValue>
+      <initValue>'Injerry'</initValue>
       <name>lname</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Enter client name to be approved - This is for client approval</description>
-      <initValue>'Peter Parker'</initValue>
+      <initValue>'Peter Pan'</initValue>
       <name>app_name</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -86,7 +96,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>This is for Capital Build Up</description>
-      <initValue>'10000302'</initValue>
+      <initValue>'10000323'</initValue>
       <name>cbu_cid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -101,7 +111,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Please input the cid for payment</description>
-      <initValue>'10000302'</initValue>
+      <initValue>'10000323'</initValue>
       <name>payment_cid</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

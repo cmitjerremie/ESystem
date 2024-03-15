@@ -122,12 +122,10 @@ WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/selec
 
 WebUI.setText(findTestObject('Object Repository/ClientCreation/input_0.00'), '09123456780')
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--Select--farmfarm 2farm 3'), '0', true)
+WebUI.selectOptionByLabel(findTestObject('Object Repository/ClientCreation/select_--Select--farmfarm 2farm 3'), GlobalVariable.unit, true)
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--Select--farmfarm 2farm 3'), '2709', true)
-
-WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--      Select      --villagevillage_79bc42'), 
-    '2712', true)
+WebUI.selectOptionByLabel(findTestObject('Object Repository/ClientCreation/select_--      Select      --villagevillage_79bc42'), 
+    GlobalVariable.center, true)
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/input_YES_CARDScholar'))
 
