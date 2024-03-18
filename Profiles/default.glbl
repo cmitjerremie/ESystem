@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description>http://10.9.2.15:8080/eSystemNextGenWeb/pages/Login</description>
-      <initValue>'http://10.9.2.15:8080/eSystemNextGenWeb/pages/Login'</initValue>
+      <initValue>'http://10.9.2.15:8880/eSystemNextGenWebApp/pages/Login'</initValue>
       <name>url</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -88,6 +88,11 @@
       <description>&quot;</description>
       <initValue>'Injerry'</initValue>
       <name>lname</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Number of clients to  be generated</description>
+      <initValue>1</initValue>
+      <name>client_num</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Enter client name to be approved - This is for client approval</description>

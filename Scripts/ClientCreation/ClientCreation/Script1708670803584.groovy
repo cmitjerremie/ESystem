@@ -37,7 +37,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.openqa.selenium.chrome.ChromeOptions
-
+import java.util.Random
 //// Set up Chrome options for headless mode and specify window size
 //ChromeOptions options = new ChromeOptions()
 //options.addArguments("--headless")
@@ -72,9 +72,57 @@ alert.accept()
 
 WebUI.delay(1)
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_FirstName_txtFname'), GlobalVariable.fname)
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_LastName_txtLname'), GlobalVariable.lname)
+// Function to generate a random first name
+String generateRandomFirstName() {
+	String vowels = "aeiou"
+	String consonants = "bcdfghjklmnpqrstvwxyz"
+	Random rand = new Random()
+	
+	StringBuilder firstNameBuilder = new StringBuilder()
+	int length = rand.nextInt(5) + 4 // Random length between 4 to 8 characters
+	for (int i = 0; i < length; i++) {
+		if (i % 2 == 0) {
+			firstNameBuilder.append(consonants.charAt(rand.nextInt(consonants.length())))
+		} else {
+			firstNameBuilder.append(vowels.charAt(rand.nextInt(vowels.length())))
+		}
+	}
+	
+	return firstNameBuilder.toString().substring(0,1).toUpperCase() + firstNameBuilder.toString().substring(1)
+}
+
+// Function to generate a random last name
+String generateRandomLastName() {
+	String vowels = "aeiou"
+	String consonants = "bcdfghjklmnpqrstvwxyz"
+	Random rand = new Random()
+	
+	StringBuilder lastNameBuilder = new StringBuilder()
+	int length = rand.nextInt(7) + 5 // Random length between 5 to 11 characters
+	for (int i = 0; i < length; i++) {
+		if (i % 2 == 0) {
+			lastNameBuilder.append(consonants.charAt(rand.nextInt(consonants.length())))
+		} else {
+			lastNameBuilder.append(vowels.charAt(rand.nextInt(vowels.length())))
+		}
+	}
+	
+	return lastNameBuilder.toString().substring(0,1).toUpperCase() + lastNameBuilder.toString().substring(1)
+}
+
+for(int x=0; x<GlobalVariable.client_num;x++)
+{
+	// Generate a random first name
+	String randomFirstName = generateRandomFirstName()
+	
+	// Generate a random last name
+	String randomLastName = generateRandomLastName()
+
+
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_FirstName_txtFname'), randomFirstName)
+
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_LastName_txtLname'), randomLastName)
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/button_SEARCH'))
 
@@ -91,9 +139,9 @@ WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/selec
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--Select--AnnulledLive-inMarriedSepa_54a068'), 
     '165', true)
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_FirstName_txtmothersMaidenFName'), GlobalVariable.fname+'Mname')
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_FirstName_txtmothersMaidenFName'), randomFirstName+' Mname')
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_LastName_txtmothersMaidenLName'), GlobalVariable.fname+'Lname')
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_LastName_txtmothersMaidenLName'), randomLastName+' Lname')
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--Select--AglipayanBorn AgainEvangel_87720a'), 
     '0', true)
@@ -161,7 +209,7 @@ WebElement dosri = driver.findElement(By.id("dosriNone"))
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_-- Select --CARD MRI MemberCARD MRI _8bd785'), 
     '1805', true)
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Referredby_txtReferredbyOtherPrimary'), GlobalVariable.fname+'refer')
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Referredby_txtReferredbyOtherPrimary'), randomFirstName +'refer')
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/input_YES_ImmediateFamilyMember'))
 
@@ -169,7 +217,7 @@ WebUI.click(findTestObject('Object Repository/ClientCreation/button_NEXT'))
 
 WebUI.delay(1)
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Remarks_txtBeneficiaryName1'), GlobalVariable.fname+'dependent')
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Remarks_txtBeneficiaryName1'), randomFirstName+'dependent')
 
 WebElement dep_bday = driver.findElement(By.id('txtBeneficiaryBday1'))
 dep_bday.sendKeys('01011999')
@@ -229,7 +277,7 @@ WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/selec
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--Select--EmploymentSalariesIncome f_b99596'), 
     '1759', true)
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Sourceof Fund_txtOtherKYCSourceOfIncome'), GlobalVariable.fname+'test Company')
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Sourceof Fund_txtOtherKYCSourceOfIncome'), randomFirstName +'test Company')
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--Select--Below 1,000 pesos1001 - 3,_8e7891'), 
     '0', true)
@@ -325,13 +373,15 @@ WebUI.delay(1)
 
 save.click()
 
-WebUI.delay(1)
+WebUI.delay(2)
 
 Actions actions3 = new Actions(driver)
 // Simulate pressing the Enter key using the Actions class
 actions3.sendKeys(Keys.ENTER).perform()
 
 WebUI.delay(3)
+
+}
 
 
 
