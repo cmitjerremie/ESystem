@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>i_mdi mdi-check-bold</name>
+   <name>Approval_view_btn</name>
    <tag></tag>
-   <elementGuidId>e4ccc619-d07b-483d-ab5a-8908ea017ec2</elementGuidId>
+   <elementGuidId>abc0430d-9187-4be7-801f-8929867a5e85</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>i.mdi.mdi-check-bold</value>
+         <key>XPATH</key>
+         <value>//tbody[@id='tblBodyNewClientList']/tr/td[8]/a[2]/i</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//th/a/i</value>
+         <key>CSS</key>
+         <value>i.mdi.mdi-open-in-new</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:attr=[title=&quot;Display Client Details&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
@@ -23,38 +29,38 @@
       <name>tag</name>
       <type>Main</type>
       <value>i</value>
-      <webElementGuid>bb24c6e3-e104-49b2-a22c-af5b7e4ff56d</webElementGuid>
+      <webElementGuid>f9244153-501d-48e3-8c68-76ba817701c0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>mdi mdi-check-bold</value>
-      <webElementGuid>256f1242-0a59-4944-858a-9cb65ec13db6</webElementGuid>
+      <value>mdi mdi-open-in-new</value>
+      <webElementGuid>cfdd50cf-508e-45be-9a62-7d78ec5b0816</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;tblBodyNewClientList&quot;)/tr[@class=&quot;odd&quot;]/th[@class=&quot;td-actions text-center&quot;]/a[@class=&quot;action-icon&quot;]/i[@class=&quot;mdi mdi-check-bold&quot;]</value>
-      <webElementGuid>f0d0104b-97d9-4dda-b714-3dad16c9924f</webElementGuid>
+      <value>id(&quot;tblBodyNewClientList&quot;)/tr[@class=&quot;odd&quot;]/td[@class=&quot;text-center&quot;]/a[@class=&quot;action-icon&quot;]/i[@class=&quot;mdi mdi-open-in-new&quot;]</value>
+      <webElementGuid>360c40a7-0ef2-4a95-a355-60588c373db0</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//tbody[@id='tblBodyNewClientList']/tr/th/a/i</value>
-      <webElementGuid>2cec6c6c-247b-451d-b5ef-2c246d685c0f</webElementGuid>
+      <value>//tbody[@id='tblBodyNewClientList']/tr/td[8]/a[2]/i</value>
+      <webElementGuid>c111683a-fcf4-4986-8417-8345c7a5aa29</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//th/a/i</value>
-      <webElementGuid>e776c8bd-56c5-4038-ac85-df49ee6b67ec</webElementGuid>
+      <value>//td[8]/a[2]/i</value>
+      <webElementGuid>52b5a8f0-d83e-4dba-9157-f1f1058644b1</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

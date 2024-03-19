@@ -38,6 +38,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.openqa.selenium.chrome.ChromeOptions
 import java.util.Random
+
+import org.apache.poi.ss.usermodel.*
+import org.apache.poi.xssf.usermodel.*//for saving data
+
 //// Set up Chrome options for headless mode and specify window size
 //ChromeOptions options = new ChromeOptions()
 //options.addArguments("--headless")
@@ -92,6 +96,25 @@ String generateRandomFirstName() {
 	return firstNameBuilder.toString().substring(0,1).toUpperCase() + firstNameBuilder.toString().substring(1)
 }
 
+// Function to generate a random middle name
+String generateRandomMiddleName() {
+	String vowels = "aeiou"
+	String consonants = "bcdfghjklmnpqrstvwxyz"
+	Random rand = new Random()
+	
+	StringBuilder middleNameBuilder = new StringBuilder()
+	int length = rand.nextInt(7) + 5 // Random length between 5 to 11 characters
+	for (int i = 0; i < length; i++) {
+		if (i % 2 == 0) {
+			middleNameBuilder.append(consonants.charAt(rand.nextInt(consonants.length())))
+		} else {
+			middleNameBuilder.append(vowels.charAt(rand.nextInt(vowels.length())))
+		}
+	}
+	
+	return middleNameBuilder.toString().substring(0,1).toUpperCase() + middleNameBuilder.toString().substring(1)
+}
+
 // Function to generate a random last name
 String generateRandomLastName() {
 	String vowels = "aeiou"
@@ -116,11 +139,16 @@ for(int x=0; x<GlobalVariable.client_num;x++)
 	// Generate a random first name
 	String randomFirstName = generateRandomFirstName()
 	
+	// Generate a random middle name
+	String randomMiddleName = generateRandomMiddleName()
+	
 	// Generate a random last name
 	String randomLastName = generateRandomLastName()
 
 
 WebUI.setText(findTestObject('Object Repository/ClientCreation/input_FirstName_txtFname'), randomFirstName)
+
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_MiddleName_txtMname'), randomMiddleName)
 
 WebUI.setText(findTestObject('Object Repository/ClientCreation/input_LastName_txtLname'), randomLastName)
 
@@ -372,6 +400,51 @@ action1.build().perform();
 WebUI.delay(1)
 
 save.click()
+
+def success = WebUI.verifyElementPresent(findTestObject('Object Repository/ClientCreation/h2_Successful (1)'), 20)
+WebUI.verifyElementPresent(findTestObject('Object Repository/ClientCreation/div_The client has been successfully created click ok to proceed and ready for Approval (1)'), 20)
+
+if (success) {
+    println("Client Saved!")
+	
+	// Specify the data file
+	def testDataFile = findTestData('CreatedClients')//customer is the name of the datafile
+	
+	// Get the path to the Excel file
+	String excelFilePath = testDataFile.getSourceUrl()
+	
+	// Open the Excel workbook
+	FileInputStream fis = new FileInputStream(excelFilePath)
+	XSSFWorkbook workbook = new XSSFWorkbook(fis)
+	
+	// Get the default sheet (assuming there is only one sheet)
+	Sheet sheet = workbook.getSheetAt(0)
+	
+	// Find the last row index (add 1 to get the next available row)
+	int lastRowIndex = sheet.getLastRowNum() + 1
+	
+	// Create a new row
+	Row newRow = sheet.createRow(lastRowIndex)
+	
+	// Add data to the new row
+	newRow.createCell(0).setCellValue(randomFirstName)
+	newRow.createCell(1).setCellValue(randomMiddleName)
+	newRow.createCell(2).setCellValue(randomLastName)
+	
+	// Save the changes
+	FileOutputStream fos = new FileOutputStream(excelFilePath)
+	workbook.write(fos)
+	
+	// Close the FileInputStream and workbook
+	fis.close()
+	fos.close()
+	workbook.close()
+	
+	// Print the added data
+	println("Added new record in data file!")
+} else {
+    println("Error Saving Client!")
+}
 
 WebUI.delay(2)
 

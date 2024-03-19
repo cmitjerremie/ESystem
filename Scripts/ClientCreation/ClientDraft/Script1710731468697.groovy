@@ -119,30 +119,30 @@ WebUI.click(findTestObject('Object Repository/ClientCreation/input_YES_FormerEmp
 WebUI.delay(2)
 ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, -500);");
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Core/button_Saveas draft'), 10)
-WebUI.click(findTestObject('Object Repository/Page_Core/button_Saveas draft'))
+WebUI.waitForElementClickable(findTestObject('Object Repository/ClientDraft/button_Saveas draft'), 10)
+WebUI.click(findTestObject('Object Repository/ClientDraft/button_Saveas draft'))
 
 WebUI.delay(1)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/h2_Are you sure you want to save this as draft'), 10)
+WebUI.verifyElementPresent(findTestObject('Object Repository/ClientDraft/h2_Are you sure you want to save this as draft'), 10)
 WebUI.verifyTextPresent("Are you sure you want to save this as draft?", true)
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Core/button_Cancel'), 10)
-WebUI.click(findTestObject('Object Repository/Page_Core/button_Cancel'))
+WebUI.waitForElementClickable(findTestObject('Object Repository/ClientDraft/button_Cancel'), 10)
+WebUI.click(findTestObject('Object Repository/ClientDraft/button_Cancel'))
 
 WebUI.delay(1)
-WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Core/button_Saveas draft'), 10)
-WebUI.click(findTestObject('Object Repository/Page_Core/button_Saveas draft'))
+WebUI.waitForElementClickable(findTestObject('Object Repository/ClientDraft/button_Saveas draft'), 10)
+WebUI.click(findTestObject('Object Repository/ClientDraft/button_Saveas draft'))
 WebUI.delay(1)
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/h2_Are you sure you want to save this as draft'), 10)
+WebUI.verifyElementPresent(findTestObject('Object Repository/ClientDraft/h2_Are you sure you want to save this as draft'), 10)
 WebUI.verifyTextPresent("Are you sure you want to save this as draft?", true)
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Core/button_Yes'), 10)
-WebUI.click(findTestObject('Object Repository/Page_Core/button_Yes'))
+WebUI.waitForElementClickable(findTestObject('Object Repository/ClientDraft/button_Yes'), 10)
+WebUI.click(findTestObject('Object Repository/ClientDraft/button_Yes'))
 
 WebUI.delay(1)
-WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Core/h2_The Record has been successfully saved as a draft'), 10)
+WebUI.verifyElementPresent(findTestObject('Object Repository/ClientDraft/h2_The Record has been successfully saved as a draft'), 10)
 WebUI.verifyTextPresent("The Record has been successfully saved as a draft", true)
 WebUI.delay(1)
 
@@ -152,7 +152,7 @@ actions3.sendKeys(Keys.ENTER).perform()
 
 WebUI.delay(2)
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/Page_Core/h4_Draft in Customer Creation'), 10)
+WebUI.waitForElementVisible(findTestObject('Object Repository/ClientDraft/h4_Draft in Customer Creation'), 10)
 WebUI.verifyTextPresent("Draft in Customer Creation", true)
 
 

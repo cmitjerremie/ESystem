@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_PaymentAdjustment</name>
+   <tag></tag>
+   <elementGuidId>384c14f7-28a5-4230-8332-528a9c5cc1bb</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#PaymentAdjustment</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//a[@id='PaymentAdjustment']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=link[name=&quot;Payment Adjustment&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>830d2f26-48e2-4a1a-aee5-0ffd7b1b844f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>gb-hover-side confirmation-link</value>
+      <webElementGuid>75e4ad30-5e8f-4d41-a5de-9dddd6068e56</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>PaymentAdjustment</value>
+      <webElementGuid>5a36c9ae-e936-4734-9ae8-087c71f8173f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>PaymentAdjustment</value>
+      <webElementGuid>7950db9f-78f4-4ab8-99e6-d97e98f757a8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>onclick</name>
+      <type>Main</type>
+      <value>return loadIframe('ifrm1', this.href);</value>
+      <webElementGuid>59b5924b-ab8c-4762-8388-26eaca8a8393</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value> Payment
+									Adjustment </value>
+      <webElementGuid>35a6b021-7185-4701-b144-bb8c2dc95a3b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;PaymentAdjustment&quot;)</value>
+      <webElementGuid>f71a12a7-ae47-496f-90be-9deeaa3bcfed</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//a[@id='PaymentAdjustment']</value>
+      <webElementGuid>f4ab69ff-b1e0-4df9-accd-f2f378ce0f6a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='sidebarPayment']/ul/li[3]/a</value>
+      <webElementGuid>a22c75a4-36bd-4437-b33a-c4eb3b8f193b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Payment
+									Adjustment')]</value>
+      <webElementGuid>72129ad0-6e96-4eee-af90-11a599ff729c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Loan'])[1]/preceding::a[2]</value>
+      <webElementGuid>ab38f9b4-be3a-42b1-8a79-5f87e78e2fb6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'PaymentAdjustment')]</value>
+      <webElementGuid>e5ada1d3-b362-4569-a150-3e812f1629a5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[3]/div/ul/li[3]/a</value>
+      <webElementGuid>37ee21e6-0f2f-43da-9eb2-a043f039c32e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'PaymentAdjustment' and @id = 'PaymentAdjustment' and (text() = ' Payment
+									Adjustment ' or . = ' Payment
+									Adjustment ')]</value>
+      <webElementGuid>5bc3a3f1-b224-4d43-b924-55cb7f04860b</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

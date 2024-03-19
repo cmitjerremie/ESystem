@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description>http://10.9.2.15:8080/eSystemNextGenWeb/pages/Login</description>
-      <initValue>'http://10.9.2.15:8880/eSystemNextGenWebApp/pages/Login'</initValue>
+      <initValue>'http://10.9.2.15:8080/eSystemNextGenWeb/pages/Login'</initValue>
       <name>url</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
