@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>This is for the 20 pesos mba and 50 pesos cbu deposit</description>
+   <name>MultiplePayment_MBA_CBU</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f2bca8f0-24e9-4459-9a0e-808225122a47</testCaseGuid>
+</TestCaseEntity>
