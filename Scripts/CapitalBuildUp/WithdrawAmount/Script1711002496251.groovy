@@ -67,70 +67,64 @@ if (rowCount >= 1) {
 
 	WebUI.sendKeys(findTestObject('Object Repository/CBU/inputtxtCID'), Keys.chord(Keys.ENTER))
 	
-	WebElement get_element = driver.findElement(By.id("txtDepositEndBal"))
-	String get_end_bal = get_element.getAttribute("value")
+	//Test Withdraw
+	WebUI.click(findTestObject('Object Repository/CBU/span_Withdrawal'))
 	
-	WebUI.click(findTestObject('Object Repository/CBU/span_Deposit'))
-	
-	WebUI.setText(findTestObject('Object Repository/CBU/inputtxtDepositAmount'), '1050')
-	
-	WebElement get_element2 = driver.findElement(By.id("txtDepositBengBal"))
-	String get_beg_bal = get_element2.getAttribute("value").replace(",", "")
-	
-	double begBalance = Double.parseDouble(get_beg_bal);
-	double dep_amount = 1050.00;
-	
-	String get_new_end_bal = get_element.getAttribute("value").replace(",", "")
-	double new_endBalance = Double.parseDouble(get_new_end_bal);
-	
-	double cal_ending = begBalance + dep_amount;
+	WebUI.setText(findTestObject('Object Repository/CBU/inputtxtWithdrawAmount'), "101")
 	
 	DecimalFormat pesoFormat = new DecimalFormat("#,##0.00");
 	
-	String formatted_beg = pesoFormat.format(begBalance);
-	String formatted_cal = pesoFormat.format(cal_ending);
-	String formatted_end = pesoFormat.format(new_endBalance);
+	WebElement w_get_element = driver.findElement(By.id("txtWithdrawBengBal"))
+	String wget_beg_bal = w_get_element.getAttribute("value").replace(",", "")
 	
-	if(formatted_end == formatted_cal)
+	Double parse_beg_bal = Double.parseDouble(wget_beg_bal)
+	String formatted_wnew_beg = pesoFormat.format(parse_beg_bal);
+	
+	//verify if ending amount is displayed correctly
+	WebElement w_ending_dis = driver.findElement(By.id("txtWithdrawEndBal"))
+	String get_ending = w_ending_dis.getAttribute('value').replace(",", "")
+	Double parse_wEnding = Double.parseDouble(get_ending)
+	double with_amount = 101.00;
+	
+	Double w_expected_end = parse_beg_bal - with_amount;
+	String formatted_expected = pesoFormat.format(w_expected_end);
+	
+	if(formatted_expected == w_ending_dis.getAttribute('value'))
 	{
-		println("Beg Balance: " + formatted_beg + " + Dep Amount: " + dep_amount + " Ending: " + formatted_end)
-		println("Deposit Works")
+		println("Withdrawal Ending Balance: " + w_ending_dis.getAttribute('value') + " Expected: " + formatted_expected)
+		println("Withdrawal Ending Balance display correct!")
 	}
 	else
 	{
-		println("Beg Balance: " + formatted_beg + " + Dep Amount: " + dep_amount + " Ending: " + formatted_end)
-		KeywordUtil.markFailed("ERROR: Incorrect deposit computation!");
+		println("Withdrawal Ending Balance: " + w_ending_dis.getAttribute('value') + " Expected: " + formatted_expected)
+		KeywordUtil.markFailed("ERROR: Incorrect Withdrawal Ending Balance!");
 	}
 	
-	WebUI.click(findTestObject('Object Repository/CBU/button_Post'))
+	WebElement wNew_begBal = driver.findElement(By.id('txtWithdrawBengBal'))
 	
-	WebUI.click(findTestObject('Object Repository/CBU/button_Cancel'))
+	WebUI.click(findTestObject('Object Repository/CBU/button_Post_1'))
 	
-	WebUI.click(findTestObject('Object Repository/CBU/button_Post'))
+	WebUI.click(findTestObject('Object Repository/CBU/button_Cancel_wd'))
+	
+	WebUI.click(findTestObject('Object Repository/CBU/button_Post_1'))
 	
 	WebUI.click(findTestObject('Object Repository/CBU/button_Yes'))
 	
-	WebUI.click(findTestObject('Object Repository/CBU/button_OK'))
+	WebUI.waitForElementVisible(findTestObject('Object Repository/CBU/div_i  SuccessfulWithdrawal of Cash has bee_9370dc'), 10)
 	
-	WebUI.click(findTestObject('Object Repository/CBU/button_OK'))
-	
-	WebUI.delay(2)
-	
-	String parentWindowHandle = driver.getWindowHandle()
-	
-	// Get all window handles
-	Set<String> allWindowHandles = driver.getWindowHandles()
-	
-	// Iterate through all handles and close the newly opened tab
-	for (String windowHandle : allWindowHandles) {
-	    if (!windowHandle.equals(parentWindowHandle)) {
-	        driver.switchTo().window(windowHandle)
-	        driver.close()
-	    }
+	String new_beg_Wbalance = wNew_begBal.getAttribute('value')
+	if(new_beg_Wbalance.equals(formatted_expected))
+	{
+		println("Withdrawal new beggining balance is Successfully updated: " + new_beg_Wbalance)
+	}
+	else
+	{
+		println("Error: Withdrawal new beggining was not changed: " + new_beg_Wbalance + "Expected: " + formatted_expected)
+		KeywordUtil.markFailed("Error: Withdrawal new beggining was not changed: " + new_beg_Wbalance + "Expected: " + formatted_expected)
 	}
 	
-	// Switch back to the parent window
-	driver.switchTo().window(parentWindowHandle)
+	WebUI.delay(1)
+	WebUI.click(findTestObject('Object Repository/CBU/button_OK'))
 	
 	WebUI.delay(2)
 	
@@ -167,7 +161,7 @@ if (rowCount >= 1) {
 		println("Table has results.")
 	}
 	
-	WebUI.setText(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), "1,050.00")
+	WebUI.setText(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), "101.00")
 	WebUI.sendKeys(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), Keys.chord(Keys.ENTER))
 	
 	WebUI.delay(2)
@@ -180,7 +174,7 @@ if (rowCount >= 1) {
 	// Check if table has results
 	if (tableText2.contains("No matching records found")) {
 		println("Table has no results.")
-		KeywordUtil.markFailed("ERROR: Table has no results. Transactions should be displayed! - deposit 1,050.00");
+		KeywordUtil.markFailed("ERROR: Table has no results. Transactions should be displayed! - withdraw 101.00");
 	} else {
 		println("Table has results.")
 	}

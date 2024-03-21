@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>i_ChangePassword_mdi mdi-logout me-1</name>
+   <name>div_i_swal2-success-ring (1)</name>
    <tag></tag>
-   <elementGuidId>eb1bba9c-7624-47bc-9287-61e2387bc756</elementGuidId>
+   <elementGuidId>5fbb799e-b2cb-4d73-a032-8bedec813196</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//li[6]/div/a[2]/i</value>
+         <value>//div[@class='swal2-content']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>i.mdi.mdi-logout.me-1</value>
+         <value>div.swal2-success-ring</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>.swal2-success-ring</value>
+      </entry>
+   </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
@@ -22,39 +28,39 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>i</value>
-      <webElementGuid>18e0da69-252a-469d-b9a8-5323db60fc5b</webElementGuid>
+      <value>div</value>
+      <webElementGuid>b7b5b3e7-499c-4058-863b-a1618cf559be</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>mdi mdi-logout me-1</value>
-      <webElementGuid>2f76a96d-a9f8-4415-89ce-d37860fa7d7a</webElementGuid>
+      <value>swal2-success-ring</value>
+      <webElementGuid>1c274da3-36d5-4859-853f-e4da0b4308f0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;body&quot;)/div[@class=&quot;wrapper show&quot;]/div[@class=&quot;navbar-custom&quot;]/div[@class=&quot;topbar container-fluid&quot;]/ul[@class=&quot;topbar-menu d-flex align-items-center gap-2&quot;]/li[@class=&quot;dropdown&quot;]/div[@class=&quot;dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown show&quot;]/a[@class=&quot;dropdown-item&quot;]/i[@class=&quot;mdi mdi-logout me-1&quot;]</value>
-      <webElementGuid>8a6e887b-6e52-4f00-9dd3-37bd3656452d</webElementGuid>
+      <value>id(&quot;body&quot;)/div[@class=&quot;swal2-container swal2-center swal2-fade swal2-shown&quot;]/div[@class=&quot;swal2-popup swal2-modal swal2-show&quot;]/div[@class=&quot;swal2-header&quot;]/div[@class=&quot;swal2-icon swal2-success swal2-animate-success-icon&quot;]/div[@class=&quot;swal2-success-ring&quot;]</value>
+      <webElementGuid>14f22574-086e-469a-afd7-b0a25ee3dfcf</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//body[@id='body']/div/div/div/ul/li[6]/div/a[2]/i</value>
-      <webElementGuid>74b8cbd7-57d7-4525-a0e1-6483dba5a1a1</webElementGuid>
+      <value>//body[@id='body']/div[4]/div/div/div[5]/div[2]</value>
+      <webElementGuid>404bd927-3d50-47a8-baa3-c8295bd51354</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//li[6]/div/a[2]/i</value>
-      <webElementGuid>2e2a2e4b-ad68-4704-9fe4-f9bc57e6580f</webElementGuid>
+      <value>//div[4]/div/div/div[5]/div[2]</value>
+      <webElementGuid>e2e22bf4-6483-42d2-a401-4c246b7bdfa4</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>i_ChangePassword_mdi mdi-logout me-1</name>
+   <name>i_Dayap 1_mdi mdi-check-bold</name>
    <tag></tag>
-   <elementGuidId>eb1bba9c-7624-47bc-9287-61e2387bc756</elementGuidId>
+   <elementGuidId>8c868543-ef22-4c3e-9996-cec011b677fc</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//li[6]/div/a[2]/i</value>
+         <value>//tbody[@id='tblBodyAmendmentList']/tr/td[7]/a/i</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>i.mdi.mdi-logout.me-1</value>
+         <value>#tblBodyAmendmentList > tr.odd > td.text-center > a.action-icon > i.mdi.mdi-check-bold</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:attr=[title=&quot;Approve Amendment &quot;s]</value>
+      </entry>
+   </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
@@ -23,38 +29,38 @@
       <name>tag</name>
       <type>Main</type>
       <value>i</value>
-      <webElementGuid>18e0da69-252a-469d-b9a8-5323db60fc5b</webElementGuid>
+      <webElementGuid>987ce14e-1298-4a67-a7f3-80c59de453dd</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>mdi mdi-logout me-1</value>
-      <webElementGuid>2f76a96d-a9f8-4415-89ce-d37860fa7d7a</webElementGuid>
+      <value>mdi mdi-check-bold</value>
+      <webElementGuid>45f88a55-20ca-477b-847f-5e61297a60a3</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;body&quot;)/div[@class=&quot;wrapper show&quot;]/div[@class=&quot;navbar-custom&quot;]/div[@class=&quot;topbar container-fluid&quot;]/ul[@class=&quot;topbar-menu d-flex align-items-center gap-2&quot;]/li[@class=&quot;dropdown&quot;]/div[@class=&quot;dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown show&quot;]/a[@class=&quot;dropdown-item&quot;]/i[@class=&quot;mdi mdi-logout me-1&quot;]</value>
-      <webElementGuid>8a6e887b-6e52-4f00-9dd3-37bd3656452d</webElementGuid>
+      <value>id(&quot;tblBodyAmendmentList&quot;)/tr[@class=&quot;odd&quot;]/td[@class=&quot;text-center&quot;]/a[@class=&quot;action-icon&quot;]/i[@class=&quot;mdi mdi-check-bold&quot;]</value>
+      <webElementGuid>e405e8e6-3bbc-4222-8c12-f69141ac92de</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//body[@id='body']/div/div/div/ul/li[6]/div/a[2]/i</value>
-      <webElementGuid>74b8cbd7-57d7-4525-a0e1-6483dba5a1a1</webElementGuid>
+      <value>//tbody[@id='tblBodyAmendmentList']/tr/td[7]/a/i</value>
+      <webElementGuid>556b484a-a7c0-40dc-90bb-c4d404fb3d40</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//li[6]/div/a[2]/i</value>
-      <webElementGuid>2e2a2e4b-ad68-4704-9fe4-f9bc57e6580f</webElementGuid>
+      <value>//td[7]/a/i</value>
+      <webElementGuid>2994f495-af29-4a5c-898e-c74f373b4fae</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

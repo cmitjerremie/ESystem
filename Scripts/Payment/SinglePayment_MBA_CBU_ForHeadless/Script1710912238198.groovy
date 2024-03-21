@@ -43,20 +43,6 @@ import org.apache.poi.xssf.usermodel.*
 
 WebUI.delay(1)
 
-WebUI.openBrowser('')
-
-WebUI.maximizeWindow();
-
-WebUI.navigateToUrl(GlobalVariable.url)
-
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtUsername'), GlobalVariable.user2)
-
-WebUI.setText(findTestObject('Object Repository/LoginPage/inputtxtPassword'), GlobalVariable.pass2)
-
-WebUI.doubleClick(findTestObject('Object Repository/LoginPage/itoggletxtPassword'))
-
-WebUI.click(findTestObject('Object Repository/LoginPage/button_Login'))
-
 WebUI.waitForElementVisible(findTestObject('Object Repository/PaymentModule/i_ri-parking-fill'), 30)
 
 WebUI.click(findTestObject('Object Repository/PaymentModule/i_ri-parking-fill'))
@@ -78,8 +64,10 @@ WebUI.delay(1)
 //get cid from the approved clients
 // Specify the data file
 def approvedClients = findTestData('ApprovedClients')
+// Count the number of rows
 def rowCount = approvedClients.getRowNumbers()
 println(rowCount)
+
 // Iterate through rows
 for (int i = rowCount; i >= rowCount; i--) {
 	// Get data for each column
@@ -88,6 +76,8 @@ for (int i = rowCount; i >= rowCount; i--) {
 	String firstName = approvedClients.getValue('FIRSTNAME', i)
 	String middleName = approvedClients.getValue('MIDDLENAME', i)
 	String lastName = approvedClients.getValue('LASTNAME', i)
+	
+	println(cid)
 	
 	WebUI.setText(findTestObject('Object Repository/PaymentModule/inputtxtCid'), cid)
 	
@@ -168,6 +158,114 @@ for (int i = rowCount; i >= rowCount; i--) {
 		// Iterate through all handles and close the newly opened tab
 		for (String windowHandle : allWindowHandles) {
 			if (!windowHandle.equals(parentWindowHandle)) {
+				
+				def tbtransfered = findTestData('ApprovedClients')
+				
+				// Iterate through rows
+				for (int j = rowCount; j >= rowCount; j--) {
+					// Get data for each column
+					String getcid = tbtransfered.getValue('CID', j)
+					String getacc = tbtransfered.getValue('ACC', j)
+					String getfname = tbtransfered.getValue('FIRSTNAME', j)
+					String getmname = tbtransfered.getValue('MIDDLENAME', j)
+					String getlname = tbtransfered.getValue('LASTNAME', j)
+					
+					// Specify the data file
+					def DoneInitial = findTestData('DoneInitialPay')
+					
+					// Get the path to the Excel file
+					String excelFilePath = DoneInitial.getSourceUrl()
+					
+					// Open the Excel workbook
+					FileInputStream fis = new FileInputStream(excelFilePath)
+					XSSFWorkbook workbook = new XSSFWorkbook(fis)
+					
+					// Get the default sheet (assuming there is only one sheet)
+					Sheet sheet = workbook.getSheetAt(2)
+					
+					// Find the last row index (add 1 to get the next available row)
+					int lastRowIndex = sheet.getLastRowNum() + 1
+					
+					// Create a new row
+					Row newRow = sheet.createRow(lastRowIndex)
+					
+					// Add data to the new row
+					newRow.createCell(0).setCellValue(getcid)
+					newRow.createCell(1).setCellValue(getacc)
+					newRow.createCell(2).setCellValue(getfname)
+					newRow.createCell(3).setCellValue(getmname)
+					newRow.createCell(4).setCellValue(getlname)
+					
+					// Save the changes
+					FileOutputStream fos = new FileOutputStream(excelFilePath)
+					workbook.write(fos)
+					
+					// Close the FileInputStream and workbook
+					fis.close()
+					fos.close()
+					workbook.close()//ApprovedClients
+					
+					// Print the added data
+					println("Added new record")
+					
+					//delete the current record once transfered
+					// Specify the data file
+					def tbDeleted = findTestData('ApprovedClients')
+					
+					// Get the path to the Excel file
+					String excelFilePath2 = tbDeleted.getSourceUrl()
+					
+					// Open the Excel workbook
+					FileInputStream fis2 = new FileInputStream(excelFilePath2)
+					XSSFWorkbook workbook2 = new XSSFWorkbook(fis2)
+					
+					Sheet sheet2 = workbook2.getSheetAt(1)
+					
+					// Define the values of FIRSTNAME, MIDDLENAME, and LASTNAME to delete
+					def cidToDelete = getcid
+					def accToDelete = getacc
+					def firstNameToDelete = getfname
+					def middleNameToDelete = getmname
+					def lastNameToDelete = getlname
+					
+					// Loop through each row to find and delete the row containing the specified values
+					for (int rowIndex2 = sheet2.getLastRowNum(); rowIndex2 >= 0; rowIndex2--) {
+						Row row2 = sheet2.getRow(rowIndex2)
+						if (row2 != null) {
+							Cell cidCell = row2.getCell(0)
+							Cell accCell = row2.getCell(1)
+							Cell firstNameCell = row2.getCell(2)
+							Cell middleNameCell = row2.getCell(3)
+							Cell lastNameCell = row2.getCell(4)
+							
+							// Check if the values match the ones to be deleted
+							if (cidCell != null && cidCell.getStringCellValue() == cidToDelete &&
+								accCell != null && accCell.getStringCellValue() == accToDelete &&
+								firstNameCell != null && firstNameCell.getStringCellValue() == firstNameToDelete &&
+								middleNameCell != null && middleNameCell.getStringCellValue() == middleNameToDelete &&
+								lastNameCell != null && lastNameCell.getStringCellValue() == lastNameToDelete) {
+								// Delete the row if found
+								sheet2.removeRow(row2)
+								// Shift rows up to fill the gap
+								if (rowIndex2 < sheet2.getLastRowNum()) {
+									sheet.shiftRows(rowIndex2 + 1, sheet2.getLastRowNum(), -1)
+								}
+							}
+						}
+					}
+					
+					// Save the changes
+					FileOutputStream fos2 = new FileOutputStream(excelFilePath2)
+					workbook2.write(fos2)
+					
+					// Close the FileInputStream and workbook
+					fis2.close()
+					fos2.close()
+					workbook2.close()//DoneInitial
+					
+					// Print a message indicating the deletion
+					println("Data successfully transfered before deleted!")
+				}
 				driver.switchTo().window(windowHandle)
 				driver.close()
 			}
@@ -186,141 +284,3 @@ for (int i = rowCount; i >= rowCount; i--) {
 	
 	
 }
-
-WebUI.delay(2)
-
-String parentWindowHandle = driver.getWindowHandle()
-
-// Get all window handles
-Set<String> allWindowHandles = driver.getWindowHandles()
-
-// Iterate through all handles and close the newly opened tab
-for (String windowHandle : allWindowHandles) {
-	if (!windowHandle.equals(parentWindowHandle)) {
-		
-		def tbtransfered = findTestData('ApprovedClients')
-		
-		// Iterate through rows
-		for (int j = rowCount; j >= rowCount; j--) {
-			// Get data for each column
-			String getcid = tbtransfered.getValue('CID', j)
-			String getacc = tbtransfered.getValue('ACC', j)
-			String getfname = tbtransfered.getValue('FIRSTNAME', j)
-			String getmname = tbtransfered.getValue('MIDDLENAME', j)
-			String getlname = tbtransfered.getValue('LASTNAME', j)
-			
-			// Specify the data file
-			def DoneInitial = findTestData('DoneInitialPay')
-			
-			// Get the path to the Excel file
-			String excelFilePath = DoneInitial.getSourceUrl()
-			
-			// Open the Excel workbook
-			FileInputStream fis = new FileInputStream(excelFilePath)
-			XSSFWorkbook workbook = new XSSFWorkbook(fis)
-			
-			// Get the default sheet (assuming there is only one sheet)
-			Sheet sheet = workbook.getSheetAt(2)
-			
-			// Find the last row index (add 1 to get the next available row)
-			int lastRowIndex = sheet.getLastRowNum() + 1
-			
-			// Create a new row
-			Row newRow = sheet.createRow(lastRowIndex)
-			
-			// Add data to the new row
-			newRow.createCell(0).setCellValue(getcid)
-			newRow.createCell(1).setCellValue(getacc)
-			newRow.createCell(2).setCellValue(getfname)
-			newRow.createCell(3).setCellValue(getmname)
-			newRow.createCell(4).setCellValue(getlname)
-			
-			// Save the changes
-			FileOutputStream fos = new FileOutputStream(excelFilePath)
-			workbook.write(fos)
-			
-			// Close the FileInputStream and workbook
-			fis.close()
-			fos.close()
-			workbook.close()//ApprovedClients
-			
-			// Print the added data
-			println("Added new record")
-			
-			//delete the current record once transfered
-			// Specify the data file
-			def tbDeleted = findTestData('ApprovedClients')
-			
-			// Get the path to the Excel file
-			String excelFilePath2 = tbDeleted.getSourceUrl()
-			
-			// Open the Excel workbook
-			FileInputStream fis2 = new FileInputStream(excelFilePath2)
-			XSSFWorkbook workbook2 = new XSSFWorkbook(fis2)
-			
-			Sheet sheet2 = workbook2.getSheetAt(1)
-			
-			// Define the values of FIRSTNAME, MIDDLENAME, and LASTNAME to delete
-			def cidToDelete = getcid
-			def accToDelete = getacc
-			def firstNameToDelete = getfname
-			def middleNameToDelete = getmname
-			def lastNameToDelete = getlname
-			
-			// Loop through each row to find and delete the row containing the specified values
-			for (int rowIndex2 = sheet2.getLastRowNum(); rowIndex2 >= 0; rowIndex2--) {
-				Row row2 = sheet2.getRow(rowIndex2)
-				if (row2 != null) {
-					Cell cidCell = row2.getCell(0)
-					Cell accCell = row2.getCell(1)
-					Cell firstNameCell = row2.getCell(2)
-					Cell middleNameCell = row2.getCell(3)
-					Cell lastNameCell = row2.getCell(4)
-					
-					// Check if the values match the ones to be deleted
-					if (cidCell != null && cidCell.getStringCellValue() == cidToDelete &&
-						accCell != null && accCell.getStringCellValue() == accToDelete &&
-						firstNameCell != null && firstNameCell.getStringCellValue() == firstNameToDelete &&
-						middleNameCell != null && middleNameCell.getStringCellValue() == middleNameToDelete &&
-						lastNameCell != null && lastNameCell.getStringCellValue() == lastNameToDelete) {
-						// Delete the row if found
-						sheet2.removeRow(row2)
-						// Shift rows up to fill the gap
-						if (rowIndex2 < sheet2.getLastRowNum()) {
-							sheet.shiftRows(rowIndex2 + 1, sheet2.getLastRowNum(), -1)
-						}
-					}
-				}
-			}
-			
-			// Save the changes
-			FileOutputStream fos2 = new FileOutputStream(excelFilePath2)
-			workbook2.write(fos2)
-			
-			// Close the FileInputStream and workbook
-			fis2.close()
-			fos2.close()
-			workbook2.close()//DoneInitial
-			
-			// Print a message indicating the deletion
-			println("Data successfully transfered before deleted!")
-		}
-		driver.switchTo().window(windowHandle)
-		driver.close()
-	}
-}
-
-// Switch back to the parent window
-driver.switchTo().window(parentWindowHandle)
-
-WebUI.delay(2)
-WebUI.verifyElementPresent(findTestObject('Object Repository/Logout/span_(Open)_account-user-avatar'), 30)
-WebUI.click(findTestObject('Object Repository/Logout/span_(Open)_account-user-avatar'))
-
-WebUI.click(findTestObject('Object Repository/Logout/i_ChangePassword_mdi mdi-logout me-1'))
-
-WebUI.verifyElementPresent(findTestObject('Object Repository/Logout/img'), 10)
-
-println("Logout Successfull")
-
-WebUI.closeBrowser()

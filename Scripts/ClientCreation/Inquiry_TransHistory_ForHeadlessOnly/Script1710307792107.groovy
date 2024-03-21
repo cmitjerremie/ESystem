@@ -72,12 +72,12 @@ WebUI.verifyElementPresent(findTestObject('Object Repository/Dashboard/div_Dashb
 
 println('Dashboard Successfully Displayed')
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/ClientAmmendment/a_Client'), 30)
-WebUI.click(findTestObject('Object Repository/ClientAmmendment/a_Client'))
+WebUI.waitForElementClickable(findTestObject('Object Repository/ClientAmendment/a_Client'), 30)
+WebUI.click(findTestObject('Object Repository/ClientAmendment/a_Client'))
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('Object Repository/ClientAmmendment/a_Inquiryand Amendment'))
+WebUI.click(findTestObject('Object Repository/ClientAmendment/a_Inquiryand Amendment'))
 
 // Get the WebDriver instance
 def driver = DriverFactory.getWebDriver()
@@ -90,23 +90,23 @@ alert.accept()
 
 WebUI.delay(1)
 
-WebUI.setText(findTestObject('Object Repository/ClientAmmendment/input_CID_txtCID'), GlobalVariable.cid_ammend)
+WebUI.setText(findTestObject('Object Repository/ClientAmendment/input_CID_txtCID'), GlobalVariable.cid_ammend)
 
-WebUI.sendKeys(findTestObject('Object Repository/ClientAmmendment/input_CID_txtCID'), Keys.chord(Keys.ENTER))
+WebUI.sendKeys(findTestObject('Object Repository/ClientAmendment/input_CID_txtCID'), Keys.chord(Keys.ENTER))
 
 WebUI.delay(5)
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/ClientAmmendment/h4_Customers'), 10)
+WebUI.waitForElementVisible(findTestObject('Object Repository/ClientAmendment/h4_Customers'), 10)
 
-WebUI.verifyElementText(findTestObject('Object Repository/ClientAmmendment/h4_Customers'), 'Customers')
+WebUI.verifyElementText(findTestObject('Object Repository/ClientAmendment/h4_Customers'), 'Customers')
 
-WebUI.verifyElementPresent(findTestObject('Object Repository/ClientAmmendment/div_Show 102550100 entriesCIDFullNameBirthd_897106_1'),
+WebUI.verifyElementPresent(findTestObject('Object Repository/ClientAmendment/div_Show 102550100 entriesCIDFullNameBirthd_897106_1'),
 	0)
 
-WebUI.click(findTestObject('Object Repository/ClientAmmendment/i_Active_mdi mdi-magnify'))
+WebUI.click(findTestObject('Object Repository/ClientAmendment/i_Active_mdi mdi-magnify'))
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/ClientAmmendment/Inquire_Transaction_History/span_Transaction History'), 10)
-WebUI.click(findTestObject('Object Repository/ClientAmmendment/Inquire_Transaction_History/span_Transaction History'))
+WebUI.waitForElementClickable(findTestObject('Object Repository/ClientAmendment/Inquire_Transaction_History/span_Transaction History'), 10)
+WebUI.click(findTestObject('Object Repository/ClientAmendment/Inquire_Transaction_History/span_Transaction History'))
 
 // Get today's date
 LocalDate today = LocalDate.now()
@@ -117,16 +117,16 @@ DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy")
 // Format today's date
 String formattedDate = today.format(formatter)
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/ClientAmmendment/Inquire_Transaction_History/input_Date Start_txtDTStartTranHistory'), 10)
+WebUI.waitForElementClickable(findTestObject('Object Repository/ClientAmendment/Inquire_Transaction_History/input_Date Start_txtDTStartTranHistory'), 10)
 
-WebUI.waitForElementClickable(findTestObject('Object Repository/ClientAmmendment/Inquire_Transaction_History/input_Date End_txtDTEndTranHistory'), 10)
+WebUI.waitForElementClickable(findTestObject('Object Repository/ClientAmendment/Inquire_Transaction_History/input_Date End_txtDTEndTranHistory'), 10)
 
-WebUI.setText(findTestObject('Object Repository/ClientAmmendment/Inquire_Transaction_History/input_Date Start_txtDTStartTranHistory'), "01012024")
-WebUI.setText(findTestObject('Object Repository/ClientAmmendment/Inquire_Transaction_History/input_Date End_txtDTEndTranHistory'), formattedDate)
+WebUI.setText(findTestObject('Object Repository/ClientAmendment/Inquire_Transaction_History/input_Date Start_txtDTStartTranHistory'), "01012024")
+WebUI.setText(findTestObject('Object Repository/ClientAmendment/Inquire_Transaction_History/input_Date End_txtDTEndTranHistory'), formattedDate)
 
-WebUI.sendKeys(findTestObject('Object Repository/ClientAmmendment/Inquire_Transaction_History/input_Date End_txtDTEndTranHistory'), Keys.ENTER.toString())
+WebUI.sendKeys(findTestObject('Object Repository/ClientAmendment/Inquire_Transaction_History/input_Date End_txtDTEndTranHistory'), Keys.ENTER.toString())
 
-TestObject tableObject = findTestObject('Object Repository/ClientAmmendment/Inquire_Transaction_History/Inquire_Table_History')
+TestObject tableObject = findTestObject('Object Repository/ClientAmendment/Inquire_Transaction_History/Inquire_Table_History')
 
 // Extract table contents
 String tableText = WebUI.getText(tableObject)

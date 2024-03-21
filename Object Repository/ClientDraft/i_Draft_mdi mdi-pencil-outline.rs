@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>i_ChangePassword_mdi mdi-logout me-1</name>
+   <name>i_Draft_mdi mdi-pencil-outline</name>
    <tag></tag>
-   <elementGuidId>eb1bba9c-7624-47bc-9287-61e2387bc756</elementGuidId>
+   <elementGuidId>5dcd0110-8610-4156-b557-4f0ca2838057</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//li[6]/div/a[2]/i</value>
+         <value>//tbody[@id='tblDraftBody']/tr/td[6]/a/i</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>i.mdi.mdi-logout.me-1</value>
+         <value>i.mdi.mdi-pencil-outline</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=row[name=&quot;785 Test Draft 03/20/2024 zcresurrecion Draft 󰲶 󰆴&quot;i] >> internal:attr=[title=&quot;Continue encoding&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
@@ -23,38 +29,38 @@
       <name>tag</name>
       <type>Main</type>
       <value>i</value>
-      <webElementGuid>18e0da69-252a-469d-b9a8-5323db60fc5b</webElementGuid>
+      <webElementGuid>743f1065-cc63-4a4a-b0b8-0e1ce0e2f895</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>mdi mdi-logout me-1</value>
-      <webElementGuid>2f76a96d-a9f8-4415-89ce-d37860fa7d7a</webElementGuid>
+      <value>mdi mdi-pencil-outline</value>
+      <webElementGuid>a57e4527-5f36-4e7b-b90a-96f554cbf6eb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;body&quot;)/div[@class=&quot;wrapper show&quot;]/div[@class=&quot;navbar-custom&quot;]/div[@class=&quot;topbar container-fluid&quot;]/ul[@class=&quot;topbar-menu d-flex align-items-center gap-2&quot;]/li[@class=&quot;dropdown&quot;]/div[@class=&quot;dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown show&quot;]/a[@class=&quot;dropdown-item&quot;]/i[@class=&quot;mdi mdi-logout me-1&quot;]</value>
-      <webElementGuid>8a6e887b-6e52-4f00-9dd3-37bd3656452d</webElementGuid>
+      <value>id(&quot;tblDraftBody&quot;)/tr[@class=&quot;odd&quot;]/td[@class=&quot;td-actions&quot;]/a[@class=&quot;action-icon btn&quot;]/i[@class=&quot;mdi mdi-pencil-outline&quot;]</value>
+      <webElementGuid>0829c3c0-fe91-45bf-8ab8-ab02b9742f13</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//body[@id='body']/div/div/div/ul/li[6]/div/a[2]/i</value>
-      <webElementGuid>74b8cbd7-57d7-4525-a0e1-6483dba5a1a1</webElementGuid>
+      <value>//tbody[@id='tblDraftBody']/tr/td[6]/a/i</value>
+      <webElementGuid>fdefc3fe-71ab-41ca-aa2c-0b855b4afb48</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//li[6]/div/a[2]/i</value>
-      <webElementGuid>2e2a2e4b-ad68-4704-9fe4-f9bc57e6580f</webElementGuid>
+      <value>//td[6]/a/i</value>
+      <webElementGuid>8dd4f0c8-85a3-488f-a92e-09b0b6c7ee83</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

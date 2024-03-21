@@ -155,6 +155,34 @@ WebUI.delay(2)
 WebUI.waitForElementVisible(findTestObject('Object Repository/ClientDraft/h4_Draft in Customer Creation'), 10)
 WebUI.verifyTextPresent("Draft in Customer Creation", true)
 
+WebUI.waitForElementClickable(findTestObject('Object Repository/ClientDraft/i_Draft_mdi mdi-delete'), 10)
+WebUI.click(findTestObject('Object Repository/ClientDraft/i_Draft_mdi mdi-delete'))
+
+WebUI.delay(1)
+WebUI.waitForElementVisible(findTestObject('Object Repository/ClientDraft/h2_Are you sure you want to delete this draft'), 10)
+WebUI.click(findTestObject('Object Repository/ClientDraft/button_Cancel (1)'))
+
+WebUI.delay(1)
+
+WebUI.waitForElementClickable(findTestObject('Object Repository/ClientDraft/i_Draft_mdi mdi-delete'), 10)
+WebUI.click(findTestObject('Object Repository/ClientDraft/i_Draft_mdi mdi-delete'))
+
+WebUI.delay(1)
+
+WebUI.waitForElementVisible(findTestObject('Object Repository/ClientDraft/h2_Are you sure you want to delete this draft'), 10)
+WebUI.click(findTestObject('Object Repository/ClientDraft/button_OK'))
+
+WebUI.delay(1)
+
+WebUI.waitForElementVisible(findTestObject('Object Repository/ClientDraft/h2_Successful'), 10)
+WebUI.verifyTextPresent("Successfull", true)
+
+WebUI.delay(3)
+
+Actions actions4 = new Actions(driver)
+actions4.sendKeys(Keys.ENTER).perform()
+
+
 
 
 
