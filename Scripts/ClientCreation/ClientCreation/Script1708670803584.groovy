@@ -401,11 +401,12 @@ WebUI.delay(1)
 
 save.click()
 
-def success = WebUI.verifyElementPresent(findTestObject('Object Repository/ClientCreation/h2_Successful (1)'), 20)
+WebUI.verifyElementPresent(findTestObject('Object Repository/ClientCreation/h2_Successful (1)'), 20)
+String msg_created = WebUI.getText(findTestObject('Object Repository/ClientCreation/h2_Successful (1)'))
 WebUI.verifyElementPresent(findTestObject('Object Repository/ClientCreation/div_The client has been successfully created click ok to proceed and ready for Approval (1)'), 20)
 
-if (success) {
-    println("Client Saved!")
+if (msg_created == "Successful!") {
+    println("Client Saved!" + msg_created)
 	
 	// Specify the data file
 	def testDataFile = findTestData('CreatedClients')//customer is the name of the datafile
@@ -443,7 +444,8 @@ if (success) {
 	// Print the added data
 	println("Added new record in data file!")
 } else {
-    println("Error Saving Client!")
+    println("Error Saving Client!" + msg_created)
+	KeywordUtil.markFailed("Error Saving Client!" + msg_created);
 }
 
 WebUI.delay(2)

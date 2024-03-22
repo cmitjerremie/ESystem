@@ -91,7 +91,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Number of clients to  be generated</description>
-      <initValue>1</initValue>
+      <initValue>3</initValue>
       <name>client_num</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

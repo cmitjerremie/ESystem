@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
-   <description>Test if the user can create loan</description>
-   <name>LoanCreation</name>
+   <description>To test if the loan draft is working</description>
+   <name>b10-LoanDraft</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,23 +10,23 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>true</rerunImmediately>
-   <testSuiteGuid>39dc3ded-0ec6-437f-be78-19197d884da3</testSuiteGuid>
+   <testSuiteGuid>d8f26774-54a1-468c-97b9-7c306e88c7ee</testSuiteGuid>
    <testCaseLink>
-      <guid>a5bab9a1-65e5-4c64-b3bf-73d6f2e4efa6</guid>
+      <guid>82ccedb5-5a18-4688-a69f-6d6c81e26170</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Login/Login</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>fa171b74-c938-47f7-8eb9-cbb27f991bb7</guid>
+      <guid>9785b075-2b66-4a95-8467-e3d1101c080a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Loan Management/LoanCreationFullCycle</testCaseId>
+      <testCaseId>Test Cases/Loan Management/LoanDraft</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>75acbc22-c86e-4c9a-aaa8-6dd9cf48df51</guid>
+      <guid>b44438ae-ad47-487b-bc19-884a7de7be77</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Logout/Logout</testCaseId>
