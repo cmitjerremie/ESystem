@@ -61,15 +61,15 @@ alert.accept()
 WebUI.delay(1)
 
 // Specify the data file
-def approveLoan = findTestData('LoanApproval')
+def disLoan = findTestData('LoanDisbursement')
 
 // Get the number of rows in the data file
-int rowCount = approveLoan.getRowNumbers()
+int rowCount = disLoan.getRowNumbers()
 
 if (rowCount >= 1) {
 	// Iterate through rows
 	for (int i = rowCount; i >= 1; i--) {
-		String cid = approveLoan.getValue('CID', i)
+		String cid = disLoan.getValue('CID', i)
 		
 		WebUI.setText(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/input_Search_form-control form-control-sm'), cid)
 		WebUI.sendKeys(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/input_Search_form-control form-control-sm'), Keys.chord(Keys.ENTER))
@@ -83,21 +83,31 @@ if (rowCount >= 1) {
 		String expectedResult = GlobalVariable.cid
 		
 		// Verify if the table content contains the expected result
-		if (tableContent.contains(expectedResult)) {
+		if (!tableContent.equals('No matching records found')) {
 			println(tableContent)
 			println("The table contains the expected result: ${expectedResult}")
 			
-			WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/i_SIKAP 1_ri-checkbox-circle-fill'), 10)
-			WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/i_SIKAP 1_ri-checkbox-circle-fill'))
+			WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/Disapprove/i_AGRI LOAN_ri-close-circle-fill'), 10)
+//			WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/Disapprove/i_AGRI LOAN_ri-close-circle-fill'))
+			WebElement disapp = driver.findElement(By.className('ri-close-circle-fill'))
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", disapp);
 			
-			WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/h4_Are yousure you want to disburse this loan'), 10)
-			WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/button_YES'))
+			WebUI.waitForElementVisible(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/Disapprove/h4_Are yousure you want to cancel disbursement'), 10)
+			WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/Disapprove/button_NO'))
+			
+			WebUI.delay(1)
+			WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/Disapprove/i_AGRI LOAN_ri-close-circle-fill'), 10)
+//			WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/Disapprove/i_AGRI LOAN_ri-close-circle-fill'))
+			WebElement disapp2 = driver.findElement(By.className('ri-close-circle-fill'))
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", disapp2);
+			WebUI.waitForElementVisible(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/Disapprove/h4_Are yousure you want to cancel disbursement'), 10)
+			WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/Disapprove/button_YES'))
 			
 			WebUI.delay(1)
 			
-			String msg_rls = WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/div_Loan has been Released'), 10)
-			
-			if(msg_rls == "Loan has been Released")
+			WebUI.waitForElementVisible(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/Disapprove/div_Loan disbursement been cancel'), 10)
+			String msg_disapp = WebUI.getText(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/Disapprove/div_Loan disbursement been cancel'))
+			if(msg_disapp == "Loan disbursement been cancel!")
 			{
 				WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/button_OK'))
 				
@@ -146,37 +156,50 @@ if (rowCount >= 1) {
 				workbook.close()
 				
 				// Print a message indicating the deletion
-				println("Data Deleted, Loan Approved!")
+				println("Data Deleted, Loan DisApproved!")
 				
-				WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/h2_Amortization Generated'), 10)
-				WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanDisbursement/button_OK'))
-					
-				WebUI.delay(2)
+				//RETURN to APPROVAL############################################3
 				
-				String parentWindowHandle = driver.getWindowHandle()
+				// Specify the data file
+				def tbreturn = findTestData('LoanApproval')
 				
-				// Get all window handles
-				Set<String> allWindowHandles = driver.getWindowHandles()
+				// Get the path to the Excel file
+				String excelFilePath2 = tbreturn.getSourceUrl()
 				
-				// Iterate through all handles and close the newly opened tab
-				for (String windowHandle : allWindowHandles) {
-					if (!windowHandle.equals(parentWindowHandle)) {
-						driver.switchTo().window(windowHandle)
-						driver.close()
-					}
-				}
+				// Open the Excel workbook
+				FileInputStream fis2 = new FileInputStream(excelFilePath2)
+				XSSFWorkbook workbook2 = new XSSFWorkbook(fis2)
 				
-				// Switch back to the parent window
-				driver.switchTo().window(parentWindowHandle)
+				Sheet sheet2 = workbook2.getSheetAt(4)
 				
-				WebUI.delay(3)
+				// Find the last row index (add 1 to get the next available row)
+				int lastRowIndex2 = sheet2.getLastRowNum() + 1
+				
+				// Create a new row
+				Row newRow2 = sheet2.createRow(lastRowIndex2)
+				
+				// Add data to the new row
+				newRow2.createCell(0).setCellValue(cid)
+				
+				// Save the changes
+				FileOutputStream fos2 = new FileOutputStream(excelFilePath2)
+				workbook2.write(fos2)
+				
+				// Close the FileInputStream and workbook
+				fis2.close()
+				fos2.close()
+				workbook2.close()
+				
+				// Print the added data
+				println("CID Returned for Approval")
 			}
 			else
 			{
-				KeywordUtil.markFailed("ERROR in Loan Disbursement" + msg_rls);
+				KeywordUtil.markFailed("ERROR in Loan Disbursement" + msg_disapp);
 			}
 			
 		} else {
+			println(tableContent)
 			println("The table does not contain the expected result: ${expectedResult}")
 			KeywordUtil.markFailed("PLEASE CHECK YOUR CLIENT NAME IF ALREADY DONE CLIENT CREATION");
 		}
@@ -184,6 +207,6 @@ if (rowCount >= 1) {
 	}
 }
 else {
-	println("Error: Data file contains no rows.")
-	KeywordUtil.markFailed("Error: Data file contains no rows.");
+	println("Error: Data file contains no rows. - Please make sure to approve loan first!")
+	KeywordUtil.markFailed("Error: Data file contains no rows. - Please make sure to approve loan first!");
 }

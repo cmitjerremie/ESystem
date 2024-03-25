@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_Dayap 1_ri-close-line</name>
+   <tag></tag>
+   <elementGuidId>01b9fb8a-ff20-4279-b994-f72f9a84eb06</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//tbody[@id='tblBodyNewClientList']/tr[5]/td[8]/a[3]/i</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=row[name=&quot;03/18/2024 Wudakuze Hogojelemos 01/01/1999 09123456780 Laguna 2 Bay Dayap 1 󰸞 󰏌 &quot;i] >> internal:attr=[title=&quot;Disapprove Client&quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>f3f9c88d-7f80-410c-a345-114a2096bebd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>ri-close-line </value>
+      <webElementGuid>f2358ed7-a642-4bd2-8466-90c67074ed2c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;tblBodyNewClientList&quot;)/tr[@class=&quot;odd&quot;]/td[@class=&quot;text-center&quot;]/a[@class=&quot;action-icon&quot;]/i[@class=&quot;ri-close-line&quot;]</value>
+      <webElementGuid>38e4635b-3213-4d8d-a5d4-6bbf01de8bc0</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//tbody[@id='tblBodyNewClientList']/tr[5]/td[8]/a[3]/i</value>
+      <webElementGuid>829a3c25-273b-4f07-8e0e-df4a91027593</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//tr[5]/td[8]/a[3]/i</value>
+      <webElementGuid>2052153d-5849-4db8-a27b-962e63543738</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

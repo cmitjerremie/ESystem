@@ -25,6 +25,11 @@ import com.kms.katalon.core.util.KeywordUtil
 import internal.GlobalVariable as GlobalVariable
 import org.apache.poi.ss.usermodel.*
 import org.apache.poi.xssf.usermodel.*
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement
+
+import org.openqa.selenium.interactions.Actions;
 
 
 WebUI.waitForElementClickable(findTestObject('Object Repository/ClientAmendment/a_Client'), 30)
@@ -79,33 +84,34 @@ if (rowCount >= 1) {
 		}
 		
 		WebUI.delay(1)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/ClientAmendment/ClientAmmendmentApproval/i_Dayap 1_ri-close-line'), 10)
-		WebUI.click(findTestObject('Object Repository/ClientAmendment/ClientAmmendmentApproval/i_Dayap 1_ri-close-line'))
+		WebElement reject = driver.findElement(By.className('ri-close-line'))
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", reject);
+		
+		WebUI.waitForElementVisible(findTestObject('Object Repository/ClientAmendment/AmendmentDisapprove/h2_Are you sure you want to disapprove this Amendment'), 10)
 		
 		WebUI.delay(1)
-		WebUI.click(findTestObject('Object Repository/ClientAmendment/ClientAmmendmentApproval/button_Cancel'))
-		
-		WebUI.waitForElementClickable(findTestObject('Object Repository/ClientAmendment/ClientAmmendmentApproval/i_Dayap 1_mdi mdi-check-bold'), 10)
-		WebUI.click(findTestObject('Object Repository/ClientAmendment/ClientAmmendmentApproval/i_Dayap 1_mdi mdi-check-bold'))
+		WebUI.click(findTestObject('Object Repository/ClientAmendment/AmendmentDisapprove/button_Cancel'))
 		
 		WebUI.delay(1)
 		
-		WebUI.waitForElementClickable(findTestObject('Object Repository/ClientAmendment/ClientAmmendmentApproval/button_Cancel'), 10)
-		WebUI.click(findTestObject('Object Repository/ClientAmendment/ClientAmmendmentApproval/button_Cancel'))
+		WebElement reject2 = driver.findElement(By.className('ri-close-line'))
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", reject2);
 		
-		WebUI.waitForElementClickable(findTestObject('Object Repository/ClientAmendment/ClientAmmendmentApproval/i_Dayap 1_mdi mdi-check-bold'), 10)
-		WebUI.click(findTestObject('Object Repository/ClientAmendment/ClientAmmendmentApproval/i_Dayap 1_mdi mdi-check-bold'))
-		
-		WebUI.delay(1)
-		WebUI.click(findTestObject('Object Repository/ClientAmendment/ClientAmmendmentApproval/button_Yes'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/ClientAmendment/AmendmentDisapprove/h2_Are you sure you want to disapprove this Amendment'), 10)
 		
 		WebUI.delay(1)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/ClientAmendment/div_i_swal2-success-ring (1)'), 10)
-		WebUI.delay(1)
-		String msg_app = WebUI.getText(findTestObject('Object Repository/ClientAmendment/ClientAmmendmentApproval/div_Record has been Successfuly Saved'))
 		
-		if(msg_app == "Record has been Successfuly Saved")
+		WebUI.click(findTestObject('Object Repository/ClientAmendment/AmendmentDisapprove/button_Yes'))
+		
+		WebUI.delay(1)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/ClientAmendment/AmendmentDisapprove/h2_Successful'), 10)
+		WebUI.delay(1)
+		String msg_disApp = WebUI.getText(findTestObject('Object Repository/ClientAmendment/AmendmentDisapprove/h2_Successful'))
+		
+		if(msg_disApp == "Success!")
 		{
+			Actions actions = new Actions(DriverFactory.getWebDriver())
+			actions.sendKeys(Keys.ENTER).perform()
 			// Specify the data file
 			def tbDeleted = findTestData('ForAmendment')
 			

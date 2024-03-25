@@ -110,79 +110,91 @@ if (rowCount >= 1) {
 	
 	WebUI.click(findTestObject('Object Repository/CBU/button_Yes'))
 	
-	WebUI.click(findTestObject('Object Repository/CBU/button_OK'))
-	
-	WebUI.click(findTestObject('Object Repository/CBU/button_OK'))
-	
-	WebUI.delay(2)
-	
-	String parentWindowHandle = driver.getWindowHandle()
-	
-	// Get all window handles
-	Set<String> allWindowHandles = driver.getWindowHandles()
-	
-	// Iterate through all handles and close the newly opened tab
-	for (String windowHandle : allWindowHandles) {
-	    if (!windowHandle.equals(parentWindowHandle)) {
-	        driver.switchTo().window(windowHandle)
-	        driver.close()
-	    }
+	WebUI.waitForElementVisible(findTestObject('Object Repository/CBU/h2_Successful'), 10)
+	WebUI.waitForElementVisible(findTestObject('Object Repository/CBU/div_Deposit of Cash  has been successfully posted'), 10)
+	String msg_dep = WebUI.getText(findTestObject('Object Repository/CBU/div_Deposit of Cash  has been successfully posted'))
+	if(msg_dep == "Deposit of Cash has been successfully posted.")
+	{
+		println(msg_dep)
+		WebUI.click(findTestObject('Object Repository/CBU/button_OK'))
+		WebUI.delay(1)
+		WebUI.click(findTestObject('Object Repository/CBU/button_OK'))
+		
+		WebUI.delay(2)
+		
+		String parentWindowHandle = driver.getWindowHandle()
+		
+		// Get all window handles
+		Set<String> allWindowHandles = driver.getWindowHandles()
+		
+		// Iterate through all handles and close the newly opened tab
+		for (String windowHandle : allWindowHandles) {
+			if (!windowHandle.equals(parentWindowHandle)) {
+				driver.switchTo().window(windowHandle)
+				driver.close()
+			}
+		}
+		
+		// Switch back to the parent window
+		driver.switchTo().window(parentWindowHandle)
+		
+		WebUI.delay(2)
+		
+		//check history
+		WebUI.click(findTestObject('Object Repository/CBU/span_Transaction History'))
+		
+		// Get today's date
+		LocalDate today = LocalDate.now()
+		
+		// Define the date format
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy")
+		
+		// Format today's date
+		String formattedDate = today.format(formatter)
+		
+		// Enter the formatted date into the text fields
+		WebUI.setText(findTestObject('Object Repository/CBU/input_Date Start_dtMStart'), formattedDate)
+		WebUI.setText(findTestObject('Object Repository/CBU/input_Date End_dtMEnd'), formattedDate)
+		
+		WebUI.sendKeys(findTestObject('Object Repository/CBU/input_Date End_dtMEnd'), Keys.ENTER.toString())
+		
+		WebUI.delay(1)
+		
+		TestObject tableObject = findTestObject('Object Repository/CBU/div_Transaction DateTRNTRN DescriptionUsern_71bb85')
+		
+		// Extract table contents
+		String tableText = WebUI.getText(tableObject)
+		
+		// Check if table has results
+		if (tableText.contains("No data available in table")) {
+			println("Table has no results.")
+			KeywordUtil.markFailed("ERROR: Table has no results. Transactions should be displayed!");
+		} else {
+			println("Table has results.")
+		}
+		
+		WebUI.setText(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), "1,050.00")
+		WebUI.sendKeys(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), Keys.chord(Keys.ENTER))
+		
+		WebUI.delay(2)
+		
+		TestObject tableObject2 = findTestObject('Object Repository/CBU/div_Transaction DateTRNTRN DescriptionUsern_71bb85')
+		String tableText2 = WebUI.getText(tableObject2)
+		
+		WebUI.delay(1)
+		
+		// Check if table has results
+		if (tableText2.contains("No matching records found")) {
+			println("Table has no results.")
+			KeywordUtil.markFailed("ERROR: Table has no results. Transactions should be displayed! - deposit 1,050.00");
+		} else {
+			println("Table has results.")
+		}
 	}
-	
-	// Switch back to the parent window
-	driver.switchTo().window(parentWindowHandle)
-	
-	WebUI.delay(2)
-	
-	//check history
-	WebUI.click(findTestObject('Object Repository/CBU/span_Transaction History'))
-	
-	// Get today's date
-	LocalDate today = LocalDate.now()
-	
-	// Define the date format
-	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy")
-	
-	// Format today's date
-	String formattedDate = today.format(formatter)
-	
-	// Enter the formatted date into the text fields
-	WebUI.setText(findTestObject('Object Repository/CBU/input_Date Start_dtMStart'), formattedDate)
-	WebUI.setText(findTestObject('Object Repository/CBU/input_Date End_dtMEnd'), formattedDate)
-	
-	WebUI.sendKeys(findTestObject('Object Repository/CBU/input_Date End_dtMEnd'), Keys.ENTER.toString())
-	
-	WebUI.delay(1)
-	
-	TestObject tableObject = findTestObject('Object Repository/CBU/div_Transaction DateTRNTRN DescriptionUsern_71bb85')
-	
-	// Extract table contents
-	String tableText = WebUI.getText(tableObject)
-	
-	// Check if table has results
-	if (tableText.contains("No data available in table")) {
-		println("Table has no results.")
-		KeywordUtil.markFailed("ERROR: Table has no results. Transactions should be displayed!");
-	} else {
-		println("Table has results.")
-	}
-	
-	WebUI.setText(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), "1,050.00")
-	WebUI.sendKeys(findTestObject('Object Repository/CBU/input_Search_form-control form-control-sm'), Keys.chord(Keys.ENTER))
-	
-	WebUI.delay(2)
-	
-	TestObject tableObject2 = findTestObject('Object Repository/CBU/div_Transaction DateTRNTRN DescriptionUsern_71bb85')
-	String tableText2 = WebUI.getText(tableObject2)
-	
-	WebUI.delay(1)
-	
-	// Check if table has results
-	if (tableText2.contains("No matching records found")) {
-		println("Table has no results.")
-		KeywordUtil.markFailed("ERROR: Table has no results. Transactions should be displayed! - deposit 1,050.00");
-	} else {
-		println("Table has results.")
+	else
+	{
+		println("Error in deposit amount msg: " + msg_dep)
+		KeywordUtil.markFailed("ERROR in deposit amount! msg: " + msg_dep);
 	}
 }
 else {

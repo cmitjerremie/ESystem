@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_Dayap 1_ri-close-line</name>
+   <tag></tag>
+   <elementGuidId>cb4d958a-1971-4e54-bdad-09c2ff4ccdd8</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#tblBodyAmendmentList > tr.odd > td.text-center > a.action-icon > i.ri-close-line</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//tbody[@id='tblBodyAmendmentList']/tr/td[7]/a[2]/i</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>internal:role=row[name=&quot;10000379 Xotoce Amd Xufifin Zagod Amd 01/01/1999 Laguna 2 Bay Dayap 1 󰸞 &quot;i] >> internal:attr=[title=&quot;Disapprove Amendment &quot;i]</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>65bfe621-e5fb-43a6-9bba-ce8e8c2d1695</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>ri-close-line </value>
+      <webElementGuid>5b480281-5992-4355-a384-873e7c0d298f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;tblBodyAmendmentList&quot;)/tr[@class=&quot;odd&quot;]/td[@class=&quot;text-center&quot;]/a[@class=&quot;action-icon&quot;]/i[@class=&quot;ri-close-line&quot;]</value>
+      <webElementGuid>40a7500b-38e7-4142-b238-56f51b4ba1ed</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//tbody[@id='tblBodyAmendmentList']/tr/td[7]/a[2]/i</value>
+      <webElementGuid>c72a7e1b-a976-420c-8494-4fa9afba7174</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//td[7]/a[2]/i</value>
+      <webElementGuid>8a54a6c1-46be-4c31-bdc8-cbe923c7ee7d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

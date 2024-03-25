@@ -112,10 +112,11 @@ for (int i = rowCount; i >= 1; i--) {
 		
 		WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanApproval/div_Loan has been approved'), 10)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanApproval/h2_Successful_LoanApproved'), 10)
-		String msg_success = WebUI.verifyElementPresent(findTestObject('Object Repository/LoanManagementModule/LoanApproval/h2_Successful_LoanApproved'), 10)
+		String msg_success = WebUI.getText(findTestObject('Object Repository/LoanManagementModule/LoanApproval/h2_Successful_LoanApproved'))
 		
 		if(msg_success == "Successful!")
 		{
+			println("Loan Approved! msg: " + msg_success)
 			// Specify the data file
 			def tbDeleted = findTestData('LoanApproval')
 			
@@ -196,6 +197,11 @@ for (int i = rowCount; i >= 1; i--) {
 			// Print the added data
 			println("Added cid for disbursement")
 		}	
+		else
+		{
+			println("Loan Approval Error! msg: " + msg_success)
+			KeywordUtil.markFailed("Loan Approval Error! msg: " + msg_success);
+		}
 		
 		WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanApproval/button_OK'))
 		WebUI.delay(2)	

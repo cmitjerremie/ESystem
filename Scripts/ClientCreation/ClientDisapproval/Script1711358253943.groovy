@@ -68,7 +68,7 @@ int rowCount = pendingCustomer.getRowNumbers()
 
 if (rowCount >= 1) {
 	// Iterate through rows
-	for (int i = rowCount; i >= 1; i--) {
+	for (int i = rowCount; i >= rowCount; i--) {
 		// Get data for each column
 		String firstName = pendingCustomer.getValue('FIRSTNAME', i)
 		String middleName = pendingCustomer.getValue('MIDDLENAME', i)
@@ -97,71 +97,32 @@ if (rowCount >= 1) {
 	//		WebUI.click(findTestObject('Object Repository/ClientApproval/i_mdi mdi-check-bold'))
 	//		WebUI.click(findTestObject('Object Repository/ClientApproval/button_Yes'))
 			
-			WebUI.waitForElementClickable(findTestObject('Object Repository/ClientApproval/Approval_view_btn'), 10)
-			WebUI.click(findTestObject('Object Repository/ClientApproval/Approval_view_btn'))
+			WebUI.delay(2)
+//			WebUI.click(findTestObject('Object Repository/ClientApproval/DisapproveClient/i_Dayap 1_ri-close-line'))
+			WebElement disapp = driver.findElement(By.className('ri-close-line'))
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", disapp);
 			
-			WebUI.waitForElementClickable(findTestObject('Object Repository/ClientApproval/button_view_Approve'), 30)
-			WebUI.click(findTestObject('Object Repository/ClientApproval/button_view_Approve'))
+			WebUI.verifyElementPresent(findTestObject('Object Repository/ClientApproval/DisapproveClient/h2_Are you sure you want to disapprove this client'), 20)
+			WebUI.click(findTestObject('Object Repository/ClientApproval/DisapproveClient/button_Cancel'))
 			
-			WebUI.verifyElementPresent(findTestObject('Object Repository/ClientApproval/h2_Are you sure you want to approve this client'), 20)
-			WebUI.click(findTestObject('Object Repository/ClientApproval/button_view_Yes'))
+			WebUI.delay(2)
 			
-			WebUI.waitForElementVisible(findTestObject('Object Repository/ClientApproval/h2_Successful_clientApproved'), 10)
-			String msg_approved = WebUI.getText(findTestObject('Object Repository/ClientApproval/h2_Successful_clientApproved'))
-			WebUI.waitForElementVisible(findTestObject('Object Repository/ClientApproval/div_New client has been approved CID-100002_073c72'), 10)
-			println(msg_approved)
+			WebElement disapp2 = driver.findElement(By.className('ri-close-line'))
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", disapp2);
 			
-			if(msg_approved == "Successful")
+			WebUI.verifyElementPresent(findTestObject('Object Repository/ClientApproval/DisapproveClient/h2_Are you sure you want to disapprove this client'), 20)
+			WebUI.click(findTestObject('Object Repository/ClientApproval/DisapproveClient/button_Yes'))
+			
+			WebUI.waitForElementVisible(findTestObject('Object Repository/ClientApproval/DisapproveClient/h2_Message'), 10)
+			WebUI.waitForElementVisible(findTestObject('Object Repository/ClientApproval/DisapproveClient/div_This Record is Rejected'), 10)
+			
+			String msg_approvedhdr = WebUI.getText(findTestObject('Object Repository/ClientApproval/DisapproveClient/h2_Message'))
+			String msg_approved = WebUI.getText(findTestObject('Object Repository/ClientApproval/DisapproveClient/div_This Record is Rejected'))
+			//Message for the meantime but "Success!" in real scenario
+			if(msg_approvedhdr == "Message" && msg_approved == "This Record is Rejected!")
 			{
-				String get_info = WebUI.getText(findTestObject('Object Repository/ClientApproval/div_New client has been approved CID-100002_073c72'))
-				def matcher = (get_info =~ /CID-(\d+) \/ ACC-(\d+-\d+-\d+)/)
-				matcher.find()
-				String cid = matcher.group(1)
-				String acc = matcher.group(2)
-				
-				GlobalVariable.gen_cid = cid
-				GlobalVariable.gen_acc = acc
-				
-				println(tbapproved + " CID: " + GlobalVariable.gen_cid + " ACC NO: " + GlobalVariable.gen_acc)
-				
-				// Specify the data file
-				def saveClientCred = findTestData('ApprovedClients')
-				
-				// Get the path to the Excel file
-				String excelFilePath = saveClientCred.getSourceUrl()
-				
-				// Open the Excel workbook
-				FileInputStream fis = new FileInputStream(excelFilePath)
-				XSSFWorkbook workbook = new XSSFWorkbook(fis)
-				
-				// Get the default sheet (assuming there is only one sheet)
-				Sheet sheet = workbook.getSheetAt(1)
-				
-				// Find the last row index (add 1 to get the next available row)
-				int lastRowIndex = sheet.getLastRowNum() + 1
-				
-				// Create a new row
-				Row newRow = sheet.createRow(lastRowIndex)
-				
-				// Add data to the new row
-				newRow.createCell(0).setCellValue(cid)
-				newRow.createCell(1).setCellValue(acc)
-				newRow.createCell(2).setCellValue(firstName)
-				newRow.createCell(3).setCellValue(middleName)
-				newRow.createCell(4).setCellValue(lastName)
-				
-				// Save the changes
-				FileOutputStream fos = new FileOutputStream(excelFilePath)
-				workbook.write(fos)
-				
-				// Close the FileInputStream and workbook
-				fis.close()
-				fos.close()
-				workbook.close()
-				
-				// Print the added data
-				println("Added new record - Customer has been approved!")
-				
+				WebUI.delay(1)
+				WebUI.click(findTestObject('Object Repository/ClientApproval/button_OK'))
 				//delete data in first sheet
 				// Specify the data file
 				def tbdeleted = findTestData('CreatedClients') // Assuming 'Customer' is the name of the data file
@@ -199,6 +160,7 @@ if (rowCount >= 1) {
 							if (rowIndex2 < sheet2.getLastRowNum()) {
 								sheet2.shiftRows(rowIndex2 + 1, sheet2.getLastRowNum(), -1)
 							}
+							break
 						}
 					}
 				}

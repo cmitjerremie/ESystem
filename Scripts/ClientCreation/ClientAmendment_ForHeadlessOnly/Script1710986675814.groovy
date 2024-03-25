@@ -95,9 +95,24 @@ if (rowCount >= 1) {
 	WebUI.selectOptionByValue(findTestObject('Object Repository/ClientAmendment/select_--Select--AnnulledLive-inMarriedSepa_54a068'),
 		'162', true)
 	
-	WebUI.setText(findTestObject('Object Repository/ClientAmendment/input_FirstName_txtfname'), firstName + " Amd")
+	// Function to generate a random middle name with exactly 3 letters
+	String vowels = "aeiou";
+	String consonants = "bcdfghjklmnpqrstvwxyz";
+	Random rand = new Random();
 	
-	WebUI.setText(findTestObject('Object Repository/ClientAmendment/input_LastName_txtlname'), lastName + " Amd")
+	StringBuilder middleNameBuilder = new StringBuilder();
+	for (int j = 0; j < 3; j++) {
+	    if (j % 2 == 0) {
+	        middleNameBuilder.append(consonants.charAt(rand.nextInt(consonants.length())));
+	    } else {
+	        middleNameBuilder.append(vowels.charAt(rand.nextInt(vowels.length())));
+	    }
+	}
+	String amdName = middleNameBuilder.toString();
+	
+	WebUI.setText(findTestObject('Object Repository/ClientAmendment/input_FirstName_txtfname'), firstName)
+	
+	WebUI.setText(findTestObject('Object Repository/ClientAmendment/input_LastName_txtlname'), lastName + amdName)
 	
 	WebUI.selectOptionByValue(findTestObject('Object Repository/ClientAmendment/select_--Select--Accommodation and Food Ser_e45bf9'),
 		'694', true)
@@ -358,6 +373,6 @@ if (rowCount >= 1) {
 	}
 }
 else {
-	println("Error: Data file contains no rows. - Please add and approved customer first!")
-	KeywordUtil.markFailed("Error: Data file contains no rows. - Please add and approved customer first!");
+	println("Error: Data file contains no rows. - Please add and approve customer first!")
+	KeywordUtil.markFailed("Error: Data file contains no rows. - Please add and approve customer first!");
 }

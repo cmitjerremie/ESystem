@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
-   <description>This is to test if the user can disburse loan successfully.</description>
-   <name>LoanDisbursement</name>
+   <description>To test if the user can disapprove loan for disbursement.</description>
+   <name>b13.1LoanDisbursement_Disapprove</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,23 +10,23 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>true</rerunImmediately>
-   <testSuiteGuid>64e734d3-31a8-4c30-9256-c9785ef020f3</testSuiteGuid>
+   <testSuiteGuid>78ddc544-af34-4fa8-ac78-4dc4341284e9</testSuiteGuid>
    <testCaseLink>
-      <guid>948067fe-3899-48a3-b694-6e346f89f7b2</guid>
+      <guid>fc185ee3-dceb-43f5-aa81-ff887860cbb0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Login/Login</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>1d2d9daa-75d6-468d-982c-88b87f95f521</guid>
+      <guid>42a2e439-a1f6-4d03-8115-6d9e6c3af51d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Loan Management/LoanDisbursement</testCaseId>
+      <testCaseId>Test Cases/Loan Management/LoanDisbursement_Disapprove</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>7a0d4802-edc5-4925-b5ee-d72131505466</guid>
+      <guid>d11456e6-d6f1-4db6-8587-354f2be494fe</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Logout/Logout</testCaseId>

@@ -85,16 +85,16 @@ def getCID = findTestData('DoneInitialPay')
 // Get the number of rows in the data file
 int rowCount = getCID.getRowNumbers()
 
+if (rowCount >= 1) {
 // Iterate through rows
-for (int i = rowCount; i >= rowCount; i--) {
-	// Get data for each column
-	String cid = getCID.getValue('CID', i)
-	String firstName = getCID.getValue('FIRSTNAME', i)
-	String lastName = getCID.getValue('LASTNAME', i)
+	for (int i = rowCount; i >= rowCount; i--) {
+		// Get data for each column
+		String cid = getCID.getValue('CID', i)
+		String firstName = getCID.getValue('FIRSTNAME', i)
+		String lastName = getCID.getValue('LASTNAME', i)
+		
 	
-	iptCID = String.valueOf(cid)
-
-	WebUI.setText(findTestObject('Object Repository/ClientAmendment/input_CID_txtCID'), iptCID) //GlobalVariable.cid_ammend
+	WebUI.setText(findTestObject('Object Repository/ClientAmendment/input_CID_txtCID'), cid) //GlobalVariable.cid_ammend
 	
 	WebUI.sendKeys(findTestObject('Object Repository/ClientAmendment/input_CID_txtCID'), Keys.chord(Keys.ENTER))
 	
@@ -113,9 +113,24 @@ for (int i = rowCount; i >= rowCount; i--) {
 	WebUI.selectOptionByValue(findTestObject('Object Repository/ClientAmendment/select_--Select--AnnulledLive-inMarriedSepa_54a068'),
 		'162', true)
 	
-	WebUI.setText(findTestObject('Object Repository/ClientAmendment/input_FirstName_txtfname'), firstName + " Amd")
+	// Function to generate a random middle name with exactly 3 letters
+	String vowels = "aeiou";
+	String consonants = "bcdfghjklmnpqrstvwxyz";
+	Random rand = new Random();
 	
-	WebUI.setText(findTestObject('Object Repository/ClientAmendment/input_LastName_txtlname'), lastName + " Amd")
+	StringBuilder middleNameBuilder = new StringBuilder();
+	for (int j = 0; j < 3; j++) {
+	    if (j % 2 == 0) {
+	        middleNameBuilder.append(consonants.charAt(rand.nextInt(consonants.length())));
+	    } else {
+	        middleNameBuilder.append(vowels.charAt(rand.nextInt(vowels.length())));
+	    }
+	}
+	String amdName = middleNameBuilder.toString();
+	
+	WebUI.setText(findTestObject('Object Repository/ClientAmendment/input_FirstName_txtfname'), firstName)
+	
+	WebUI.setText(findTestObject('Object Repository/ClientAmendment/input_LastName_txtlname'), lastName + amdName)
 	
 	WebUI.selectOptionByValue(findTestObject('Object Repository/ClientAmendment/select_--Select--Accommodation and Food Ser_e45bf9'),
 		'694', true)
@@ -167,7 +182,7 @@ for (int i = rowCount; i >= rowCount; i--) {
 	
 	((JavascriptExecutor) driver).executeScript("window.scrollTo(0, -500);")
 	
-	WebUI.verifyElementPresent(findTestObject('Object Repository/ClientAmendment/a_DOSRIRPT'), 0)
+	WebUI.verifyElementPresent(findTestObject('Object Repository/ClientAmendment/a_DOSRIRPT'), 10)
 	
 	WebUI.click(findTestObject('Object Repository/ClientAmendment/button_Amend'))
 	
@@ -317,16 +332,16 @@ for (int i = rowCount; i >= rowCount; i--) {
 	
 	WebUI.click(findTestObject('Object Repository/ClientAmendment/button_Yes'))
 	
-	WebUI.verifyElementPresent(findTestObject('Object Repository/ClientAmendment/div_The client amendment has been successfu_5db511'),10)
+	WebUI.delay(1)
+	WebUI.waitForElementVisible(findTestObject('Object Repository/ClientAmendment/div_i_swal2-success-ring (1)'), 10)
+	WebUI.waitForElementVisible(findTestObject('Object Repository/ClientAmendment/div_The client amendment has been successfu_5db511'), 10)
+	String msg_amd = WebUI.getText(findTestObject('Object Repository/ClientAmendment/div_The client amendment has been successfu_5db511'))
 	
-	String expectedText = 'The client amendment has been successfully processed. Please inform your approver to save the changes.'
-	
-	// Verify if the expected text is present on the web page
-	if (WebUI.verifyTextPresent(expectedText, true)) {
+	if (msg_amd == "The client amendment has been successfully processed. Please inform your approver to save the changes.") {
 	    // Code to execute if the text is present
-		
+		println(msg_amd)
 		// Specify the data file
-		def pendingAmmend = findTestData('ForAmendment')//customer is the name of the datafile
+		def pendingAmmend = findTestData('ForAmendment')
 		
 		// Get the path to the Excel file
 		String excelFilePath = pendingAmmend.getSourceUrl()
@@ -358,7 +373,8 @@ for (int i = rowCount; i >= rowCount; i--) {
 	    println("Ammendment saved successfully")
 	} else {
 	    // Code to execute if the text is not present
-	    println("Ammendment Error")
+	    println("Ammendment Error msg: " + msg_amd)
+		KeywordUtil.markFailed("Ammendment Error msg: " + msg_amd)
 	}
 	
 	WebUI.click(findTestObject('Object Repository/ClientAmendment/button_Yes'))
@@ -371,7 +387,12 @@ for (int i = rowCount; i >= rowCount; i--) {
 	WebUI.click(findTestObject('Object Repository/ClientAmendment/span_Close'))
 	
 	WebUI.delay(1)
-
+	
+	}
+}
+else {
+	println("Error: Data file contains no rows. - Please add and approve customer first!")
+	KeywordUtil.markFailed("Error: Data file contains no rows. - Please add and approve customer first!");
 }
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Logout/span_(Open)_account-user-avatar'), 30)

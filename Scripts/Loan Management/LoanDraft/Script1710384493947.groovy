@@ -39,8 +39,8 @@ WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanManagemen
 
 WebUI.delay(1)
 
-WebUI.waitForElementVisible(findTestObject('Object Repository/LoanManagementModule/LoanManagementNav/a_LoanManagement'), 50)
-WebUI.waitForElementClickable(findTestObject('Object Repository/LoanManagementModule/LoanManagementNav/a_LoanManagement'), 30)
+WebUI.waitForElementVisible(findTestObject('Object Repository/LoanManagementModule/LoanManagementNav/a_LoanManagement'), 10)
+WebUI.waitForElementClickable(findTestObject('Object Repository/LoanManagementModule/LoanManagementNav/a_LoanManagement'), 10)
 WebUI.click(findTestObject('Object Repository/LoanManagementModule/LoanManagementNav/a_LoanManagement'))
 
 // Get the WebDriver instance
