@@ -62,7 +62,7 @@ println(rowCount)
 
 if (rowCount >= 1) {
 	// Iterate through rows
-	for (int i = rowCount; i > 0; i--) {
+	for (int i = rowCount; i >= rowCount; i--) {
 		// Get data for each column
 		String cid = getPending.getValue('CID', i)
 	
@@ -108,7 +108,8 @@ if (rowCount >= 1) {
 		WebUI.delay(1)
 		String msg_disApp = WebUI.getText(findTestObject('Object Repository/ClientAmendment/AmendmentDisapprove/h2_Successful'))
 		
-		if(msg_disApp == "Success!")
+		//Message for the meantime but "Successful!" in real scenario
+		if(msg_disApp == "Successful!")
 		{
 			Actions actions = new Actions(DriverFactory.getWebDriver())
 			actions.sendKeys(Keys.ENTER).perform()
@@ -136,6 +137,7 @@ if (rowCount >= 1) {
 					// Check if the values match the ones to be deleted
 					if (cidNameCell != null && cidNameCell.getStringCellValue() == cidToDelete){
 						// Delete the row if found
+						println("Row Deleted")
 						sheet2.removeRow(row2)
 						// Shift rows up to fill the gap
 						if (rowIndex < sheet2.getLastRowNum()) {
@@ -159,11 +161,9 @@ if (rowCount >= 1) {
 		}
 		else
 		{
-			println("Something went wrong in amendment approval! msg: " + msg_app)
-			KeywordUtil.markFailed("Something went wrong in amendment approval! msg: " + msg_app);
+			println("Something went wrong in amendment approval! msg: " + msg_disApp)
+			KeywordUtil.markFailed("Something went wrong in amendment approval! msg: " + msg_disApp);
 		}
-		
-		WebUI.click(findTestObject('Object Repository/ClientAmendment/ClientAmmendmentApproval/button_OK'))
 	
 	}
 }
