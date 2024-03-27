@@ -134,6 +134,22 @@ String generateRandomLastName() {
 	return lastNameBuilder.toString().substring(0,1).toUpperCase() + lastNameBuilder.toString().substring(1)
 }
 
+String generateRandomBirthday() {
+	// Define the age range (18 to 65)
+	int minAge = 18
+	int maxAge = 65
+	
+	// Calculate the minimum and maximum birth dates based on the age range
+	LocalDate today = LocalDate.now()
+	LocalDate minBirthDate = today.minusYears(maxAge)
+	LocalDate maxBirthDate = today.minusYears(minAge)
+	
+	// Generate a random birth date within the range
+	LocalDate randomBirthDate = minBirthDate.plusDays((int)(Math.random() * ((maxBirthDate.toEpochDay() - minBirthDate.toEpochDay()) + 1)))
+	
+	return randomBirthDate.format(DateTimeFormatter.ofPattern('MMddyyyy')) // Format the date as MMDDYYYY
+}
+
 for(int x=0; x<GlobalVariable.client_num;x++)
 {
 	// Generate a random first name
@@ -144,6 +160,8 @@ for(int x=0; x<GlobalVariable.client_num;x++)
 	
 	// Generate a random last name
 	String randomLastName = generateRandomLastName()
+	
+	String randomBirthday = generateRandomBirthday()
 
 
 WebUI.setText(findTestObject('Object Repository/ClientCreation/input_FirstName_txtFname'), randomFirstName)
@@ -151,6 +169,8 @@ WebUI.setText(findTestObject('Object Repository/ClientCreation/input_FirstName_t
 WebUI.setText(findTestObject('Object Repository/ClientCreation/input_MiddleName_txtMname'), randomMiddleName)
 
 WebUI.setText(findTestObject('Object Repository/ClientCreation/input_LastName_txtLname'), randomLastName)
+
+WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Birthday_txtdoBirth'), randomBirthday)
 
 WebUI.click(findTestObject('Object Repository/ClientCreation/button_SEARCH'))
 
@@ -186,8 +206,8 @@ WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/selec
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--Select--Accommodation and Food Ser_e45bf9'), 
     '687', true)
 
-WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Birthday_txtbday'), '01011999')
-WebUI.sendKeys(findTestObject('Object Repository/ClientCreation/input_Birthday_txtbday'), Keys.ENTER.toString())
+//WebUI.setText(findTestObject('Object Repository/ClientCreation/input_Birthday_txtbday'), '01011999')
+//WebUI.sendKeys(findTestObject('Object Repository/ClientCreation/input_Birthday_txtbday'), Keys.ENTER.toString())
 
 
 WebUI.selectOptionByValue(findTestObject('Object Repository/ClientCreation/select_--      Select      --Abra - CAR (Co_3be376'), 
